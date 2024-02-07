@@ -1,7 +1,7 @@
 ---
 # https://gethomepage.dev/configs/settings
 title: ASB Solutions Home Page
-startUrl: https://asbblog.com
+startUrl: https://homepage2.asbblog.com
 headerStyle: clean
 hideErrors: true
 bookmarksStyle: icons
@@ -56,7 +56,7 @@ quicklaunch:
   hideVisitURL: true
 
 hideVersion: true
-showStats: false  # Disable stats to reduce API calls
+showStats: true  # Disable stats to reduce API calls
 
 providers:
   openweathermap: openweathermapapikey

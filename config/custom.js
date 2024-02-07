@@ -16,7 +16,11 @@
         enableChatbot: true,
         debugMode: false,
         // Ollama Configuration
-        ollamaUrl: 'http://localhost:11434',  // Change to your Ollama server URL
+        // Read from environment when available (Next.js: NEXT_PUBLIC_OLLAMA_URL)
+        // or from a global `window.OLLAMA_URL` set at runtime. Fallback to localhost.
+        ollamaUrl: (typeof process !== 'undefined' && process.env && process.env.NEXT_PUBLIC_OLLAMA_URL)
+            ? process.env.NEXT_PUBLIC_OLLAMA_URL
+            : (typeof window !== 'undefined' && window.OLLAMA_URL) ? window.OLLAMA_URL : 'http://localhost:11434',
         ollamaModel: 'llama3.2'  // Change to your preferred model
     };
 
