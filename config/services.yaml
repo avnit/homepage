@@ -302,93 +302,6 @@
         icon: jackett
         siteMonitor: "{{HOMEPAGE_VAR_JACKETT_URL}}"
         widget:
-<<<<<<< HEAD
-            type: pihole
-            url: https://pi2.asbblog.com
-            key: 5536c470d038c11793b535e8c1176817c001d6f20a4704fa7908939be82e2922
-    - Portainer:
-        href: http://potainer.asbblog.com
-        description: portainer container
-        siteMonitor: http://portainer.asbblog.com/
-        icon: portainer
-        widget:
-            type: portainer
-            url: http://portainer.asbblog.com
-            env: 2
-            key: ptr_T4o9B+spPrciNRWmFjdv5volVpHDrxehs9OfcOWzwAA=
-- Storage Server:
-    - NAS:
-        href: http://unraid.asbblog.com/login/
-        description: Unraid 
-        siteMonitor: https://unraid.asbblog.com/login
-        icon: unraid
-    - NAS: 
-        href: https://abambah.synology.me:5001/#/signin/
-        description: synology 
-        siteMonitor: https://nas1.asbblog.com/signin/
-        icon: si-synology
-- Automation:
-    - Home: 
-        href: https://home.asbblog.com
-        description: Home Assistance for home
-        icon: home-assistant 
-        siteMonitor: https://home.asbblog.com
-        widget:
-            type: homeassistant
-            url: https://home.asbblog.com
-            key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzZGZkZDUzM2EwMWY0N2ZmYjViYmZmZTZmNGI0NDgwNSIsImlhdCI6MTcwNzkzODA2MywiZXhwIjoyMDIzMjk4MDYzfQ.SzfzMZnVBsexBFO2VIFZQekmN7CnrMd0Ld28sgFe-TI
-            custom:
-                 - state: light.hue_play_gradient_lightstrip_1
-                   label: TV Light strip status 
-                 - state: light.signe_gradient_floor_main_room
-                   label: Lamp main room 
-                 - state: sensor.air_quality_monitor_carbon_dioxide
-                   label: carbon monoxide 
-                 - state: lock.ix_xdrive50_lock
-                   label: Car status
-                    
-    - Casaos:           
-        href: http://casaos.asbblog.com
-        description : Casaos Asbblog 
-        icon: casaos 
-    - Casaos Ubuntu: 
-        href: http://ubuntu2.asbblog.com/
-        descripition: Casaos Ubuntu 
-        icon: casaos
-- Business:
-    - Vikunja:
-        href: http://vj.asbblog.com/
-        description: Project management tool 
-        icon: vikunja
-        siteMonitor: http://vj.asbblog.com/
-    - Ceipal:
-        href: https://talenthire.ceipal.com/signin/
-        description: CEIPAL for candidate and job management. 
-        icon: mdi-application
-    - Timesheet: 
-        href: https://www.appsheet.com/start/757b606f-8201-467a-a20a-42d247bf53b9?platform=desktop#vss=H4sIAAAAAAAAA6XOsQ7CIBQF0H-5M1_AahyM0UXjIg7P8poQKTSFVhvCvwumxlkdueTcdxMmw_dDpOYGeU6f15ZnSCSF49yzglRYeRcHbxWEwp66JSTLTtOgkJEv4u0jB8j0HZf_XRcwml00reGhdlVZOhZXvquqwWKQBbox0tXya3AxOZes9c0YWJ_KlB8mhI1bP3pyeud1qWzJBs5PZkXeSmUBAAA=&view=Calendar&appName=TimesheetTracker-330590035
-        description: Timesheet for ASB Employees
-- Other: 
-    - Calander: 
-        widget:
-            type: calendar
-            firstDayInWeek: sunday # optional - defaults to monday
-            view: monthly # optional - possible values monthly, agenda
-            maxEvents: 10 # optional - defaults to 10
-            showTime: true # optional - show time for event happening today - defaults to false
-            timezone: America/Los_Angeles # optional and only when timezone is not detected 
-            integrations: # optional
-                - type: sonarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
-                  service_group: Media2 # group name where widget exists
-                  service_name: Sonarr # service name for that widget
-                  color: teal # optional - defaults to pre-defined color for the service (teal for sonarr)
-    - Grafana:
-       widget:
-            type: grafana
-            url: http://192.168.68.84:3010/
-            username: sa-1-foradmin
-            password: 
-=======
           type: jackett
           url: "{{HOMEPAGE_VAR_JACKETT_URL}}"
           fields: ["configured", "errored"]
@@ -398,7 +311,6 @@
         description: Docker on Unraid
         icon: docker.png
         siteMonitor: "{{HOMEPAGE_VAR_DOCKER_WEB_URL}}"
->>>>>>> 4d178a1a1c4cc14a1418a101505dccc82eae62ce
     - ESPHome:
         href: "{{HOMEPAGE_VAR_ESP_HOME_URL}}"
         description: ESPHome
