@@ -211,7 +211,7 @@
             type: grafana
             url: http://192.168.68.84:3010/
             username: sa-1-foradmin
-            password: glsa_uMUHmIMw1f9LB61Ev9gaEda48hlwHGJQ_a89ab211
+            password: 
     - ESPHome:
         widget:
           type: esphome
