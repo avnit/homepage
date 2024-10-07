@@ -893,5 +893,17 @@
         "ping": "Ping",
         "download": "Download",
         "upload": "Upload"
+    },
+    "stocks": {
+        "stocks": "Stocks",
+        "loading": "Loading",
+        "open": "Open - US Market",
+        "closed": "Closed - US Market",
+        "invalidConfiguration": "Invalid Configuration"
+    },
+    "frigate": {
+        "cameras": "Cameras",
+        "uptime": "Uptime",
+        "version": "Version"
     }
 }
