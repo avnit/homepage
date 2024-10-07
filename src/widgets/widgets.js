@@ -15,6 +15,7 @@ import coinmarketcap from "./coinmarketcap/widget";
 import crowdsec from "./crowdsec/widget";
 import customapi from "./customapi/widget";
 import deluge from "./deluge/widget";
+import develancacheui from "./develancacheui/widget";
 import diskstation from "./diskstation/widget";
 import downloadstation from "./downloadstation/widget";
 import emby from "./emby/widget";
@@ -23,6 +24,7 @@ import evcc from "./evcc/widget";
 import fileflows from "./fileflows/widget";
 import flood from "./flood/widget";
 import freshrss from "./freshrss/widget";
+import frigate from "./frigate/widget";
 import fritzbox from "./fritzbox/widget";
 import gamedig from "./gamedig/widget";
 import gatus from "./gatus/widget";
@@ -45,6 +47,7 @@ import kavita from "./kavita/widget";
 import komga from "./komga/widget";
 import kopia from "./kopia/widget";
 import lidarr from "./lidarr/widget";
+import linkwarden from "./linkwarden/widget";
 import mastodon from "./mastodon/widget";
 import mealie from "./mealie/widget";
 import medusa from "./medusa/widget";
@@ -94,6 +97,7 @@ import scrutiny from "./scrutiny/widget";
 import sonarr from "./sonarr/widget";
 import speedtest from "./speedtest/widget";
 import stash from "./stash/widget";
+import stocks from "./stocks/widget";
 import strelaysrv from "./strelaysrv/widget";
 import swagdashboard from "./swagdashboard/widget";
 import tailscale from "./tailscale/widget";
@@ -132,6 +136,7 @@ const widgets = {
   crowdsec,
   customapi,
   deluge,
+  develancacheui,
   diskstation,
   downloadstation,
   emby,
@@ -140,6 +145,7 @@ const widgets = {
   fileflows,
   flood,
   freshrss,
+  frigate,
   fritzbox,
   gamedig,
   gatus,
@@ -164,6 +170,7 @@ const widgets = {
   komga,
   kopia,
   lidarr,
+  linkwarden,
   mastodon,
   mealie,
   medusa,
@@ -215,6 +222,7 @@ const widgets = {
   sonarr,
   speedtest,
   stash,
+  stocks,
   strelaysrv,
   swagdashboard,
   tailscale,
