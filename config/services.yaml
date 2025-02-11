@@ -12,7 +12,6 @@
             type: radarr
             url: https://radarr.asbblog.com
             key: 89786ab3384c4a748562df01b485b49c
-            enableQueue: true
     - QbTorrent:
         href: https://qb.asbblog.com/
         description: Bit torrent
@@ -41,7 +40,6 @@
             type: sonarr
             url:  https://sonarr.asbblog.com
             key: d9d1f45e906d4564a0563f792ca4b37b
-            enableQueue: true # optional, defaults to false
     - prowlarr:
         href: https://prowlarr.asbblog.com
         description: prowlarr
@@ -50,14 +48,6 @@
             type: prowlarr
             url: https://prowlarr.asbblog.com
             key: 4e036a829b1145cf89799e38586e40aa
-    - kodi:
-        href: https://kodi.asbblog.com/
-        description: kodi
-        icon: kodi
-    - kodi2:
-        href: https://kodi2.asbblog.com/
-        description: kodi2
-        icon: kodi
     - plex:
         href: https://plex.tv
         description: Plex media player
@@ -66,6 +56,15 @@
             type: plex
             url: https://192.168.68.79:32400
             key: Cet9igiJQVNosbeUmj1s
+    - HDHomerun:
+        href: http://hdhomerun.local
+        icon: hdhomerun
+        widget: 
+          type: hdhomerun
+          url: http://hdhomerun.local
+          tuner: 0 # optional - defaults to 0, used for tuner-specific fields
+          fields: ["channels", "hd"] # optional - default fields shown
+          
 - Media2:
     - Radarr:
         href: https://radarr2.asbblog.com/
@@ -76,7 +75,6 @@
             type: radarr
             url: https://radarr2.asbblog.com
             key: 04c84f1ec0e841299f3046ce04356f5f
-            enableQueue: true
     - QbTorrent:
         href: https://qb2.asbblog.com/
         description: Bit torrent
@@ -105,7 +103,6 @@
             type: sonarr
             url:  http://sonarr2.asbblog.com
             key: 4f3fd7fa3ca5407eb986ddadc149a9c5
-            enableQueue: true # optional, defaults to false
     - prowlarr: 
         href: https://prowlarr2.asbblog.com/
         description: prowlarr
@@ -126,13 +123,13 @@
             url: https://pi.asbblog.com
             key: d5cee877ac04b8c52c6a182d64781fa30bf3a00d590af20a70bc82f0037bd55e
     - Pi two:
-        href: https://192.168.68.113/admin
+        href: http://192.168.68.133/admin
         description: pi2 hole - main
-        siteMonitor: https://192.168.68.133/admin
+        siteMonitor: http://192.168.68.133/admin
         icon: pi-hole
         widget:
             type: pihole
-            url: https://192.168.68.133
+            url: http://192.168.68.133/admin
             key: d5cee877ac04b8c52c6a182d64781fa30bf3a00d590af20a70bc82f0037bd55e
     - Portainer:
         href: https://potainer.asbblog.com
@@ -154,7 +151,7 @@
             url:  https://192.168.68.129:9443
             env: 2
             key: ptr_T4o9B+spPrciNRWmFjdv5volVpHDrxehs9OfcOWzwAA=
-     - Portainer-132:
+    - Portainer-132:
         href: https://192.168.68.132:9443
         description: portainer container
         siteMonitor: https://192.168.68.132:9443
@@ -162,8 +159,28 @@
         widget:
             type: portainer
             url: https://192.168.68.132:9443
-            env: 1
+            env: 2
             key: ptr_T+fTOADZ0Zm6DHMBV0NWeaW7KkyU4q+Mp6IJTyfBbOI=
+    - Grafana:
+        href: https://grafana.asbblog.com
+        description: Grafana unraid
+        siteMonitor: https://grafana.asbblog.com
+        icon: grafana
+        widget: 
+          type: grafana
+          url: https://grafana.asbblog.com
+          username: admin
+          password: golD123@
+    - proxmox: 
+        href: https://pve.asbblog.com
+        description: Proxmox 1 
+        siteMonitor: https://pve.asbblog.com
+        icon: proxmox 
+        widget : 
+          type: proxmox
+          url: https://pve.asbblog.com
+          username: api@pam!homepage 
+          password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9 
 - Storage-Server:
     - NAS:
         href: https://unraid.asbblog.com/login/

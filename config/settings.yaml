@@ -16,8 +16,11 @@ layout:
   Automation:
     style: row
     columns: 4
-  Storage Server:
+  Storage-Server:
     style: row
+    columns: 2
+  Other:
+    style: row 
     columns: 2
   Media:
     style: row
