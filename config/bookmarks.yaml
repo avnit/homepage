@@ -3,21 +3,71 @@
 # https://gethomepage.dev/configs/bookmarks
 
 - Developer:
-    - IT Tools:
-        - abbr: IT
-          href: https://tools.asbblog.com/
-    - Github - avnit: 
-        - abbr: GT
-          href: https://https://github.com/avnit/
+  - IT Tools:
+    - abbr: IT
+      href: https://tools.asbblog.com/
+  - Github - avnit: 
+    - abbr: GT
+      href: https://https://github.com/avnit/
 - Social:
-    - Reddit:
-        - abbr: RE
-          href: https://reddit.com/
-
+  - Reddit:
+    - abbr: RE
+      href: https://reddit.com/
 - Entertainment:
-    - YouTube:
-        - abbr: YT
-          href: https://youtube.com/
+  - Youtube:
+    - abbr: YT
+      href: https://youtube.com/
+  - Netflix:
+    - abbr: NF
+      href: https://netflix.com/
+  - Prime Video:
+    - abbr: PV
+      href: https://primevideo.com/
+  - Disney+:
+    - abbr: D+
+      href: https://disneyplus.com/
+  - Hulu:
+    - abbr: HU
+      href: https://hulu.com/
+  - HBO Max:
+    - abbr: HM
+      href: https://hbomax.com/
+  - Apple TV+:
+    - abbr: ATV
+      href: https://tv.apple.com/
+  - Peacock:
+    - abbr: PC
+      href: https://peacocktv.com/
+  - Paramount+:
+    - abbr: PP
+      href: https://paramountplus.com/
+  - Discovery+:
+    - abbr: D+
+      href: https://discoveryplus.com/
+  - Starz:
+    - abbr: SZ
+      href: https://starz.com/
+  - Showtime:
+    - abbr: ST
+      href: https://showtime.com/
+  - AMC+:
+    - abbr: AC
+      href: https://amcplus.com/
+  - Epix:
+    - abbr: EP
+      href: https://epix.com/
+  - Crunchyroll:
+    - abbr: CR
+      href: https://crunchyroll.com/
+  - Funimation:
+    - abbr: FN
+      href: https://funimation.com/
+  - VRV:
+    - abbr: VR
+      href: https://vrv.co/
+  - Shudder:
+    - abbr: SH
+      href: https://shudder.com/
 - Repositories:
   - Homelab:
     - icon: si-github-#FFFFFF
