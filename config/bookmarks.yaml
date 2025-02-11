@@ -25,56 +25,61 @@
       href: https://primevideo.com/
   - Disney+:
     - icon: si-disneyplus-#000000
+      abbr: DP
       href: https://disneyplus.com/
   - Disney+ Hotstar:
     - abbr: DH
       href: https://disneyplus.com/
   - Hulu:
-    - abbr: HU
-      icon: si-hulu-#000000
+    - icon: si-hulu-#000000
       href: https://hulu.com/
   - HBO Max:
-    - abbr: HM
-      icon: si-hbo-#000000
+    - icon: si-hbo-#000000
       href: https://hbomax.com/
   - Apple TV+:
     - abbr: ATV
       icon: si-apple-#000000
       href: https://tv.apple.com/
   - Peacock:
-    - abbr: PC
-      icon: si-peacocktv-#000000
+    - icon: si-peacocktv-#000000
       href: https://peacocktv.com/
   - Paramount+:
-    - abbr: PP
-      icon: si-paramount-#000000
+    - icon: si-paramount-#000000
       href: https://paramountplus.com/
   - Discovery+:
     - abbr: D+
+      icon: si-discoveryplus-#000000
       href: https://discoveryplus.com/
   - Starz:
     - abbr: SZ
+      icon: si-starz-#000000
       href: https://starz.com/
   - Showtime:
     - abbr: ST
+      icon: si-showtime-#000000
       href: https://showtime.com/
   - AMC+:
     - abbr: AC
+      icon: si-amc-#000000
       href: https://amcplus.com/
   - Epix:
     - abbr: EP
+      icon: si-epix-#000000
       href: https://epix.com/
   - Crunchyroll:
     - abbr: CR
+      icon: si-crunchyroll-#000000
       href: https://crunchyroll.com/
   - Funimation:
     - abbr: FN
       href: https://funimation.com/
   - VRV:
     - abbr: VR
+      icon: si-vrv-#000000
       href: https://vrv.co/
   - Shudder:
     - abbr: SH
+      icon: si-shudder-#000000
       href: https://shudder.com/
 - Repositories:
   - Homelab:
