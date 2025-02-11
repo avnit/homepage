@@ -1,7 +1,47 @@
 ---
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
-
+- Hypervisor:
+    - Proxmox:
+        icon: proxmox.svg
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        description: pve1
+        widget:
+            type: proxmox
+            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            username:  "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+            password:  "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+            node: pve
+    - Proxmox:
+        icon: proxmox.svg
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        description: pve2
+        widget:
+            type: proxmox
+            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            username:  "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+            password:  "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+            node: pve-x99
+    - Proxmox:
+        icon: proxmox.svg
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        description: pve3
+        widget:
+            type: proxmox
+            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            username:  "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+            password:  "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+            node: pve5
+    - Proxmox:
+        icon: proxmox.svg
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        description: pve4
+        widget:
+            type: proxmox
+            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            username:  "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+            password:  "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+#            node: storinator
 - Media:
     - Radarr:
         href: https://radarr.asbblog.com/
@@ -23,48 +63,73 @@
             username: admin
             password: adminadmin
     - jellyseerr:
-        href: https://jelly.asbblog.com/
+        href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
         description: jellyseerr
         icon: jellyseerr
-        siteMontior: https://jelly.asbblog.com
+        siteMontior: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
         widget:
             type: jellyseerr
-            url: https://jelly.asbblog.com
-            key: MTcwMzcxMzUwNTY1NWQwZWUyODNlLWVhYmEtNDllOS05ZDFhLTVmMDY5NTVhYjhhMg==
+            url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+            key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
     - Sonarr:
-        href: https://sonarr.asbblog.com/
+        href: "{{HOMEPAGE_VAR_SONARR_URL}}"
         description: Sonnar
-        siteMonitor: http://sonarr.asbblog.com/
+        siteMonitor: "{{HOMEPAGE_VAR_SONARR_URL}}"
         icon: sonarr
         widget:
             type: sonarr
-            url:  https://sonarr.asbblog.com
-            key: d9d1f45e906d4564a0563f792ca4b37b
+            url:  "{{HOMEPAGE_VAR_SONARR_URL}}"
+            key: "{{HOMEPAGE_VAR_SONARR_API_TOKEN}}"
     - prowlarr:
-        href: https://prowlarr.asbblog.com
+        href: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
         description: prowlarr
         icon: prowlarr
         widget:
             type: prowlarr
-            url: https://prowlarr.asbblog.com
-            key: 4e036a829b1145cf89799e38586e40aa
-    - plex:
-        href: https://plex.tv
-        description: Plex media player
-        icon: plex
+            url: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
+            key: "{{HOMEPAGE_VAR_PROWLARR_API_TOKEN}}"
+    - Plex:
+        icon: plex.svg
+        href: "{{HOMEPAGE_VAR_PLEX_URL}}"
+        description: media server
         widget:
             type: plex
-            url: https://192.168.68.79:32400
-            key: Cet9igiJQVNosbeUmj1s
+            url: "{{HOMEPAGE_VAR_PLEX_URL}}"
+            key: "{{HOMEPAGE_VAR_PLEX_API_TOKEN}}"
     - HDHomerun:
-        href: http://hdhomerun.local
-        icon: hdhomerun
-        widget: 
-          type: hdhomerun
-          url: http://hdhomerun.local
-          tuner: 0 # optional - defaults to 0, used for tuner-specific fields
-          fields: ["channels", "hd"] # optional - default fields shown
-          
+        icon: hdhomerun.png
+        href: "{{HOMEPAGE_VAR_HDHOMERUN_URL}}"
+        description: flex 4k
+        widget:
+            type: hdhomerun
+            url: "{{HOMEPAGE_VAR_HDHOMERUN_URL}}"
+            tuner: 0 # optional - defaults to 0, used for tuner-specific fields
+            fields: ["channels", "hd"] # optional - default fields shown
+- DNS:
+    - Pi-Hole1:
+        icon: pi-hole.svg
+        href: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}"
+        description: quasar
+        widget:
+            type: pihole
+            url: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}"
+            key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_1}}"
+    - Pi-Hole2:
+        icon: pi-hole.svg
+        href: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
+        description: blazar
+        widget:
+            type: pihole
+            url: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
+            key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_2}}"
+    - Pi-Hole3:
+        icon: pi-hole.svg
+        href: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
+        description: electron
+        widget:
+            type: pihole
+            url: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
+            key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_3}}"          
 - Media2:
     - Radarr:
         href: https://radarr2.asbblog.com/
@@ -113,24 +178,6 @@
             url: http://prowlarr2.asbblog.com
             key: 16bc79a702aa44d1987f7c62efd3d706
 - Monitoring:
-    - Pi One:
-        href: https://pi.asbblog.com/admin
-        description: pi hole - main
-        icon: pi-hole
-        siteMonitor: https://pi.asbblog.com/admin
-        widget:
-            type: pihole
-            url: https://pi.asbblog.com
-            key: d5cee877ac04b8c52c6a182d64781fa30bf3a00d590af20a70bc82f0037bd55e
-    - Pi two:
-        href: http://192.168.68.133/admin
-        description: pi2 hole - main
-        siteMonitor: http://192.168.68.133/admin
-        icon: pi-hole
-        widget:
-            type: pihole
-            url: http://192.168.68.133/admin
-            key: d5cee877ac04b8c52c6a182d64781fa30bf3a00d590af20a70bc82f0037bd55e
     - Portainer:
         href: https://potainer.asbblog.com
         description: portainer container
@@ -162,25 +209,16 @@
             env: 2
             key: ptr_T+fTOADZ0Zm6DHMBV0NWeaW7KkyU4q+Mp6IJTyfBbOI=
     - Grafana:
-        href: https://grafana.asbblog.com
+        href: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
         description: Grafana unraid
-        siteMonitor: https://grafana.asbblog.com
+        siteMonitor: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
         icon: grafana
         widget: 
           type: grafana
-          url: https://grafana.asbblog.com
+          url: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
           username: admin
-          password: golD123@
-    - proxmox: 
-        href: https://pve.asbblog.com
-        description: Proxmox 1 
-        siteMonitor: https://pve.asbblog.com
-        icon: proxmox 
-        widget : 
-          type: proxmox
-          url: https://pve.asbblog.com
-          username: api@pam!homepage 
-          password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9 
+          password: "{{HOMEPAGE_VAR_GRAFANA_API_TOKEN}}"
+
 - Storage-Server:
     - NAS:
         href: https://unraid.asbblog.com/login/
@@ -193,15 +231,14 @@
         siteMonitor: https://192-168-68-80.abambah.direct.quickconnect.to:5001/#/signin/
         icon: si-synology
 - Automation:
-    - Home: 
-        href: https://home.asbblog.com
-        description: Home Assistance for home
-        icon: home-assistant 
-        siteMonitor: https://home.asbblog.com
+    - Home Assistant:
+        icon: home-assistant.svg
+        href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+        description: home
         widget:
             type: homeassistant
-            url: https://home.asbblog.com
-            key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzYjk3MmY4ODRjYmM0MTE5OGViYzAyMzIzMjM3M2Q5YSIsImlhdCI6MTczOTIxMDIwMCwiZXhwIjoyMDU0NTcwMjAwfQ.TZ_nXHXnto1tsKxQa_fOhkfkJ-KYKsqI_lSeTdFkFlE
+            url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+            key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}"
     - Casaos:           
         href: https://casaos.asbblog.com/
         description : Casaos Asbblog 
@@ -244,4 +281,12 @@
                   service_group: Media # group name where widget exists
                   service_name: Sonarr # service name for that widget
                   color: teal # optional - defaults to pre-defined color for the service (teal for sonarr)
-      
+    - GitLab:
+        icon: gitlab.svg
+        href: https://gitlab.com
+        description: source code
+    - GitHub:
+        icon: github.svg
+        href: https://github.com
+        description: source code
+

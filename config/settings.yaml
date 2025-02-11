@@ -7,10 +7,20 @@ startUrl: https://asbblog.com
 theme: dark # or light
 color: cyan
 layout:
+  Hypervisor:
+    header: true
+    style: row
+    columns: 4
   Business: 
+    header: true
+    style: row
+    columns: 4
+  DNS:
+    header: true
     style: row
     columns: 4
   Monitoring:
+    header: true
     style: row
     columns: 4
   Automation:
