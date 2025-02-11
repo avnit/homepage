@@ -15,31 +15,43 @@
       href: https://reddit.com/
 - Entertainment:
   - Youtube:
-    - abbr: YT
+    - icon: si-youtube-#FF0000
+      abbr: YT
       href: https://youtube.com/
   - Netflix:
     - abbr: NF
+      icon: si-netflix-#E50914
       href: https://netflix.com/
   - Prime Video:
     - abbr: PV
+      icon: si-amazon-#FF9900
       href: https://primevideo.com/
   - Disney+:
     - abbr: D+
+      icon: si-disneyplus-#000000
+      href: https://disneyplus.com/
+  - Disney+ Hotstar:
+    - abbr: DH
       href: https://disneyplus.com/
   - Hulu:
     - abbr: HU
+      icon: si-hulu-#000000
       href: https://hulu.com/
   - HBO Max:
     - abbr: HM
+      icon: si-hbo-#000000
       href: https://hbomax.com/
   - Apple TV+:
     - abbr: ATV
+      icon: si-apple-#000000
       href: https://tv.apple.com/
   - Peacock:
     - abbr: PC
+      icon: si-peacocktv-#000000
       href: https://peacocktv.com/
   - Paramount+:
     - abbr: PP
+      icon: si-paramount-#000000
       href: https://paramountplus.com/
   - Discovery+:
     - abbr: D+
@@ -110,7 +122,7 @@
     - icon: aws.png
       href: https://aws.amazon.com
   - Google Cloud:
-    - icon: googlecloud.png
+    - icon: googlecloud
       href: https://console.cloud.google.com
   - Microsoft Azure:
     - icon: azure.png
