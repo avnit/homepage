@@ -9,8 +9,8 @@
         widget:
             type: proxmox
             url: https://pve.asbblog.com
-            username: {{HOMEPAGE_VAR_PROXMOX_USER}}
-            password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            username: api@pam!homepage
+            password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9
             node: pve
     - Proxmox:
         icon: proxmox.svg
@@ -19,8 +19,8 @@
         widget:
             type: proxmox
             url: https://pve.asbblog.com
-            username: {{HOMEPAGE_VAR_PROXMOX_USER}}
-            password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            username: api@pam!homepage
+            password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9
             node: pve-x99
     - Proxmox:
         icon: proxmox.svg
@@ -29,8 +29,8 @@
         widget:
             type: proxmox
             url: https://pve.asbblog.com
-            username: {{HOMEPAGE_VAR_PROXMOX_USER}}
-            password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            username: api@pam!homepage
+            password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9
             node: pve5
     - Proxmox:
         icon: proxmox.svg
@@ -39,8 +39,8 @@
         widget:
             type: proxmox
             url: https://pve.asbblog.com
-            username: {{HOMEPAGE_VAR_PROXMOX_USER}}
-            password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            username: api@pam!homepage
+            password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9
 #            node: storinator
 - Media:
     - Radarr:
