@@ -9,8 +9,8 @@
         widget:
             type: proxmox
             url: https://pve.asbblog.com
-            username:  {{HOMEPAGE_VAR_PROXMOX_USER}}
-            password:  {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            username: {{HOMEPAGE_VAR_PROXMOX_USER}}
+            password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
             node: pve
     - Proxmox:
         icon: proxmox.svg
@@ -19,8 +19,8 @@
         widget:
             type: proxmox
             url: https://pve.asbblog.com
-            username:  {{HOMEPAGE_VAR_PROXMOX_USER}}
-            password:  {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            username: {{HOMEPAGE_VAR_PROXMOX_USER}}
+            password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
             node: pve-x99
     - Proxmox:
         icon: proxmox.svg
@@ -29,8 +29,8 @@
         widget:
             type: proxmox
             url: https://pve.asbblog.com
-            username:  {{HOMEPAGE_VAR_PROXMOX_USER}}
-            password:  {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            username: {{HOMEPAGE_VAR_PROXMOX_USER}}
+            password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
             node: pve5
     - Proxmox:
         icon: proxmox.svg
@@ -39,8 +39,8 @@
         widget:
             type: proxmox
             url: https://pve.asbblog.com
-            username:  {{HOMEPAGE_VAR_PROXMOX_USER}}
-            password:  {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            username: {{HOMEPAGE_VAR_PROXMOX_USER}}
+            password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
 #            node: storinator
 - Media:
     - Radarr:
@@ -78,7 +78,7 @@
         icon: sonarr
         widget:
             type: sonarr
-            url:  {{HOMEPAGE_VAR_SONARR_URL}}
+            url: {{HOMEPAGE_VAR_SONARR_URL}}
             key: {{HOMEPAGE_VAR_SONARR_API_TOKEN}}
     - prowlarr:
         href: {{HOMEPAGE_VAR_PROWLARR_URL}}
@@ -281,12 +281,3 @@
                   service_group: Media # group name where widget exists
                   service_name: Sonarr # service name for that widget
                   color: teal # optional - defaults to pre-defined color for the service (teal for sonarr)
-    - GitLab:
-        icon: gitlab.svg
-        href: https://gitlab.com
-        description: source code
-    - GitHub:
-        icon: github.svg
-        href: https://github.com
-        description: source code
-
