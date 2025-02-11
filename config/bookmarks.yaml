@@ -16,19 +16,15 @@
 - Entertainment:
   - Youtube:
     - icon: si-youtube-#FF0000
-      abbr: YT
       href: https://youtube.com/
   - Netflix:
-    - abbr: NF
-      icon: si-netflix-#E50914
+    - icon: si-netflix-#E50914
       href: https://netflix.com/
   - Prime Video:
-    - abbr: PV
-      icon: si-amazon-#FF9900
+    - icon: si-amazon-#FF9900
       href: https://primevideo.com/
   - Disney+:
-    - abbr: D+
-      icon: si-disneyplus-#000000
+    - icon: si-disneyplus-#000000
       href: https://disneyplus.com/
   - Disney+ Hotstar:
     - abbr: DH
