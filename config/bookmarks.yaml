@@ -1,0 +1,136 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Developer:
+  - IT Tools:
+    - abbr: IT
+      href: https://tools.asbblog.com/
+  - Github - avnit: 
+    - abbr: GT
+      href: https://https://github.com/avnit/
+- Social:
+  - Reddit:
+    - abbr: RE
+      href: https://reddit.com/
+- Entertainment:
+  - Youtube:
+    - icon: si-youtube-#FF0000
+      href: https://youtube.com/
+  - Netflix:
+    - icon: si-netflix-#E50914
+      href: https://netflix.com/
+  - Prime Video:
+    - icon: si-amazon-#FF9900
+      href: https://primevideo.com/
+  - Disney+:
+    - icon: si-disneyplus-#000000
+      abbr: DP
+      href: https://disneyplus.com/
+  - Disney+ Hotstar:
+    - abbr: DH
+      href: https://disneyplus.com/
+  - Hulu:
+    - icon: si-hulu-#000000
+      href: https://hulu.com/
+  - HBO Max:
+    - icon: si-hbo-#000000
+      href: https://hbomax.com/
+  - Apple TV+:
+    - abbr: ATV
+      icon: si-apple-#000000
+      href: https://tv.apple.com/
+  - Peacock:
+    - icon: si-peacocktv-#000000
+      href: https://peacocktv.com/
+  - Paramount+:
+    - icon: si-paramount-#000000
+      href: https://paramountplus.com/
+  - Discovery+:
+    - abbr: D+
+      icon: si-discoveryplus-#000000
+      href: https://discoveryplus.com/
+  - Starz:
+    - abbr: SZ
+      icon: si-starz-#000000
+      href: https://starz.com/
+  - Showtime:
+    - abbr: ST
+      icon: si-showtime-#000000
+      href: https://showtime.com/
+  - AMC+:
+    - abbr: AC
+      icon: si-amc-#000000
+      href: https://amcplus.com/
+  - Epix:
+    - abbr: EP
+      icon: si-epix-#000000
+      href: https://epix.com/
+  - Crunchyroll:
+    - abbr: CR
+      icon: si-crunchyroll-#000000
+      href: https://crunchyroll.com/
+  - Funimation:
+    - abbr: FN
+      href: https://funimation.com/
+  - VRV:
+    - abbr: VR
+      icon: si-vrv-#000000
+      href: https://vrv.co/
+  - Shudder:
+    - abbr: SH
+      icon: si-shudder-#000000
+      href: https://shudder.com/
+- Repositories:
+  - Homelab:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/avnit/homepage
+  - Boilerplates:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/christianlempa/boilerplates
+  - Cheat-Sheets:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/christianlempa/cheat-sheets
+  - Scripts:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/christianlempa/scripts
+  - Python4Eeryone:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/avnit/Python-for-everyone
+  - Bigbear-Video-Assets:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/bigbeartechworld/big-bear-video-assets
+
+- Cloud Services:
+  - Sophos Cloud:
+    - icon: /icons/cld.png
+      href: https://cloud.sophos.com
+  - Cloudflare:
+    - icon: cloudflare.png
+      href: https://dash.cloudflare.com
+  - Teleport:
+    - icon: teleport.png
+      href: https://clcreative.teleport.sh
+  - Twingate:
+    - icon: twingate.png
+      href: https://clcreative.twingate.com
+  - Netbird:
+    - icon: https://netbird.io/_next/static/media/netbird-icon.00225e97.svg
+      href: https://app.netbird.io
+
+- Cloud Platforms:
+  - AWS:
+    - icon: aws.png
+      href: https://aws.amazon.com
+  - Google Cloud:
+    - icon: google.png
+      href: https://console.cloud.google.com
+  - Microsoft Azure:
+    - icon: azure.png
+      href: https://portal.azure.com
+  - Digital Ocean:
+    - icon: si-digitalocean-#0080FF
+      href: https://cloud.digitalocean.com
+  - CIVO:
+    - icon: si-civo-#239DFF
+      href: https://www.civo.com
