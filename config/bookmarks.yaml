@@ -117,6 +117,9 @@
   - Netbird:
     - icon: https://netbird.io/_next/static/media/netbird-icon.00225e97.svg
       href: https://app.netbird.io
+  - Tailscale:
+    - icon: tailscale.png
+      href: https://login.tailscale.com
 
 - Cloud Platforms:
   - AWS:
