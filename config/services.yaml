@@ -108,12 +108,12 @@
 - DNS:
     - Pi-Hole1:
         icon: pi-hole.svg
-        href: {{HOMEPAGE_VAR_PIHOLE_URL_1}}
+        href: https://pi.asbblog.com/admin
         description: quasar
         widget:
             type: pihole
-            url: {{HOMEPAGE_VAR_PIHOLE_URL_1}}
-            key: {{HOMEPAGE_VAR_PIHOLE_API_KEY_1}}
+            url: https://pi.asbblog.com/admin
+            key: 5536c470d038c11793b535e8c1176817c001d6f20a4704fa7908939be82e2922
     - Pi-Hole2:
         icon: pi-hole.svg
         href: {{HOMEPAGE_VAR_PIHOLE_URL_2}}
@@ -124,12 +124,12 @@
             key: {{HOMEPAGE_VAR_PIHOLE_API_KEY_2}}
     - Pi-Hole3:
         icon: pi-hole.svg
-        href: {{HOMEPAGE_VAR_PIHOLE_URL_3}}
+        href: http://192.168.68.133/admin
         description: electron
         widget:
             type: pihole
-            url: {{HOMEPAGE_VAR_PIHOLE_URL_3}}
-            key: {{HOMEPAGE_VAR_PIHOLE_API_KEY_3}}          
+            url: http://192.168.68.133/admin
+            key: d5cee877ac04b8c52c6a182d64781fa30bf3a00d590af20a70bc82f0037bd55e         
 - Media2:
     - Radarr:
         href: https://radarr2.asbblog.com/
