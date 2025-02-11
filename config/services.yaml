@@ -4,41 +4,41 @@
 - Hypervisor:
     - Proxmox:
         icon: proxmox.svg
-        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        href: https://pve.asbblog.com
         description: pve1
         widget:
             type: proxmox
-            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            url: https://pve.asbblog.com
             username:  "{{HOMEPAGE_VAR_PROXMOX_USER}}"
             password:  "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
             node: pve
     - Proxmox:
         icon: proxmox.svg
-        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        href: https://pve.asbblog.com
         description: pve2
         widget:
             type: proxmox
-            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            url: https://pve.asbblog.com
             username:  "{{HOMEPAGE_VAR_PROXMOX_USER}}"
             password:  "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
             node: pve-x99
     - Proxmox:
         icon: proxmox.svg
-        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        href: https://pve.asbblog.com
         description: pve3
         widget:
             type: proxmox
-            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            url: https://pve.asbblog.com
             username:  "{{HOMEPAGE_VAR_PROXMOX_USER}}"
             password:  "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
             node: pve5
     - Proxmox:
         icon: proxmox.svg
-        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        href: https://pve.asbblog.com
         description: pve4
         widget:
             type: proxmox
-            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            url: https://pve.asbblog.com
             username:  "{{HOMEPAGE_VAR_PROXMOX_USER}}"
             password:  "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
 #            node: storinator
