@@ -90,19 +90,19 @@
             key: {{HOMEPAGE_VAR_PROWLARR_API_TOKEN}}
     - Plex:
         icon: plex.svg
-        href: {{HOMEPAGE_VAR_PLEX_URL}}
+        href: https://plex.tv
         description: media server
         widget:
             type: plex
-            url: {{HOMEPAGE_VAR_PLEX_URL}}
+            url: https://plex.tv
             key: {{HOMEPAGE_VAR_PLEX_API_TOKEN}}
     - HDHomerun:
         icon: hdhomerun.png
-        href: {{HOMEPAGE_VAR_HDHOMERUN_URL}}
+        href: https://192.168.68.92
         description: flex 4k
         widget:
             type: hdhomerun
-            url: {{HOMEPAGE_VAR_HDHOMERUN_URL}}
+            url: https://192.168.68.92
             tuner: 0 # optional - defaults to 0, used for tuner-specific fields
             fields: ["channels", "hd"] # optional - default fields shown
 - DNS:
