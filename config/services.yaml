@@ -209,13 +209,13 @@
             env: 2
             key: ptr_T+fTOADZ0Zm6DHMBV0NWeaW7KkyU4q+Mp6IJTyfBbOI=
     - Grafana:
-        href: {{HOMEPAGE_VAR_GRAFANA_URL}}
+        href: https://grafana.asbblog.com
         description: Grafana unraid
-        siteMonitor: {{HOMEPAGE_VAR_GRAFANA_URL}}
+        siteMonitor: https://grafana.asbblog.com
         icon: grafana
         widget: 
           type: grafana
-          url: {{HOMEPAGE_VAR_GRAFANA_URL}}
+          url: https://grafana.asbblog.com
           username: admin
           password: {{HOMEPAGE_VAR_GRAFANA_API_TOKEN}}
 
@@ -233,12 +233,13 @@
 - Automation:
     - Home Assistant:
         icon: home-assistant.svg
-        href: {{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}
+        href: https://home.asbblog.com  
         description: home
         widget:
             type: homeassistant
-            url: {{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}
-            key: {{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}
+            url: https://home.asbblog.com
+            # username: {{HOMEPAGE_VAR_HOME_ASSISTANT_USERNAME}}
+            key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzYjk3MmY4ODRjYmM0MTE5OGViYzAyMzIzMjM3M2Q5YSIsImlhdCI6MTczOTIxMDIwMCwiZXhwIjoyMDU0NTcwMjAwfQ.TZ_nXHXnto1tsKxQa_fOhkfkJ-KYKsqI_lSeTdFkFlE
     - Casaos:           
         href: https://casaos.asbblog.com/
         description : Casaos Asbblog 
