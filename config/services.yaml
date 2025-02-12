@@ -113,7 +113,7 @@
         widget:
             type: pihole
             url: https://pi.asbblog.com/admin
-            key: d5cee877ac04b8c52c6a182d64781fa30bf3a00d590af20a70bc82f0037bd55e
+            key: 5536c470d038c11793b535e8c1176817c001d6f20a4704fa7908939be82e2922
     - Pi-Hole2:
         icon: pi-hole.svg
         href: {{HOMEPAGE_VAR_PIHOLE_URL_2}}
@@ -129,7 +129,7 @@
         widget:
             type: pihole
             url: http://192.168.68.133/admin
-            key: 5536c470d038c11793b535e8c1176817c001d6f20a4704fa7908939be82e2922       
+            key: d5cee877ac04b8c52c6a182d64781fa30bf3a00d590af20a70bc82f0037bd55e       
 - Media2:
     - Radarr:
         href: https://radarr2.asbblog.com/
