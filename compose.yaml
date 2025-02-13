@@ -24,7 +24,6 @@ services:
     devices: []
     cap_add: []
     command: []
-    env_file: .env
     networks:
       - default
     privileged: false
