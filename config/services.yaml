@@ -56,21 +56,21 @@
         href: https://qb.asbblog.com/
         description: Bit torrent
         icon: qbittorrent
-        siteMonitor: https1://qb.asbblog.com/
+        siteMonitor: https://qb.asbblog.com/
         widget:
             type: qbittorrent
             url: https://qb.asbblog.com
             username: admin
             password: adminadmin
     - jellyseerr:
-        href: {{HOMEPAGE_VAR_JELLYFIN_URL}}
+        href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
         description: jellyseerr
         icon: jellyseerr
-        siteMontior: {{HOMEPAGE_VAR_JELLYFIN_URL}}
+        siteMontior: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
         widget:
             type: jellyseerr
-            url: {{HOMEPAGE_VAR_JELLYFIN_URL}}
-            key: {{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}
+            url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+            key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
     - Sonarr:
         href: {{HOMEPAGE_VAR_SONARR_URL}}
         description: Sonnar
@@ -116,12 +116,12 @@
             key: 5536c470d038c11793b535e8c1176817c001d6f20a4704fa7908939be82e2922
     - Pi-Hole2:
         icon: pi-hole.svg
-        href: {{HOMEPAGE_VAR_PIHOLE_URL_2}}
+        href: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
         description: blazar
         widget:
             type: pihole
-            url: {{HOMEPAGE_VAR_PIHOLE_URL_2}}
-            key: {{HOMEPAGE_VAR_PIHOLE_API_KEY_2}}
+            url: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
+            key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_2}}"
     - Pi-Hole3:
         icon: pi-hole.svg
         href: http://192.168.68.133/admin
@@ -151,10 +151,10 @@
             username: admin
             password: adminadmin
     - jellyseerr: 
-        href: https://jelly.asbblog.com/
+        href: http://jelly.asbblog.com/
         description: jellyseerr 
         icon: jellyseerr
-        siteMontior: https://jelly.asbblog.com
+        siteMontior: http://jelly.asbblog.com
         widget:
             type: jellyseerr
             url: http://jelly.asbblog.com
