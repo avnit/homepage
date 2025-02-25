@@ -9,8 +9,8 @@
         widget:
             type: proxmox
             url: https://pve.asbblog.com
-            username:  {{HOMEPAGE_VAR_PROXMOX_USER}}
-            password:  {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            username: api@pam!homepage
+            password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9
             node: pve
     - Proxmox:
         icon: proxmox.svg
@@ -19,8 +19,8 @@
         widget:
             type: proxmox
             url: https://pve.asbblog.com
-            username:  {{HOMEPAGE_VAR_PROXMOX_USER}}
-            password:  {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            username: api@pam!homepage
+            password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9
             node: pve-x99
     - Proxmox:
         icon: proxmox.svg
@@ -29,8 +29,8 @@
         widget:
             type: proxmox
             url: https://pve.asbblog.com
-            username:  {{HOMEPAGE_VAR_PROXMOX_USER}}
-            password:  {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            username: api@pam!homepage
+            password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9
             node: pve5
     - Proxmox:
         icon: proxmox.svg
@@ -39,8 +39,8 @@
         widget:
             type: proxmox
             url: https://pve.asbblog.com
-            username:  {{HOMEPAGE_VAR_PROXMOX_USER}}
-            password:  {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            username: api@pam!homepage
+            password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9
 #            node: storinator
 - Media:
     - Radarr:
@@ -78,7 +78,7 @@
         icon: sonarr
         widget:
             type: sonarr
-            url:  {{HOMEPAGE_VAR_SONARR_URL}}
+            url: {{HOMEPAGE_VAR_SONARR_URL}}
             key: {{HOMEPAGE_VAR_SONARR_API_TOKEN}}
     - prowlarr:
         href: {{HOMEPAGE_VAR_PROWLARR_URL}}
@@ -90,30 +90,30 @@
             key: {{HOMEPAGE_VAR_PROWLARR_API_TOKEN}}
     - Plex:
         icon: plex.svg
-        href: {{HOMEPAGE_VAR_PLEX_URL}}
+        href: https://plex.tv
         description: media server
         widget:
             type: plex
-            url: {{HOMEPAGE_VAR_PLEX_URL}}
+            url: https://plex.tv
             key: {{HOMEPAGE_VAR_PLEX_API_TOKEN}}
     - HDHomerun:
         icon: hdhomerun.png
-        href: {{HOMEPAGE_VAR_HDHOMERUN_URL}}
+        href: https://192.168.68.92
         description: flex 4k
         widget:
             type: hdhomerun
-            url: {{HOMEPAGE_VAR_HDHOMERUN_URL}}
+            url: https://192.168.68.92
             tuner: 0 # optional - defaults to 0, used for tuner-specific fields
             fields: ["channels", "hd"] # optional - default fields shown
 - DNS:
     - Pi-Hole1:
         icon: pi-hole.svg
-        href: {{HOMEPAGE_VAR_PIHOLE_URL_1}}
+        href: https://pi.asbblog.com/admin
         description: quasar
         widget:
             type: pihole
-            url: {{HOMEPAGE_VAR_PIHOLE_URL_1}}
-            key: {{HOMEPAGE_VAR_PIHOLE_API_KEY_1}}
+            url: https://pi.asbblog.com/admin
+            key: 5536c470d038c11793b535e8c1176817c001d6f20a4704fa7908939be82e2922
     - Pi-Hole2:
         icon: pi-hole.svg
         href: {{HOMEPAGE_VAR_PIHOLE_URL_2}}
@@ -124,12 +124,12 @@
             key: {{HOMEPAGE_VAR_PIHOLE_API_KEY_2}}
     - Pi-Hole3:
         icon: pi-hole.svg
-        href: {{HOMEPAGE_VAR_PIHOLE_URL_3}}
+        href: http://192.168.68.133/admin
         description: electron
         widget:
             type: pihole
-            url: {{HOMEPAGE_VAR_PIHOLE_URL_3}}
-            key: {{HOMEPAGE_VAR_PIHOLE_API_KEY_3}}          
+            url: http://192.168.68.133/admin
+            key: d5cee877ac04b8c52c6a182d64781fa30bf3a00d590af20a70bc82f0037bd55e       
 - Media2:
     - Radarr:
         href: https://radarr2.asbblog.com/
@@ -209,13 +209,13 @@
             env: 2
             key: ptr_T+fTOADZ0Zm6DHMBV0NWeaW7KkyU4q+Mp6IJTyfBbOI=
     - Grafana:
-        href: {{HOMEPAGE_VAR_GRAFANA_URL}}
+        href: https://grafana.asbblog.com
         description: Grafana unraid
-        siteMonitor: {{HOMEPAGE_VAR_GRAFANA_URL}}
+        siteMonitor: https://grafana.asbblog.com
         icon: grafana
         widget: 
           type: grafana
-          url: {{HOMEPAGE_VAR_GRAFANA_URL}}
+          url: https://grafana.asbblog.com
           username: admin
           password: {{HOMEPAGE_VAR_GRAFANA_API_TOKEN}}
 
@@ -233,12 +233,13 @@
 - Automation:
     - Home Assistant:
         icon: home-assistant.svg
-        href: {{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}
+        href: https://home.asbblog.com  
         description: home
         widget:
             type: homeassistant
-            url: {{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}
-            key: {{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}
+            url: https://home.asbblog.com
+            # username: {{HOMEPAGE_VAR_HOME_ASSISTANT_USERNAME}}
+            key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzYjk3MmY4ODRjYmM0MTE5OGViYzAyMzIzMjM3M2Q5YSIsImlhdCI6MTczOTIxMDIwMCwiZXhwIjoyMDU0NTcwMjAwfQ.TZ_nXHXnto1tsKxQa_fOhkfkJ-KYKsqI_lSeTdFkFlE
     - Casaos:           
         href: https://casaos.asbblog.com/
         description : Casaos Asbblog 
@@ -281,12 +282,3 @@
                   service_group: Media # group name where widget exists
                   service_name: Sonarr # service name for that widget
                   color: teal # optional - defaults to pre-defined color for the service (teal for sonarr)
-    - GitLab:
-        icon: gitlab.svg
-        href: https://gitlab.com
-        description: source code
-    - GitHub:
-        icon: github.svg
-        href: https://github.com
-        description: source code
-
