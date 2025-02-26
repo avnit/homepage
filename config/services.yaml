@@ -112,8 +112,8 @@
         description: quasar
         widget:
             type: pihole
-            url: https://pi.asbblog.com/admin
-            key: 5536c470d038c11793b535e8c1176817c001d6f20a4704fa7908939be82e2922
+            url: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}"
+            key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_1}}"
     - Pi-Hole2:
         icon: pi-hole.svg
         href: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
@@ -132,42 +132,43 @@
             key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_3}}"      
 - Media2:
     - Radarr:
-        href: https://radarr2.asbblog.com/
+        href: "{{HOMEPAGE_VAR_RADARR_URL}}"
         description: Radarr
         icon: radarr
-        siteMonitor: https://radarr2.asbblog.com/
+        siteMonitor: "{{HOMEPAGE_VAR_RADARR_URL}}"
         widget:
             type: radarr
-            url: https://radarr2.asbblog.com
-            key: 04c84f1ec0e841299f3046ce04356f5f
+            url: "{{HOMEPAGE_VAR_RADARR_URL}}"
+            key: "{{HOMEPAGE_VAR_RADARR_API_KEY}}"
     - QbTorrent:
-        href: https://qb2.asbblog.com/
+        href: "{{HOMEPAGE_VAR_QB_URL}}"
         description: Bit torrent
         icon: qbittorrent
-        siteMonitor: https://qb2.asbblog.com/
+        siteMonitor: "{{HOMEPAGE_VAR_QB_URL}}"
         widget:
             type: qbittorrent
-            url: https://qb2.asbblog.com
-            username: admin
-            password: adminadmin
+            url: "{{HOMEPAGE_VAR_QB_URL}}"
+            username: "{{HOMEPAGE_VAR_QB_USER}}"
+            password: "{{HOMEPAGE_VAR_QB_API_KEY}}"
+            
     - jellyseerr: 
-        href: http://jelly.asbblog.com/
+        href: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
         description: jellyseerr 
         icon: jellyseerr
-        siteMontior: http://jelly.asbblog.com
+        siteMontior: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
         widget:
             type: jellyseerr
-            url: http://jelly.asbblog.com
-            key: MTcwMzcxMzUwNTY1NWQwZWUyODNlLWVhYmEtNDllOS05ZDFhLTVmMDY5NTVhYjhhMg==
+            url: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
+            key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
     - Sonarr: 
-        href: https://sonarr2.asbblog.com/
+        href: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
         description: Sonnar
-        siteMonitor: https://sonarr2.asbblog.com/
+        siteMonitor: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
         icon: sonarr
         widget:
             type: sonarr
-            url:  http://sonarr2.asbblog.com
-            key: 4f3fd7fa3ca5407eb986ddadc149a9c5
+            url:  "{{HOMEPAGE_VAR_SONARR_URL_2}}"
+            key: "{{HOMEPAGE_VAR_SONARR_API_KEY_2}}"
     - prowlarr: 
         href: https://prowlarr2.asbblog.com/
         description: prowlarr
@@ -179,35 +180,35 @@
             key: 16bc79a702aa44d1987f7c62efd3d706
 - Monitoring:
     - Portainer:
-        href: https://potainer.asbblog.com
+        href: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
         description: portainer container
-        siteMonitor: https://portainer.asbblog.com/
+        siteMonitor: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
         icon: portainer
         widget:
             type: portainer
-            url: https://portainer.asbblog.com
+            url: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
             env: 2
-            key: ptr_T4o9B+spPrciNRWmFjdv5volVpHDrxehs9OfcOWzwAA=
+            key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY}}"
     - Portainer-129:
-        href: https://192.168.68.129:9443
+        href: "{{HOMEPAGE_VAR_PORTAINER_URL_3}}"
         description: portainer container
-        siteMonitor:  https://192.168.68.129:9443
+        siteMonitor:  "{{HOMEPAGE_VAR_PORTAINER_URL_3}}"
         icon: portainer
         widget:
             type: portainer
-            url:  https://192.168.68.129:9443
+            url:  "{{HOMEPAGE_VAR_PORTAINER_URL_3}}"
             env: 2
-            key: ptr_T4o9B+spPrciNRWmFjdv5volVpHDrxehs9OfcOWzwAA=
+            key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY}}"
     - Portainer-132:
-        href: https://192.168.68.132:9443
+        href: "{{HOMEPAGE_VAR_PORTAINER_URL_2}}"
         description: portainer container
-        siteMonitor: https://192.168.68.132:9443
+        siteMonitor: "{{HOMEPAGE_VAR_PORTAINER_URL_2}}"
         icon: portainer
         widget:
             type: portainer
-            url: https://192.168.68.132:9443
+            url: "{{HOMEPAGE_VAR_PORTAINER_URL_2}}"
             env: 2
-            key: ptr_T+fTOADZ0Zm6DHMBV0NWeaW7KkyU4q+Mp6IJTyfBbOI=
+            key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY}}"
     - Grafana:
         href: https://grafana.asbblog.com
         description: Grafana unraid
@@ -233,13 +234,13 @@
 - Automation:
     - Home Assistant:
         icon: home-assistant.svg
-        href: https://home.asbblog.com  
+        href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
         description: home
         widget:
             type: homeassistant
-            url: https://home.asbblog.com
+            url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
             # username: "{{HOMEPAGE_VAR_HOME_ASSISTANT_USERNAME}}"
-            key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzYjk3MmY4ODRjYmM0MTE5OGViYzAyMzIzMjM3M2Q5YSIsImlhdCI6MTczOTIxMDIwMCwiZXhwIjoyMDU0NTcwMjAwfQ.TZ_nXHXnto1tsKxQa_fOhkfkJ-KYKsqI_lSeTdFkFlE
+            key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY_2}}"
     - Casaos:           
         href: https://casaos.asbblog.com/
         description : Casaos Asbblog 
