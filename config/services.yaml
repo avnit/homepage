@@ -181,6 +181,39 @@
             type: prowlarr
             url: http://prowlarr2.asbblog.com
             key: 16bc79a702aa44d1987f7c62efd3d706
+    - Jackett: 
+        href: "{{HOMEPAGE_VAR_JACKETT_URL}}"
+        description: Jackett
+        icon: jackett
+        siteMonitor: "{{HOMEPAGE_VAR_JACKETT_URL}}"
+        widget:
+            type: jackett
+            url: "{{HOMEPAGE_VAR_JACKETT_URL}}"
+            fields: ["configured", "errored"]
+            key: "{{HOMEPAGE_VAR_JACKETT_API_KEY}}"
+    - Docker-web:
+        href: "{{HOMEPAGE_VAR_DOCKER_WEB_URL}}"
+        description: Docker on Unraid
+        icon: docker.png
+        siteMonitor: "{{HOMEPAGE_VAR_DOCKER_WEB_URL}}"
+    - ESPHome:
+        widget:
+          type: esphome
+          url: "{{GE_VAR_ESP_HOME_URL}}"
+    - Calibre-web:
+        href: "{{HOMEPAGE_VAR_CALIBRE_URL}}"
+        description: Calibre
+        siteMonitor: "{{HOMEPAGE_VAR_CALIBRE_URL}}"
+        icon: calibre.png
+        widget: 
+          type: calibreweb
+          url: "{{HOMEPAGE_VAR_CALIBRE_URL}}"
+          username: "{{HOMEPAGE_VAR_CALIBRE_ADMIN}}"
+          password: "{{HOMEPAGE_VAR_CALIBRE_PASSWORD}}"
+    - MusicAssistant:
+        href: https://music.asbblog.com
+        description: Music Assistant
+        icon: music-assistant
 - Monitoring:
     - Portainer:
         href: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
@@ -252,6 +285,14 @@
         href: https://ubuntu2.asbblog.com/
         descripition: Casaos Ubuntu 
         icon: casaos
+    - caddy: 
+        href: "{{HOMEPAGE_VAR_CADDY_URL}}"
+        description: caddy 
+        icon: caddy
+        siteMonitor: "{{HOMEPAGE_VAR_CADDY_URL}}"
+        widget:
+            type: caddy
+            url: "{{HOMEPAGE_VAR_CADDY_ADMIN_URL}}"
 - Business:
     - Vikunja:
         href: https://vj.asbblog.com/
