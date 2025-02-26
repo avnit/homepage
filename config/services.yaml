@@ -109,7 +109,8 @@
     - Pi-Hole1:
         icon: pi-hole.svg
         href: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}" # https://pi.asbblog.com/admin
-        description: quasar
+        description: orange-pi-hole
+        siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}"
         widget:
             type: pihole
             url: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}"
@@ -117,7 +118,8 @@
     - Pi-Hole2:
         icon: pi-hole.svg
         href: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
-        description: blazar
+        siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
+        description: proxmox-lxc-128
         widget:
             type: pihole
             url: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
@@ -125,7 +127,8 @@
     - Pi-Hole3:
         icon: pi-hole.svg
         href: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
-        description: electron
+        siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
+        description: tower
         widget:
             type: pihole
             url: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
