@@ -180,7 +180,7 @@
             siteMonitor: https://prowlarr2.asbblog.com/
             widget:
                 type: prowlarr
-                url: http://prowlarr2.asbblog.com
+                url: https://prowlarr2.asbblog.com
                 key: 16bc79a702aa44d1987f7c62efd3d706
       - Jackett:
             href: "{{HOMEPAGE_VAR_JACKETT_URL}}"
