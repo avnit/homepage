@@ -4,43 +4,43 @@
 - Hypervisor:
     - Proxmox:
         icon: proxmox.svg
-        href: https://pve.asbblog.com
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
         description: pve1
         widget:
             type: proxmox
-            url: https://pve.asbblog.com
-            username: api@pam!homepage
-            password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9
+            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+            password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
             node: pve
     - Proxmox:
         icon: proxmox.svg
-        href: https://pve.asbblog.com
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
         description: pve2
         widget:
             type: proxmox
-            url: https://pve.asbblog.com
-            username: api@pam!homepage
-            password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9
+            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+            password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
             node: pve-x99
     - Proxmox:
         icon: proxmox.svg
-        href: https://pve.asbblog.com
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
         description: pve3
         widget:
             type: proxmox
-            url: https://pve.asbblog.com
-            username: api@pam!homepage
-            password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9
+            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+            password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
             node: pve5
     - Proxmox:
         icon: proxmox.svg
-        href: https://pve.asbblog.com
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
         description: pve4
         widget:
             type: proxmox
-            url: https://pve.asbblog.com
-            username: api@pam!homepage
-            password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9
+            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+            password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
 #            node: storinator
 - Media:
     - Radarr:
@@ -63,46 +63,46 @@
             username: admin
             password: adminadmin
     - jellyseerr:
-        href: {{HOMEPAGE_VAR_JELLYFIN_URL}}
+        href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
         description: jellyseerr
         icon: jellyseerr
-        siteMontior: {{HOMEPAGE_VAR_JELLYFIN_URL}}
+        siteMontior: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
         widget:
             type: jellyseerr
-            url: {{HOMEPAGE_VAR_JELLYFIN_URL}}
-            key: {{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}
+            url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+            key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
     - Sonarr:
-        href: {{HOMEPAGE_VAR_SONARR_URL}}
+        href: "{{HOMEPAGE_VAR_SONARR_URL}}"
         description: Sonnar
-        siteMonitor: {{HOMEPAGE_VAR_SONARR_URL}}
+        siteMonitor: "{{HOMEPAGE_VAR_SONARR_URL}}"
         icon: sonarr
         widget:
             type: sonarr
-            url: {{HOMEPAGE_VAR_SONARR_URL}}
-            key: {{HOMEPAGE_VAR_SONARR_API_TOKEN}}
+            url: "{{HOMEPAGE_VAR_SONARR_URL}}"
+            key: "{{HOMEPAGE_VAR_SONARR_API_TOKEN}}"
     - prowlarr:
-        href: {{HOMEPAGE_VAR_PROWLARR_URL}}
+        href: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
         description: prowlarr
         icon: prowlarr
         widget:
             type: prowlarr
-            url: {{HOMEPAGE_VAR_PROWLARR_URL}}
-            key: {{HOMEPAGE_VAR_PROWLARR_API_TOKEN}}
+            url: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
+            key: "{{HOMEPAGE_VAR_PROWLARR_API_TOKEN}}"
     - Plex:
         icon: plex.svg
         href: https://plex.tv
         description: media server
         widget:
             type: plex
-            url: https://plex.tv
-            key: {{HOMEPAGE_VAR_PLEX_API_TOKEN}}
+            url: "{{HOMEPAGE_VAR_PLEX_URL}}"
+            key: "{{HOMEPAGE_VAR_PLEX_API_TOKEN}}"
     - HDHomerun:
         icon: hdhomerun.png
-        href: https://192.168.68.92
+        href: "{{HOMEPAGE_VAR_HDHOMERUN_URL}}"
         description: flex 4k
         widget:
             type: hdhomerun
-            url: https://192.168.68.92
+            url: "{{HOMEPAGE_VAR_HDHOMERUN_URL}}"
             tuner: 0 # optional - defaults to 0, used for tuner-specific fields
             fields: ["channels", "hd"] # optional - default fields shown
 - DNS:
@@ -124,12 +124,12 @@
             key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_2}}"
     - Pi-Hole3:
         icon: pi-hole.svg
-        href: http://192.168.68.133/admin
+        href: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
         description: electron
         widget:
             type: pihole
-            url: http://192.168.68.133/admin
-            key: d5cee877ac04b8c52c6a182d64781fa30bf3a00d590af20a70bc82f0037bd55e       
+            url: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
+            key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_3}}"      
 - Media2:
     - Radarr:
         href: https://radarr2.asbblog.com/
@@ -217,7 +217,7 @@
           type: grafana
           url: https://grafana.asbblog.com
           username: admin
-          password: {{HOMEPAGE_VAR_GRAFANA_API_TOKEN}}
+          password: "{{HOMEPAGE_VAR_GRAFANA_API_TOKEN}}"
 
 - Storage-Server:
     - NAS:
@@ -238,7 +238,7 @@
         widget:
             type: homeassistant
             url: https://home.asbblog.com
-            # username: {{HOMEPAGE_VAR_HOME_ASSISTANT_USERNAME}}
+            # username: "{{HOMEPAGE_VAR_HOME_ASSISTANT_USERNAME}}"
             key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzYjk3MmY4ODRjYmM0MTE5OGViYzAyMzIzMjM3M2Q5YSIsImlhdCI6MTczOTIxMDIwMCwiZXhwIjoyMDU0NTcwMjAwfQ.TZ_nXHXnto1tsKxQa_fOhkfkJ-KYKsqI_lSeTdFkFlE
     - Casaos:           
         href: https://casaos.asbblog.com/
