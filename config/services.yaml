@@ -273,13 +273,13 @@
                 username: admin
                 password: "{{HOMEPAGE_VAR_GRAFANA_API_TOKEN}}"
       - speedtest:
-            href: https://192.168.68:110:8765
+            href: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
             description: speedtest
-            siteMonitor: https://192.168.68:110:8765
+            siteMonitor: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
             icon: speedtest
             widget:
                 type: speedtest
-                url: https://192.168.68:110:8765
+                url:  "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
 
 - Storage-Server:
       - NAS:
