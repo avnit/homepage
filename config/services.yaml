@@ -195,9 +195,13 @@
             icon: docker.png
             siteMonitor: "{{HOMEPAGE_VAR_DOCKER_WEB_URL}}"
       - ESPHome:
+            href: "{{HOMEPAGE_VAR_ESP_HOME_URL}}"
+            description: ESPHome
+            icon: esphome
+            siteMonitor: "{{HOMEPAGE_VAR_ESP_HOME_URL}}"
             widget:
                 type: esphome
-                url: "{{GE_VAR_ESP_HOME_URL}}"
+                url: "{{HOMEPAGE_VAR_ESP_HOME_URL}}"
       - Calibre-web:
             href: "{{HOMEPAGE_VAR_CALIBRE_URL}}"
             description: Calibre
@@ -212,6 +216,7 @@
             href: https://music.asbblog.com
             description: Music Assistant
             icon: music-assistant
+            siteMonitor: https://music.asbblog.com
 - Monitoring:
       - Portainer:
             href: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
