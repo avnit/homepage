@@ -43,7 +43,7 @@ quicklaunch:
   hideInternetSearch: true
   hideVisitURL: true
 hideVersion: true
-logpath: /root/homepage
+#logpath: /root/homepage
 showStats: true
 providers:
   openweathermap: openweathermapapikey

@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     volumes:
       - /root/homepage/config:/app/config
-    #  - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
     env_file: /root/homepage/.env
     privileged: true
     hostname: homepage
