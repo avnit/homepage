@@ -111,7 +111,6 @@
             siteMonitor: https://dash.cloudflare.com/
             widget:
                 type: cloudflared
-                url: https://dash.cloudflare.com/
                 accountid : "{{HOMEPAGE_VAR_CLOUDFLARE_ACCOUNT_ID}}" 
                 key: "{{HOMEPAGE_VAR_CLOUDFLARE_API_KEY}}"
                 tunnelid: "{{HOMEPAGE_VAR_CLOUDFLARE_TUNNEL_ID}}"
