@@ -104,6 +104,17 @@
                 tuner: 0 # optional - defaults to 0, used for tuner-specific fields
                 fields: ["channels", "hd", "tunerCount", "channelNumber", "channelNetwork", "signalStrength", "signalQuality", "symbolQuality", "networkRate", "clientIP" ] # optional - default fields shown
 - DNS:
+      -cloudflare:
+            icon: cloudflare.svg
+            href: https://dash.cloudflare.com/
+            description: Cloudflare
+            siteMonitor: https://dash.cloudflare.com/
+            widget:
+                type: cloudflare
+                url: https://dash.cloudflare.com/
+                accountid : "{{HOMEPAGE_VAR_CLOUDFLARE_ACCOUNT_ID}}" 
+                key: "{{HOMEPAGE_VAR_CLOUDFLARE_API_KEY}}"
+                tunnelid: "{{HOMEPAGE_VAR_CLOUDFLARE_TUNNEL_ID}}"
       - Pi-Hole1:
             icon: pi-hole.svg
             href: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}/admin" # https://pi.asbblog.com/admin
@@ -212,6 +223,7 @@
             icon: calibre.png
             widget:
                 type: calibreweb
+                fields: ["books", "authors", "categories", "series"]
                 url: "{{HOMEPAGE_VAR_CALIBRE_URL}}"
                 username: "{{HOMEPAGE_VAR_CALIBRE_ADMIN}}"
                 password: "{{HOMEPAGE_VAR_CALIBRE_PASSWORD}}"
