@@ -44,24 +44,24 @@
 #            node: storinator
 - Media:
     - Radarr:
-        href: https://radarr.asbblog.com/
+        href: "{{HOMEPAGE_VAR_RADARR_URL}}"
         description: Radarr
         icon: radarr
-        siteMonitor: https://radarr.asbblog.com/
+        siteMonitor: "{{HOMEPAGE_VAR_RADARR_URL}}"
         widget:
             type: radarr
-            url: https://radarr.asbblog.com
-            key: 89786ab3384c4a748562df01b485b49c
+            url: "{{HOMEPAGE_VAR_RADARR_URL}}"
+            key: "{{HOMEPAGE_VAR_RADARR_API_KEY}}"
     - QbTorrent:
-        href: https://qb.asbblog.com/
+        href: "{{HOMEPAGE_VAR_QB_URL}}"
         description: Bit torrent
         icon: qbittorrent
-        siteMonitor: https://qb.asbblog.com/
+        siteMonitor: "{{HOMEPAGE_VAR_QB_URL}}"
         widget:
             type: qbittorrent
-            url: https://qb.asbblog.com
-            username: admin
-            password: adminadmin
+            url: "{{HOMEPAGE_VAR_QB_URL}"
+            username: "{{HOMEPAGE_VAR_QB_USER}}"
+            password: "{{HOMEPAGE_VAR_QB_API_KEY}}"
     - jellyseerr:
         href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
         description: jellyseerr
