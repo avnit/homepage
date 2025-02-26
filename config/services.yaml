@@ -234,13 +234,13 @@
 - Automation:
     - Home Assistant:
         icon: home-assistant.svg
-        href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
+        href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
         description: home
         widget:
             type: homeassistant
-            url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
+            url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
             # username: "{{HOMEPAGE_VAR_HOME_ASSISTANT_USERNAME}}"
-            key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY_2}}"
+            key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}"
     - Casaos:           
         href: https://casaos.asbblog.com/
         description : Casaos Asbblog 
