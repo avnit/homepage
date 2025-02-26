@@ -102,14 +102,13 @@
                 type: hdhomerun
                 url: "{{HOMEPAGE_VAR_HDHOMERUN_URL}}"
                 tuner: 0 # optional - defaults to 0, used for tuner-specific fields
-                fields: ["channels", "hd"] # optional - default fields shown
+                fields: ["channels", "hd", "tunerCount", "channelNumber", "channelNetwork", "signalStrength", "signalQuality", "symbolQuality", "networkRate", "clientIP" ] # optional - default fields shown
 - DNS:
       - Pi-Hole1:
             icon: pi-hole.svg
             href: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}/admin" # https://pi.asbblog.com/admin
             description: orange-pi-hole
             siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}/admin"
-            version: 6.0.3
             widget:
                 type: pihole
                 url: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}"
@@ -119,7 +118,6 @@
             href: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}/admin"
             siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}/admin"
             description: proxmox-lxc-128
-            version: 6.0.4
             widget:
                 type: pihole
                 url: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
@@ -129,7 +127,6 @@
             href: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}/admin"
             siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}/admin"
             description: tower
-            version: 6.0.4
             widget:
                 type: pihole
                 url: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
