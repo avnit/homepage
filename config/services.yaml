@@ -104,7 +104,7 @@
                 tuner: 0 # optional - defaults to 0, used for tuner-specific fields
                 fields: ["channels", "hd", "tunerCount", "channelNumber", "channelNetwork", "signalStrength", "signalQuality", "symbolQuality", "networkRate", "clientIP" ] # optional - default fields shown
 - DNS:
-      -cloudflare:
+      - cloudflare:
             icon: cloudflare.svg
             href: https://dash.cloudflare.com/
             description: Cloudflare
