@@ -109,6 +109,7 @@
             href: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}" # https://pi.asbblog.com/admin
             description: orange-pi-hole
             siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}"
+            version: 6.0.3
             widget:
                 type: pihole
                 url: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}"
@@ -118,6 +119,7 @@
             href: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
             siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
             description: proxmox-lxc-128
+            version: 6.0.4
             widget:
                 type: pihole
                 url: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
@@ -127,6 +129,7 @@
             href: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
             siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
             description: tower
+            version: 6.0.4
             widget:
                 type: pihole
                 url: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
