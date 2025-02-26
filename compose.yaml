@@ -1,49 +1,13 @@
-name: homepage
 services:
   homepage:
     container_name: homepage
-    image: abambah/homepage:latest
+    image: abambah/homepage2:latest
     ports:
-      - mode: ingress
-        target: 3000
-        published: "3000"
-        protocol: tcp
+      - 3000:3000
     restart: unless-stopped
     volumes:
-      - type: bind
-        source: /home/avnit/homepage/config
-        target: /app/config
-        bind:
-          create_host_path: true
-      - type: bind
-        source: /var/run/docker.sock
-        target: /var/run/docker.sock
-        read_only: true
-        bind:
-          create_host_path: true
-    devices: []
-    cap_add: []
-    command: []
-    env_file: .env
-    networks:
-      - default
-    privileged: false
+      - /root/homepage/config:/app/config
+    #  - /var/run/docker.sock:/var/run/docker.sock
+    env_file: /root/homepage/.env
+    privileged: true
     hostname: homepage
-    cpu_shares: 90
-    deploy:
-      resources:
-        limits:
-          memory: 15969M
-networks:
-  default:
-    name: homepage_default
-x-casaos:
-  hostname: ""
-  scheme: http
-  index: /
-  port_map: 3000
-  author: self
-  category: self
-  icon: ""
-  title:
-    custom: Homepage

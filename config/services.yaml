@@ -63,14 +63,14 @@
             username: admin
             password: adminadmin
     - jellyseerr:
-        href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+        href: {{HOMEPAGE_VAR_JELLYFIN_URL}}
         description: jellyseerr
         icon: jellyseerr
-        siteMontior: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+        siteMontior: {{HOMEPAGE_VAR_JELLYFIN_URL}}
         widget:
             type: jellyseerr
-            url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
-            key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
+            url: {{HOMEPAGE_VAR_JELLYFIN_URL}}
+            key: {{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}
     - Sonarr:
         href: {{HOMEPAGE_VAR_SONARR_URL}}
         description: Sonnar
@@ -108,7 +108,7 @@
 - DNS:
     - Pi-Hole1:
         icon: pi-hole.svg
-        href: https://pi.asbblog.com/admin
+        href: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}" # https://pi.asbblog.com/admin
         description: quasar
         widget:
             type: pihole
