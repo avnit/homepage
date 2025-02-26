@@ -198,7 +198,7 @@
             type: portainer
             url:  "{{HOMEPAGE_VAR_PORTAINER_URL_3}}"
             env: 2
-            key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY}}"
+            key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY_3}}"
     - Portainer-132:
         href: "{{HOMEPAGE_VAR_PORTAINER_URL_2}}"
         description: portainer container
@@ -208,7 +208,7 @@
             type: portainer
             url: "{{HOMEPAGE_VAR_PORTAINER_URL_2}}"
             env: 2
-            key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY}}"
+            key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY_2}}"
     - Grafana:
         href: https://grafana.asbblog.com
         description: Grafana unraid
