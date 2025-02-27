@@ -145,6 +145,21 @@
                 url: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
                 key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_3}}"
 - Media2:
+      - jellyfin:
+            href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+            description: jellyfin
+            icon: jellyfin
+            siteMonitor: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+            widget:
+                type: jellyfin
+                url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+                key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
+                enableBlock: true
+                # enableNowPlaying: true
+                # enableRecentlyAdded: true
+                enableUser: true
+                showEpisodeCount: true
+                expandOneStreamToTwoRows: true
       - Radarr:
             href: "{{HOMEPAGE_VAR_RADARR_URL}}"
             description: Radarr
