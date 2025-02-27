@@ -364,6 +364,6 @@
                 timezone: America/Los_Angeles # optional and only when timezone is not detected
                 integrations: # optional
                     - type: sonarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
-                      service_group: Media # group name where widget exists
+                      service_group: Media2 # group name where widget exists
                       service_name: Sonarr # service name for that widget
                       color: teal # optional - defaults to pre-defined color for the service (teal for sonarr)
