@@ -307,6 +307,18 @@
             description: synology
             siteMonitor: https://192-168-68-80.abambah.direct.quickconnect.to:5001/#/signin/
             icon: si-synology
+      - NAS:
+            href: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
+            description: truenas
+            siteMonitor: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
+            icon: si-truenas
+            widget:
+                type: truenas
+                url: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
+                username: "{{HOMEPAGE_VAR_TRUENAS_USER}}"
+                password: "{{HOMEPAGE_VAR_TRUENAS_PASSWORD}}"
+                enablePools: true
+                nasName: scale
 - Automation:
       - Home-Assistant:
             icon: home-assistant.svg
