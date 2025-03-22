@@ -111,7 +111,7 @@
             siteMonitor: https://dash.cloudflare.com/
             widget:
                 type: cloudflared
-                accountid : "{{HOMEPAGE_VAR_CLOUDFLARE_ACCOUNT_ID}}" 
+                accountid: "{{HOMEPAGE_VAR_CLOUDFLARE_ACCOUNT_ID}}"
                 key: "{{HOMEPAGE_VAR_CLOUDFLARE_API_KEY}}"
                 tunnelid: "{{HOMEPAGE_VAR_CLOUDFLARE_TUNNEL_ID}}"
       - Pi-Hole1:
@@ -308,7 +308,7 @@
             siteMonitor: https://192-168-68-80.abambah.direct.quickconnect.to:5001/#/signin/
             icon: si-synology
 - Automation:
-      - Home Assistant:
+      - Home-Assistant:
             icon: home-assistant.svg
             href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
             description: home
@@ -321,7 +321,7 @@
             href: https://casaos.asbblog.com/
             description: Casaos Asbblog
             icon: casaos
-      - Casaos Ubuntu:
+      - Casaos-Ubuntu:
             href: https://ubuntu2.asbblog.com/
             descripition: Casaos Ubuntu
             icon: casaos
@@ -348,7 +348,7 @@
             href: https://talenthire.ceipal.com/signin/
             description: CEIPAL for candidate and job management.
             icon: mdi-application
-      - IT Tools:
+      - IT-Tools:
             href: https://tools.asbblog.com/
             description: IT Tools for the developers
             icon: mdi-tools
