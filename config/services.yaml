@@ -9,27 +9,24 @@
                 url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
                 username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
                 password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
-                node: pve
       - Proxmox:
             icon: proxmox.svg
-            href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            href: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
             description: pve2
             widget:
                 type: proxmox
-                url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
-                username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
-                password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
-                node: pve-x99
+                url: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
+                username: "{{HOMEPAGE_VAR_PROXMOX_USER_2}}"
+                password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_2}}"
       - Proxmox:
             icon: proxmox.svg
-            href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            href: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
             description: pve3
             widget:
                 type: proxmox
-                url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
-                username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
-                password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
-                node: pve5
+                url: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
+                username: "{{HOMEPAGE_VAR_PROXMOX_USER_3}}"
+                password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_3}}"
       - Proxmox:
             icon: proxmox.svg
             href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
@@ -39,6 +36,7 @@
                 url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
                 username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
                 password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+                node: pve # optional - defaults to proxmox
 #            node: storinator
 - Media:
       - Radarr:
