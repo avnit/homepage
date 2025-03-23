@@ -1,4 +1,5 @@
 import adguard from "./adguard/widget";
+import apcups from "./apcups/widget";
 import argocd from "./argocd/widget";
 import atsumeru from "./atsumeru/widget";
 import audiobookshelf from "./audiobookshelf/widget";
@@ -40,6 +41,7 @@ import gotify from "./gotify/widget";
 import grafana from "./grafana/widget";
 import hdhomerun from "./hdhomerun/widget";
 import headscale from "./headscale/widget";
+import hoarder from "./hoarder/widget";
 import homeassistant from "./homeassistant/widget";
 import homebox from "./homebox/widget";
 import homebridge from "./homebridge/widget";
@@ -102,6 +104,7 @@ import readarr from "./readarr/widget";
 import rutorrent from "./rutorrent/widget";
 import sabnzbd from "./sabnzbd/widget";
 import scrutiny from "./scrutiny/widget";
+import slskd from "./slskd/widget";
 import sonarr from "./sonarr/widget";
 import speedtest from "./speedtest/widget";
 import spoolman from "./spoolman/widget";
@@ -134,6 +137,7 @@ import zabbix from "./zabbix/widget";
 
 const widgets = {
   adguard,
+  apcups,
   argocd,
   atsumeru,
   audiobookshelf,
@@ -174,6 +178,7 @@ const widgets = {
   grafana,
   hdhomerun,
   headscale,
+  hoarder,
   homeassistant,
   homebox,
   homebridge,
@@ -240,6 +245,7 @@ const widgets = {
   rutorrent,
   sabnzbd,
   scrutiny,
+  slskd,
   sonarr,
   speedtest,
   spoolman,
