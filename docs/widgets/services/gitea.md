@@ -9,6 +9,7 @@ API token requires `notifications`, `repository` and `issue` permissions. See th
 
 Allowed fields: `["repositories", "notifications", "issues", "pulls"]`.
 
+
 ```yaml
 widget:
   type: gitea
