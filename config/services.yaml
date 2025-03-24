@@ -9,7 +9,7 @@
                 url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
                 username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
                 password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
-      - Proxmox:
+      - Proxmox2:
             icon: proxmox.svg
             href: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
             description: pve2
@@ -18,7 +18,7 @@
                 url: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
                 username: "{{HOMEPAGE_VAR_PROXMOX_USER_2}}"
                 password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_2}}"
-      - Proxmox:
+      - Proxmox3:
             icon: proxmox.svg
             href: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
             description: pve3
@@ -27,7 +27,7 @@
                 url: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
                 username: "{{HOMEPAGE_VAR_PROXMOX_USER_3}}"
                 password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_3}}"
-      - Proxmox:
+      - Proxmox4:
             icon: proxmox.svg
             href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
             description: pve4
