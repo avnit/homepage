@@ -12,21 +12,23 @@
       - Proxmox2:
             icon: proxmox.svg
             href: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
-            description: pve2
+            description: pve-dell
             widget:
                 type: proxmox
                 url: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
                 username: "{{HOMEPAGE_VAR_PROXMOX_USER_2}}"
                 password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_2}}"
+                node: pve-dell2
       - Proxmox3:
             icon: proxmox.svg
             href: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
-            description: pve3
+            description: pve-truenas
             widget:
                 type: proxmox
                 url: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
                 username: "{{HOMEPAGE_VAR_PROXMOX_USER_3}}"
                 password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_3}}"
+                node: pve2
       - Proxmox4:
             icon: proxmox.svg
             href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
