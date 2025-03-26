@@ -54,20 +54,53 @@
 
 
 
+# avnit.github.io - My Personal Homepage
 
-# Features
+This repository hosts the source code for my personal homepage, homepage2.asbblog.com. It's designed to showcase my projects, skills, and personal information in a clean and accessible format.
 
-With features like quick search, bookmarks, weather support, a wide range of integrations and widgets, an elegant and modern design, and a focus on performance, Homepage is your ideal start to the day and a handy companion throughout it.
+The code repo has been forked from homepage.dev and additional functionality is added to make it personal 
 
-- **Fast** - The site is statically generated at build time for instant load times.
-- **Secure** - All API requests to backend services are proxied, keeping your API keys hidden. Constantly reviewed for security by the community.
-- **For Everyone** - Images built for AMD64, ARM64.
-- **Full i18n** - Support for over 40 languages.
-- **Service & Web Bookmarks** - Add custom links to the homepage.
-- **Docker Integration** - Container status and stats. Automatic service discovery via labels.
-- **Service Integration** - Over 100 service integrations, including popular starr and self-hosted apps.
-- **Information & Utility Widgets** - Weather, time, date, search, and more.
-- **And much more...**
+## Technologies Used
+
+* **HTML**: For structuring the content.
+* **CSS**: For styling and layout.
+* **JavaScript**: For interactive elements (if any are implemented).
+* **GitHub Pages**: For hosting the website.
+
+## Structure
+
+The repository is structured as follows:
+
+* `index.html`: The main HTML file for the homepage.
+* `style.css`: The stylesheet for the homepage's design.
+* `script.js`: JavaScript files if there are any interactive elements.
+* `assets/`: A directory for images and other static assets.
+* `README.md`: This file.
+
+## Customization
+
+If you'd like to use this repository as a template for your own homepage, you can follow these steps:
+
+1.  **Fork the Repository:** Click the "Fork" button on the top right of the repository page.
+2.  **Clone the Fork:** Clone the forked repository to your local machine:
+
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/homepage.git](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/homepage.git)
+    ```
+
+3.  **Customize the Content:**
+    * Edit `index.html` to replace my personal information with your own.
+    * Modify `style.css` to change the appearance of the website.
+    * Add your own projects, skills, and other relevant information.
+    * Add or replace images in the `assets/` directory.
+
+4.  **Deploy to GitHub Pages:**
+    * Go to your repository settings on GitHub.
+    * Scroll down to the "GitHub Pages" section.
+    * Select the `main` branch (or `master` if that's what you have) as the source.
+    * GitHub Pages will automatically deploy your website.
+    * Your website will be available at `YOUR_USERNAME.github.io/homepage` (or `YOUR_USERNAME.github.io` if you renamed the repository to `YOUR_USERNAME.github.io`).
+
 
 ## Docker Integration
 
@@ -189,18 +222,3 @@ Then run the development server:
 mkdocs serve # or build, to build the static site
 ```
 
-# Support & Suggestions
-
-If you have any questions, suggestions, or general issues, please start a discussion on the [Discussions](https://github.com/gethomepage/homepage/discussions) page.
-
-## Troubleshooting
-
-In addition to the docs, the [troubleshooting guide](https://gethomepage.dev/troubleshooting/) can help reveal many basic config or network issues. If you're having a problem, it's a good place to start.
-
-## Contributing & Contributors
-
-Contributions are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
-
-Thanks to the over 200 contributors who have helped make this project what it is today!
-
-Especially huge thanks to [@shamoon](https://github.com/shamoon), who has been the backbone of this community from the very start.
