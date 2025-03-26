@@ -278,14 +278,14 @@
                 env: 2
                 key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY_2}}"
       - Grafana:
-            href: https://grafana.asbblog.com
+            href: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
             description: Grafana unraid
-            siteMonitor: https://grafana.asbblog.com
+            siteMonitor: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
             icon: grafana
             widget:
                 type: grafana
-                url: https://grafana.asbblog.com
-                username: admin
+                url: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
+                username: abambah
                 password: "{{HOMEPAGE_VAR_GRAFANA_API_TOKEN}}"
       - speedtest:
             href: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
