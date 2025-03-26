@@ -285,7 +285,7 @@
             widget:
                 type: grafana
                 url: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
-                username: abambah
+                username: admin
                 password: "{{HOMEPAGE_VAR_GRAFANA_API_TOKEN}}"
       - speedtest:
             href: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
