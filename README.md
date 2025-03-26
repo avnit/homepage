@@ -54,7 +54,7 @@
 
 
 
-# avnit.github.io - My Personal Homepage
+# homepage2.asbblog.com - My Personal Homepage
 
 This repository hosts the source code for my personal homepage, homepage2.asbblog.com. It's designed to showcase my projects, skills, and personal information in a clean and accessible format.
 
