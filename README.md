@@ -89,20 +89,18 @@ If you'd like to use this repository as a template for your own homepage, you ca
     ```
 
 3.  **Customize the Content:**
-    * Edit `index.html` to replace my personal information with your own.
-    * Modify `style.css` to change the appearance of the website.
-    * Add your own projects, skills, and other relevant information.
-    * Add or replace images in the `assets/` directory.
+    * Edit `config\*` directory to make the files personal.
+    * edit run.sh and compose.yaml to point to the correct home directory 
 
-4.  **Deploy to GitHub Pages:**
-    * Go to your repository settings on GitHub.
-    * Scroll down to the "GitHub Pages" section.
-    * Select the `main` branch (or `master` if that's what you have) as the source.
-    * GitHub Pages will automatically deploy your website.
-    * Your website will be available at `YOUR_USERNAME.github.io/homepage` (or `YOUR_USERNAME.github.io` if you renamed the repository to `YOUR_USERNAME.github.io`).
+4.  **Deploy to Linux server **
+    * Go to your promox and opne the console of the VM where you have debian linux installed.
+    * clone the repo and do docker login 
+    * execute run.sh .
+    * Make sure that docker hub has the homepage app and you are using right tags in compose.yaml
+    * The service is exposed on port 3000 
+    
 
-
-## Docker Integration
+## Docker Integration ( Added to run.sh ) 
 
 Homepage has built-in support for Docker, and can automatically discover and add services to the homepage based on labels. See the [Docker Service Discovery](https://gethomepage.dev/configs/docker/#automatic-service-discovery) page for more information.
 
