@@ -77,7 +77,7 @@
             widget:
                 type: sonarr
                 url: "{{HOMEPAGE_VAR_SONARR_URL}}"
-                key: "{{HOMEPAGE_VAR_SONARR_API_TOKEN}}"
+                key: "{{HOMEPAGE_VAR_SONARR_API_KEY}}"
       - prowlarr:
             href: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
             description: prowlarr
@@ -134,32 +134,32 @@
             icon: pi-hole.svg
             href: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}/admin" # https://pi.asbblog.com/admin
             description: orange-pi-hole
-            version: 6
             siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}/admin"
             widget:
                 type: pihole
                 url: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}"
                 key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_1}}"
+                version: 6
       - Pi-Hole2:
             icon: pi-hole.svg
             href: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}/admin"
             siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}/admin"
             description: proxmox-lxc-128
-            version: 6
             widget:
                 type: pihole
                 url: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
                 key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_2}}"
+                version: 6
       - Pi-Hole3:
             icon: pi-hole.svg
             href: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}/admin"
             siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}/admin"
             description: tower
-            version: 6
             widget:
                 type: pihole
                 url: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
                 key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_3}}"
+                version: 6
 - Media2:
       - jellyfin:
             href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
