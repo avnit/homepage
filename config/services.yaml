@@ -86,14 +86,14 @@
                 type: prowlarr
                 url: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
                 key: "{{HOMEPAGE_VAR_PROWLARR_API_TOKEN}}"
-      - readerr:
-            href: "{{HOMEPAGE_VAR_READERR_URL}}"
-            description: readerr
-            icon: readerr
+      - readarr:
+            href: "{{HOMEPAGE_VAR_READARR_URL}}"
+            description: readarr
+            icon: readarr
             widget:
-                type: readerr
-                url: "{{HOMEPAGE_VAR_READERR_URL}}"
-                key: "{{HOMEPAGE_VAR_READERR_API_TOKEN}}"
+                type: readarr
+                url: "{{HOMEPAGE_VAR_READARR_URL}}"
+                key: "{{HOMEPAGE_VAR_READARR_API_TOKEN}}"
       - Plex:
             icon: plex.svg
             href: https://plex.tv
