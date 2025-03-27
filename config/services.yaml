@@ -94,6 +94,14 @@
                 type: readarr
                 url: "{{HOMEPAGE_VAR_READARR_URL}}"
                 key: "{{HOMEPAGE_VAR_READARR_API_TOKEN}}"
+      - lidarr:
+            href: "{{HOMEPAGE_VAR_LIDARR_URL}}"
+            description: lidarr
+            icon: lidarr
+            widget:
+                type: lidarr
+                url: "{{HOMEPAGE_VAR_LIDARR_URL}}"
+                key: "{{HOMEPAGE_VAR_LIDARR_API_TOKEN}}"
       - Plex:
             icon: plex.svg
             href: https://plex.tv
@@ -215,6 +223,15 @@
                 type: prowlarr
                 url: "{{HOMEPAGE_VAR_PROWLARR_URL_2}}"
                 key: "{{HOMEPAGE_VAR_PROWLARR_API_TOKEN_2}}"
+      - lidarr:
+            href: "{{HOMEPAGE_VAR_LIDARR_URL_2}}"
+            description: lidarr
+            icon: lidarr
+            siteMonitor: "{{HOMEPAGE_VAR_LIDARR_URL_2}}"
+            widget:
+                type: lidarr
+                url: "{{HOMEPAGE_VAR_LIDARR_URL_2}}"
+                key: "{{HOMEPAGE_VAR_LIDARR_API_TOKEN_2}}"
       - Jackett:
             href: "{{HOMEPAGE_VAR_JACKETT_URL}}"
             description: Jackett
