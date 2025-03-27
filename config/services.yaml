@@ -86,6 +86,14 @@
                 type: prowlarr
                 url: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
                 key: "{{HOMEPAGE_VAR_PROWLARR_API_TOKEN}}"
+      - readerr:
+            href: "{{HOMEPAGE_VAR_READERR_URL}}"
+            description: readerr
+            icon: readerr
+            widget:
+                type: readerr
+                url: "{{HOMEPAGE_VAR_READERR_URL}}"
+                key: "{{HOMEPAGE_VAR_READERR_API_TOKEN}}"
       - Plex:
             icon: plex.svg
             href: https://plex.tv
@@ -161,24 +169,24 @@
                 showEpisodeCount: true
                 expandOneStreamToTwoRows: true
       - Radarr:
-            href: "{{HOMEPAGE_VAR_RADARR_URL}}"
+            href: "{{HOMEPAGE_VAR_RADARR_URL_2}}"
             description: Radarr
             icon: radarr
-            siteMonitor: "{{HOMEPAGE_VAR_RADARR_URL}}"
+            siteMonitor: "{{HOMEPAGE_VAR_RADARR_URL_2}}"
             widget:
                 type: radarr
-                url: "{{HOMEPAGE_VAR_RADARR_URL}}"
-                key: "{{HOMEPAGE_VAR_RADARR_API_KEY}}"
+                url: "{{HOMEPAGE_VAR_RADARR_URL_2}}"
+                key: "{{HOMEPAGE_VAR_RADARR_API_KEY_2}}"
       - QbTorrent:
-            href: "{{HOMEPAGE_VAR_QB_URL}}"
-            description: Bit torrent
+            href: "{{HOMEPAGE_VAR_QB_URL_2}}"
+            description: Bit torrent on Orange Pi
             icon: qbittorrent
-            siteMonitor: "{{HOMEPAGE_VAR_QB_URL}}"
+            siteMonitor: "{{HOMEPAGE_VAR_QB_URL_2}}"
             widget:
                 type: qbittorrent
-                url: "{{HOMEPAGE_VAR_QB_URL}}"
-                username: "{{HOMEPAGE_VAR_QB_USER}}"
-                password: "{{HOMEPAGE_VAR_QB_API_KEY}}"
+                url: "{{HOMEPAGE_VAR_QB_URL_2}}"
+                username: "{{HOMEPAGE_VAR_QB_USER_2}}"
+                password: "{{HOMEPAGE_VAR_QB_API_KEY_2}}"
 
       - jellyseerr:
             href: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
@@ -199,14 +207,14 @@
                 url: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
                 key: "{{HOMEPAGE_VAR_SONARR_API_KEY_2}}"
       - prowlarr:
-            href: https://prowlarr2.asbblog.com/
+            href: "{{HOMEPAGE_VAR_PROWLARR_URL_2}}"
             description: prowlarr
             icon: prowlarr
-            siteMonitor: https://prowlarr2.asbblog.com/
+            siteMonitor: "{{HOMEPAGE_VAR_PROWLARR_URL_2}}"
             widget:
                 type: prowlarr
-                url: https://prowlarr2.asbblog.com
-                key: 16bc79a702aa44d1987f7c62efd3d706
+                url: "{{HOMEPAGE_VAR_PROWLARR_URL_2}}"
+                key: "{{HOMEPAGE_VAR_PROWLARR_API_TOKEN_2}}"
       - Jackett:
             href: "{{HOMEPAGE_VAR_JACKETT_URL}}"
             description: Jackett
