@@ -399,23 +399,24 @@
                 timezone: America/Los_Angeles # optional and only when timezone is not detected
                 integrations: # optional
                   - type: sonarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
-                    service_group: Media2 # group name where widget exists
+                    service_group: Media # group name where widget exists
                     service_name: Sonarr # service name for that widget
                     color: teal # optional - defaults to pre-defined color for the service (teal for sonarr)
                   - type: radarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
-                    service_group: Media2 # group name where widget exists
+                    service_group: Media # group name where widget exists
                     service_name: Radarr # service name for that widget
                     color: red # optional - defaults to pre-defined color for the service (red for radarr)
                   - type: lidarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
                     service_group: Media2 # group name where widget exists
-                    service_name: Lidarr # service name for that widget
+                    service_name: lidarr # service name for that widget
                     color: blue # optional - defaults to pre-defined color for the service (blue for lidarr)
                   - type: readarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
-                    service_group: Media2 # group name where widget exists
-                    service_name: Readarr # service name for that widget
+                    service_group: Media # group name where widget exists
+                    service_name: readarr # service name for that widget
                     color: purple # optional - defaults to pre-defined color for the service (purple for readarr)
                   - type: ical # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
-                    service_group: Other # group name where widget exists
-                    service_name: Calander # service name for that widget
+                    name: Coursera # name of the service - used for display purposes
                     color: zinc # optional - defaults to pre-defined color for the service (orange for ical)
                     url: http://www.coursera.org/api/learnerCalendars.v1/46974119/uRHz9JWGSM2swl2Uux8vHg.ics # ical url to fetch events from
+                    params:
+                        showName: true
