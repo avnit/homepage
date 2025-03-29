@@ -48,3 +48,4 @@ showStats: true
 providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
+  finnhub: cvjjgu9r01qlscpcir7gcvjjgu9r01qlscpcir80
