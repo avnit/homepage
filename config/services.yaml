@@ -346,7 +346,8 @@
       - Home-Assistant:
             icon: home-assistant.svg
             href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
-            description: home
+            siteMonitor: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+            description: home assistant
             widget:
                 type: homeassistant
                 url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"

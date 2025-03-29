@@ -30,3 +30,17 @@
     longitude: -121.88
     cache: 5
 
+- stocks:
+    label: Stocks
+    provider: finnhub
+    watchlist:
+      - AAPL
+      - MSFT
+      - AMZN
+      - GOOGL
+      - META
+      - TSLA
+      - NVDA
+      - BRK.B      
+    showUSMarketStatus: true
+
