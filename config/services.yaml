@@ -322,26 +322,25 @@
                 url:  "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
 
 - Storage-Server:
-      - NAS:
+      - Unraid:
             href: https://unraid.asbblog.com/login/
             description: Unraid
             siteMonitor: https://unraid.asbblog.com/login
             icon: unraid
-      - NAS:
+      - Synology:
             href: https://192-168-68-80.abambah.direct.quickconnect.to:5001/#/signin/
             description: synology
             siteMonitor: https://192-168-68-80.abambah.direct.quickconnect.to:5001/#/signin/
             icon: si-synology
-      - NAS:
+      - TrueNas:
             href: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
-            description: truenas
+            description: scale
             siteMonitor: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
-            icon: si-truenas
+            icon: truenas.svg
             widget:
                 type: truenas
                 url: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
                 key: "{{HOMEPAGE_VAR_TRUENAS_PASSWORD}}"
-                nasType: scale
 - Automation:
       - Home-Assistant:
             icon: home-assistant.svg
