@@ -154,7 +154,7 @@
             icon: pi-hole.svg
             href: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}/admin"
             siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}/admin"
-            description: tower
+            description: pve-3-pihole-unbound
             widget:
                 type: pihole
                 url: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
