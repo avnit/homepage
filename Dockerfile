@@ -1,3 +1,4 @@
+
 # Install dependencies only when needed
 FROM docker.io/node:22-alpine AS deps
 
@@ -16,13 +17,18 @@ RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store pnpm i
 
 # Rebuild the source code only when needed
 FROM docker.io/node:22-alpine AS builder
+
 WORKDIR /app
 
+# Setup
 RUN mkdir config
+COPY . .
 
+ARG CI
 ARG BUILDTIME
 ARG VERSION
 ARG REVISION
+
 
 COPY  --from=deps /app/node_modules ./node_modules/
 COPY . .
@@ -36,32 +42,28 @@ RUN npm install -g pnpm \
 FROM docker.io/node:22-alpine AS runner
 LABEL org.opencontainers.image.title "Homepage"
 LABEL org.opencontainers.image.description "A self-hosted services landing page, with docker and service integrations."
+
 LABEL org.opencontainers.image.url="https://github.com/gethomepage/homepage"
 LABEL org.opencontainers.image.documentation='https://github.com/gethomepage/homepage/wiki'
 LABEL org.opencontainers.image.source='https://github.com/gethomepage/homepage'
 LABEL org.opencontainers.image.licenses='Apache-2.0'
 
-ENV NODE_ENV=production
-
+# Setup
 WORKDIR /app
 
-# Copy files from context (this allows the files to copy before the builder stage is done).
-COPY  --chown=1000:1000 package.json next.config.js ./
-COPY  --chown=1000:1000 /public ./public/
+# Copy only necessary files from the build stage
+COPY --link --from=builder --chown=1000:1000 /app/.next/standalone/ ./
+COPY --link --from=builder --chown=1000:1000 /app/.next/static/ ./.next/static
 
-# Copy files from builder
-COPY  --from=builder --chown=1000:1000 /app/.next/standalone ./
-COPY  --from=builder --chown=1000:1000 /app/.next/static/ ./.next/static/
-COPY  --chmod=755 docker-entrypoint.sh /usr/local/bin/
+RUN apk add --no-cache su-exec iputils-ping
 
-RUN apk add --no-cache su-exec
-
+ENV NODE_ENV=production
 ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
 EXPOSE $PORT
 
 HEALTHCHECK --interval=10s --timeout=3s --start-period=20s \
-  CMD wget --no-verbose --tries=1 --spider --no-check-certificate http://127.0.0.1:$PORT/api/healthcheck || exit 1
+  CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:$PORT/api/healthcheck || exit 1
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["node", "server.js"]
