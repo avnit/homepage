@@ -1,0 +1,450 @@
+apiVersion: v1
+data:
+  bookmarks.yaml: "---\n# For configuration options and examples, please see:\n# https://gethomepage.dev/configs/bookmarks\n\n- Developer:\n  - IT Tools:\n    - abbr: IT\n      href: https://tools.asbblog.com/\n  - Github - avnit: \n    - abbr: GT\n      href: https://https://github.com/avnit/\n- Social:\n  - Reddit:\n    - abbr: RE\n      href: https://reddit.com/\n- Entertainment:\n  - Youtube:\n    - icon: si-youtube-#FF0000\n      href: https://youtube.com/\n  - Netflix:\n    - icon: si-netflix-#E50914\n      href: https://netflix.com/\n  - Prime Video:\n    - icon: si-amazon-#FF9900\n      href: https://primevideo.com/\n  - Disney+:\n    - icon: si-disneyplus-#000000\n      abbr: DP\n      href: https://disneyplus.com/\n  - Disney+ Hotstar:\n    - abbr: DH\n      href: https://disneyplus.com/\n  - Hulu:\n    - icon: si-hulu-#000000\n      href: https://hulu.com/\n  - HBO Max:\n    - icon: si-hbo-#000000\n      href: https://hbomax.com/\n  - Apple TV+:\n    - abbr: ATV\n      icon: si-apple-#000000\n      href: https://tv.apple.com/\n  - Peacock:\n    - icon: si-peacocktv-#000000\n      href: https://peacocktv.com/\n  - Paramount+:\n    - icon: si-paramount-#000000\n      href: https://paramountplus.com/\n  - Discovery+:\n    - abbr: D+\n      icon: si-discoveryplus-#000000\n      href: https://discoveryplus.com/\n  - Starz:\n    - abbr: SZ\n      icon: si-starz-#000000\n      href: https://starz.com/\n  - Showtime:\n    - abbr: ST\n      icon: si-showtime-#000000\n      href: https://showtime.com/\n  - AMC+:\n    - abbr: AC\n      icon: si-amc-#000000\n      href: https://amcplus.com/\n  - Epix:\n    - abbr: EP\n      icon: si-epix-#000000\n      href: https://epix.com/\n  - Crunchyroll:\n    - abbr: CR\n      icon: si-crunchyroll-#000000\n      href: https://crunchyroll.com/\n  - Funimation:\n    - abbr: FN\n      href: https://funimation.com/\n  - VRV:\n    - abbr: VR\n      icon: si-vrv-#000000\n      href: https://vrv.co/\n  - Shudder:\n    - abbr: SH\n      icon: si-shudder-#000000\n      href: https://shudder.com/\n- Repositories:\n  - Homelab:\n    - icon: si-github-#FFFFFF\n      href: https://github.com/avnit/homepage\n  - Boilerplates:\n    - icon: si-github-#FFFFFF\n      href: https://github.com/christianlempa/boilerplates\n  - Cheat-Sheets:\n    - icon: si-github-#FFFFFF\n      href: https://github.com/christianlempa/cheat-sheets\n  - Scripts:\n    - icon: si-github-#FFFFFF\n      href: https://github.com/christianlempa/scripts\n  - Python4Eeryone:\n    - icon: si-github-#FFFFFF\n      href: https://github.com/avnit/Python-for-everyone\n  - Bigbear-Video-Assets:\n    - icon: si-github-#FFFFFF\n      href: https://github.com/bigbeartechworld/big-bear-video-assets\n\n- Cloud Services:\n  - Sophos Cloud:\n    - icon: /icons/cld.png\n      href: https://cloud.sophos.com\n  - Cloudflare:\n    - icon: cloudflare.png\n      href: https://dash.cloudflare.com\n  - Teleport:\n    - icon: teleport.png\n      href: https://clcreative.teleport.sh\n  - Twingate:\n    - icon: twingate.png\n      href: https://clcreative.twingate.com\n  - Netbird:\n    - icon: https://netbird.io/_next/static/media/netbird-icon.00225e97.svg\n      href: https://app.netbird.io\n  - Tailscale:\n    - icon: tailscale.png\n      href: https://login.tailscale.com\n\n- Cloud Platforms:\n  - AWS:\n    - icon: aws.png\n      href: https://aws.amazon.com\n  - Google Cloud:\n    - icon: google.png\n      href: https://console.cloud.google.com\n  - Microsoft Azure:\n    - icon: azure.png\n      href: https://portal.azure.com\n  - Digital Ocean:\n    - icon: si-digitalocean-#0080FF\n      href: https://cloud.digitalocean.com\n  - CIVO:\n    - icon: si-civo-#239DFF\n      href: https://www.civo.com\n"
+  custom.css: ""
+  custom.js: ""
+  docker.yaml: |
+    ---
+    # For configuration options and examples, please see:
+    # https://gethomepage.dev/configs/docker/
+
+    # my-docker:
+    #   host: 127.0.0.1
+    #   port: 2375
+
+    my-docker:
+      socket: /var/run/docker.sock
+  kubernetes.yaml: |
+    ---
+    # sample kubernetes config
+  services.yaml: |
+    ---
+    - Hypervisor:
+          - Proxmox:
+                icon: proxmox.svg
+                href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+                description: pve1
+                widget:
+                    type: proxmox
+                    url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+                    username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+                    password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+          - Proxmox2:
+                icon: proxmox.svg
+                href: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
+                description: pve-dell
+                widget:
+                    type: proxmox
+                    url: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
+                    username: "{{HOMEPAGE_VAR_PROXMOX_USER_2}}"
+                    password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_2}}"
+                    node: pve-dell2
+          - Proxmox3:
+                icon: proxmox.svg
+                href: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
+                description: pve-truenas
+                widget:
+                    type: proxmox
+                    url: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
+                    username: "{{HOMEPAGE_VAR_PROXMOX_USER_3}}"
+                    password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_3}}"
+                    node: pve2
+          - Proxmox4:
+                icon: proxmox.svg
+                href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+                description: pve4
+                widget:
+                    type: proxmox
+                    url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+                    username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+                    password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+                    node: pve # optional - defaults to proxmox
+    #            node: storinator
+    - Media:
+          - Radarr:
+                href: "{{HOMEPAGE_VAR_RADARR_URL}}"
+                description: Radarr
+                icon: radarr
+                siteMonitor: "{{HOMEPAGE_VAR_RADARR_URL}}"
+                widget:
+                    type: radarr
+                    url: "{{HOMEPAGE_VAR_RADARR_URL}}"
+                    key: "{{HOMEPAGE_VAR_RADARR_API_KEY}}"
+          - QbTorrent:
+                href: "{{HOMEPAGE_VAR_QB_URL}}"
+                description: Bit torrent
+                icon: qbittorrent
+                siteMonitor: "{{HOMEPAGE_VAR_QB_URL}}"
+                widget:
+                    type: qbittorrent
+                    url: "{{HOMEPAGE_VAR_QB_URL}"
+                    username: "{{HOMEPAGE_VAR_QB_USER}}"
+                    password: "{{HOMEPAGE_VAR_QB_API_KEY}}"
+          - jellyseerr:
+                href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+                description: jellyseerr
+                icon: jellyseerr
+                siteMontior: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+                widget:
+                    type: jellyseerr
+                    url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+                    key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
+          - Sonarr:
+                href: "{{HOMEPAGE_VAR_SONARR_URL}}"
+                description: Sonnar
+                siteMonitor: "{{HOMEPAGE_VAR_SONARR_URL}}"
+                icon: sonarr
+                widget:
+                    type: sonarr
+                    url: "{{HOMEPAGE_VAR_SONARR_URL}}"
+                    key: "{{HOMEPAGE_VAR_SONARR_API_KEY}}"
+          - prowlarr:
+                href: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
+                description: prowlarr
+                icon: prowlarr
+                widget:
+                    type: prowlarr
+                    url: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
+                    key: "{{HOMEPAGE_VAR_PROWLARR_API_TOKEN}}"
+          - readarr:
+                href: "{{HOMEPAGE_VAR_READARR_URL}}"
+                description: readarr
+                icon: readarr
+                widget:
+                    type: readarr
+                    url: "{{HOMEPAGE_VAR_READARR_URL}}"
+                    key: "{{HOMEPAGE_VAR_READARR_API_TOKEN}}"
+          - lidarr:
+                href: "{{HOMEPAGE_VAR_LIDARR_URL}}"
+                description: lidarr
+                icon: lidarr
+                widget:
+                    type: lidarr
+                    url: "{{HOMEPAGE_VAR_LIDARR_URL}}"
+                    key: "{{HOMEPAGE_VAR_LIDARR_API_TOKEN}}"
+          - Plex:
+                icon: plex.svg
+                href: https://plex.tv
+                description: media server
+                widget:
+                    type: plex
+                    url: "{{HOMEPAGE_VAR_PLEX_URL}}"
+                    key: "{{HOMEPAGE_VAR_PLEX_API_TOKEN}}"
+          - HDHomerun:
+                icon: hdhomerun.png
+                href: "{{HOMEPAGE_VAR_HDHOMERUN_URL}}"
+                description: flex 4k
+                widget:
+                    type: hdhomerun
+                    url: "{{HOMEPAGE_VAR_HDHOMERUN_URL}}"
+                    tuner: 0 # optional - defaults to 0, used for tuner-specific fields
+                    fields: ["channels", "hd", "tunerCount", "channelNumber", "channelNetwork", "signalStrength", "signalQuality", "symbolQuality", "networkRate", "clientIP" ] # optional - default fields shown
+    - DNS:
+          - cloudflare:
+                icon: cloudflare.svg
+                href: https://dash.cloudflare.com/
+                description: Cloudflare
+                siteMonitor: https://dash.cloudflare.com/
+                widget:
+                    type: cloudflared
+                    accountid: "{{HOMEPAGE_VAR_CLOUDFLARE_ACCOUNT_ID}}"
+                    key: "{{HOMEPAGE_VAR_CLOUDFLARE_API_KEY}}"
+                    tunnelid: "{{HOMEPAGE_VAR_CLOUDFLARE_TUNNEL_ID}}"
+          - Pi-Hole1:
+                icon: pi-hole.svg
+                href: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}/admin" # https://pi.asbblog.com/admin
+                description: orange-pi-hole
+                siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}/admin"
+                widget:
+                    type: pihole
+                    url: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}"
+                    key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_1}}"
+                    version: 6
+          - Pi-Hole2:
+                icon: pi-hole.svg
+                href: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}/admin"
+                siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}/admin"
+                description: proxmox-lxc-128
+                widget:
+                    type: pihole
+                    url: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
+                    key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_2}}"
+                    version: 6
+          - Pi-Hole3:
+                icon: pi-hole.svg
+                href: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}/admin"
+                siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}/admin"
+                description: pve-3-pihole-unbound
+                widget:
+                    type: pihole
+                    url: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
+                    key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_3}}"
+                    version: 6
+    - Media2:
+          - jellyfin:
+                href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+                description: jellyfin
+                icon: jellyfin
+                siteMonitor: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+                widget:
+                    type: jellyfin
+                    url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+                    key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
+                    enableBlock: true
+                    # enableNowPlaying: true
+                    # enableRecentlyAdded: true
+                    enableUser: true
+                    showEpisodeCount: true
+                    expandOneStreamToTwoRows: true
+          - Radarr:
+                href: "{{HOMEPAGE_VAR_RADARR_URL_2}}"
+                description: Radarr
+                icon: radarr
+                siteMonitor: "{{HOMEPAGE_VAR_RADARR_URL_2}}"
+                widget:
+                    type: radarr
+                    url: "{{HOMEPAGE_VAR_RADARR_URL_2}}"
+                    key: "{{HOMEPAGE_VAR_RADARR_API_KEY_2}}"
+          - QbTorrent:
+                href: "{{HOMEPAGE_VAR_QB_URL_2}}"
+                description: Bit torrent on Orange Pi
+                icon: qbittorrent
+                siteMonitor: "{{HOMEPAGE_VAR_QB_URL_2}}"
+                widget:
+                    type: qbittorrent
+                    url: "{{HOMEPAGE_VAR_QB_URL_2}}"
+                    username: "{{HOMEPAGE_VAR_QB_USER_2}}"
+                    password: "{{HOMEPAGE_VAR_QB_API_KEY_2}}"
+
+          - jellyseerr:
+                href: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
+                description: jellyseerr
+                icon: jellyseerr
+                siteMontior: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
+                widget:
+                    type: jellyseerr
+                    url: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
+                    key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
+          - Sonarr:
+                href: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
+                description: Sonnar
+                siteMonitor: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
+                icon: sonarr
+                widget:
+                    type: sonarr
+                    url: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
+                    key: "{{HOMEPAGE_VAR_SONARR_API_KEY_2}}"
+          - prowlarr:
+                href: "{{HOMEPAGE_VAR_PROWLARR_URL_2}}"
+                description: prowlarr
+                icon: prowlarr
+                siteMonitor: "{{HOMEPAGE_VAR_PROWLARR_URL_2}}"
+                widget:
+                    type: prowlarr
+                    url: "{{HOMEPAGE_VAR_PROWLARR_URL_2}}"
+                    key: "{{HOMEPAGE_VAR_PROWLARR_API_TOKEN_2}}"
+          - lidarr:
+                href: "{{HOMEPAGE_VAR_LIDARR_URL_2}}"
+                description: lidarr
+                icon: lidarr
+                siteMonitor: "{{HOMEPAGE_VAR_LIDARR_URL_2}}"
+                widget:
+                    type: lidarr
+                    url: "{{HOMEPAGE_VAR_LIDARR_URL_2}}"
+                    key: "{{HOMEPAGE_VAR_LIDARR_API_TOKEN_2}}"
+          - Jackett:
+                href: "{{HOMEPAGE_VAR_JACKETT_URL}}"
+                description: Jackett
+                icon: jackett
+                siteMonitor: "{{HOMEPAGE_VAR_JACKETT_URL}}"
+                widget:
+                    type: jackett
+                    url: "{{HOMEPAGE_VAR_JACKETT_URL}}"
+                    fields: ["configured", "errored"]
+                    key: "{{HOMEPAGE_VAR_JACKETT_API_KEY}}"
+          - Docker-web:
+                href: "{{HOMEPAGE_VAR_DOCKER_WEB_URL}}"
+                description: Docker on Unraid
+                icon: docker.png
+                siteMonitor: "{{HOMEPAGE_VAR_DOCKER_WEB_URL}}"
+          - ESPHome:
+                href: "{{HOMEPAGE_VAR_ESP_HOME_URL}}"
+                description: ESPHome
+                icon: esphome
+                siteMonitor: "{{HOMEPAGE_VAR_ESP_HOME_URL}}"
+                widget:
+                    type: esphome
+                    url: "{{HOMEPAGE_VAR_ESP_HOME_URL}}"
+          - Calibre-web:
+                href: "{{HOMEPAGE_VAR_CALIBRE_URL}}"
+                description: Calibre
+                siteMonitor: "{{HOMEPAGE_VAR_CALIBRE_URL}}"
+                icon: calibre.png
+                widget:
+                    type: calibreweb
+                    fields: ["books", "authors", "categories", "series"]
+                    url: "{{HOMEPAGE_VAR_CALIBRE_URL}}"
+                    username: "{{HOMEPAGE_VAR_CALIBRE_ADMIN}}"
+                    password: "{{HOMEPAGE_VAR_CALIBRE_PASSWORD}}"
+          - MusicAssistant:
+                href: https://music.asbblog.com
+                description: Music Assistant
+                icon: music-assistant
+                siteMonitor: https://music.asbblog.com
+    - Monitoring:
+          - Portainer:
+                href: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
+                description: portainer container
+                siteMonitor: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
+                icon: portainer
+                widget:
+                    type: portainer
+                    url: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
+                    env: 2
+                    key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY}}"
+          - Portainer-129:
+                href: "{{HOMEPAGE_VAR_PORTAINER_URL_3}}"
+                description: portainer container
+                siteMonitor: "{{HOMEPAGE_VAR_PORTAINER_URL_3}}"
+                icon: portainer
+                widget:
+                    type: portainer
+                    url: "{{HOMEPAGE_VAR_PORTAINER_URL_3}}"
+                    env: 2
+                    key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY_3}}"
+          - Portainer-132:
+                href: "{{HOMEPAGE_VAR_PORTAINER_URL_2}}"
+                description: portainer container
+                siteMonitor: "{{HOMEPAGE_VAR_PORTAINER_URL_2}}"
+                icon: portainer
+                widget:
+                    type: portainer
+                    url: "{{HOMEPAGE_VAR_PORTAINER_URL_2}}"
+                    env: 2
+                    key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY_2}}"
+          - Grafana:
+                href: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
+                description: Grafana unraid
+                siteMonitor: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
+                icon: grafana
+                widget:
+                    type: grafana
+                    url: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
+                    username: admin
+                    password: "{{HOMEPAGE_VAR_GRAFANA_API_TOKEN}}"
+          - speedtest:
+                href: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
+                description: speedtest
+                siteMonitor: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
+                icon: speedtest
+                widget:
+                    type: speedtest
+                    url:  "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
+
+    - Storage-Server:
+          - Unraid:
+                href: https://unraid.asbblog.com/login/
+                description: Unraid
+                siteMonitor: https://unraid.asbblog.com/login
+                icon: unraid
+          - Synology:
+                href: https://192-168-68-80.abambah.direct.quickconnect.to:5001/#/signin/
+                description: synology
+                siteMonitor: https://192-168-68-80.abambah.direct.quickconnect.to:5001/#/signin/
+                icon: si-synology
+          - TrueNas:
+                href: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
+                description: scale
+                siteMonitor: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
+                icon: truenas.svg
+                widget:
+                    type: truenas
+                    url: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
+                    key: "{{HOMEPAGE_VAR_TRUENAS_PASSWORD}}"
+    - Automation:
+          - Home-Assistant:
+                icon: home-assistant.svg
+                href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+                siteMonitor: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+                description: home assistant
+                widget:
+                    type: homeassistant
+                    url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+                    # username: "{{HOMEPAGE_VAR_HOME_ASSISTANT_USERNAME}}"
+                    key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}"
+          - Casaos:
+                href: https://casaos.asbblog.com/
+                description: Casaos Asbblog
+                icon: casaos
+          - Casaos-Ubuntu:
+                href: https://ubuntu2.asbblog.com/
+                descripition: Casaos Ubuntu
+                icon: casaos
+          - caddy:
+                href: "{{HOMEPAGE_VAR_CADDY_URL}}"
+                description: caddy
+                icon: caddy
+                siteMonitor: "{{HOMEPAGE_VAR_CADDY_URL}}"
+                widget:
+                    type: caddy
+                    url: "{{HOMEPAGE_VAR_CADDY_ADMIN_URL}}"
+    - Business:
+          - Vikunja:
+                href: https://vj.asbblog.com/
+                description: Project management tool
+                icon: vikunja
+                siteMonitor: https://vj.asbblog.com/
+          - Books:
+                href: https://books.asbsolutionsgroup.com
+                description: Zoho Books for timesheet and invoicing
+                icon: mdi-book-account
+                siteMonitor: https://books.asbsolutionsgroup.com/
+          - Ceipal:
+                href: https://talenthire.ceipal.com/signin/
+                description: CEIPAL for candidate and job management.
+                icon: mdi-application
+          - IT-Tools:
+                href: https://tools.asbblog.com/
+                description: IT Tools for the developers
+                icon: mdi-tools
+                siteMonitor: https://tools.asbblog.com/
+    - Other:
+          - Calander:
+                widget:
+                    type: calendar
+                    firstDayInWeek: sunday # optional - defaults to monday
+                    view: monthly # optional - possible values monthly, agenda
+                    maxEvents: 10 # optional - defaults to 10
+                    showTime: true # optional - show time for event happening today - defaults to false
+                    timezone: America/Los_Angeles # optional and only when timezone is not detected
+                    integrations: # optional
+                      - type: sonarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
+                        service_group: Media # group name where widget exists
+                        service_name: Sonarr # service name for that widget
+                        color: teal # optional - defaults to pre-defined color for the service (teal for sonarr)
+                      - type: radarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
+                        service_group: Media # group name where widget exists
+                        service_name: Radarr # service name for that widget
+                        color: red # optional - defaults to pre-defined color for the service (red for radarr)
+                      - type: lidarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
+                        service_group: Media2 # group name where widget exists
+                        service_name: lidarr # service name for that widget
+                        color: blue # optional - defaults to pre-defined color for the service (blue for lidarr)
+                      - type: readarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
+                        service_group: Media # group name where widget exists
+                        service_name: readarr # service name for that widget
+                        color: purple # optional - defaults to pre-defined color for the service (purple for readarr)
+                      - type: ical # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
+                        name: Coursera # name of the service - used for display purposes
+                        color: zinc # optional - defaults to pre-defined color for the service (orange for ical)
+                        url: http://www.coursera.org/api/learnerCalendars.v1/46974119/uRHz9JWGSM2swl2Uux8vHg.ics # ical url to fetch events from
+                        params:
+                            showName: true
+  services.yaml.save: "---\n# For configuration options and examples, please see:\n# https://gethomepage.dev/latest/configs/services\n\n- Media:\n    - Radarr:\n        href: https://radarr.asbblog.com/\n        description: Radarr\n        icon: radarr\n        siteMonitor: https://radarr.asbblog.com/\n        widget:\n            type: radarr\n            url: https://radarr.asbblog.com\n            key: 89786ab3384c4a748562df01b485b49c\n            enableQueue: true\n    - QbTorrent:\n        href: https://qb.asbblog.com/\n        description: Bit torrent\n        icon: qbittorrent\n        siteMonitor: https://qb.asbblog.com/\n        widget:\n            type: qbittorrent\n            url: https://qb.asbblog.com\n            username: admin\n            password: adminadmin\n    - jellyseerr:\n        href: https://jelly.asbblog.com/\n        description: jellyseerr\n        icon: jellyseerr\n        siteMontior: https://jelly.asbblog.com\n        widget:\n            type: jellyseerr\n            url: https://jelly.asbblog.com\n            key: MTcwMzcxMzUwNTY1NWQwZWUyODNlLWVhYmEtNDllOS05ZDFhLTVmMDY5NTVhYjhhMg==\n    - Sonarr:\n        href: https://sonarr.asbblog.com/\n        description: Sonnar\n        siteMonitor: https://sonarr.asbblog.com/\n        icon: sonarr\n        widget:\n            type: sonarr\n            url:  https://sonarr.asbblog.com\n            key: d9d1f45e906d4564a0563f792ca4b37b\n            enableQueue: true # optional, defaults to false\n    - prowlarr:\n        href: https//prowlarr.asbblog.com\n        description: prowlarr\n        icon: prowlarr\n        widget:\n            type: prowlarr\n            url: http://prowlarr.asbblog.com\n            key: 4e036a829b1145cf89799e38586e40aa\n    - plex:\n        href: https://plex.tv\n        description: Plex media player\n        icon: plex\n        widget:\n            type: plex\n            url: http://192.168.68.79:32400\n            key: Cet9igiJQVNosbeUmj1s\n    - MusicAssistant:\n        href: https://music.asbblog.com\n        description: Music Assistant\n        icon: music-assistant\n- Media2:\n    - Radarr:\n        href: https://radarr2.asbblog.com/\n        description: Radarr\n        icon: radarr\n        siteMonitor: https://radarr2.asbblog.com/\n        widget:\n            type: radarr\n            url: https://radarr2.asbblog.com\n            key: 04c84f1ec0e841299f3046ce04356f5f\n            enableQueue: true\n    - QbTorrent:\n        href: https://qb2.asbblog.com/\n        description: Bit torrent\n        icon: qbittorrent\n        siteMonitor: http://qb2.asbblog.com/\n        widget:\n            type: qbittorrent\n            url: http://qb2.asbblog.com\n            username: admin\n            password: adminadmin\n    - jellyseerr:\n        href: http://jelly.asbblog.com/\n        description: jellyseerr\n        icon: jellyseerr\n        siteMontior: http://jelly.asbblog.com\n        widget:\n            type: jellyseerr\n            url: http://jelly.asbblog.com\n            key: MTcwMzcxMzUwNTY1NWQwZWUyODNlLWVhYmEtNDllOS05ZDFhLTVmMDY5NTVhYjhhMg==\n    - Sonarr:\n        href: https://sonarr2.asbblog.com/\n        description: Sonnar\n        siteMonitor: https://sonarr2.asbblog.com/\n        icon: sonarr\n        widget:\n            type: sonarr\n            url:  https://sonarr2.asbblog.com\n            key: 4f3fd7fa3ca5407eb986ddadc149a9c5\n            enableQueue: true # optional, defaults to false\n    - prowlarr:\n        href: https://prowlarr2.asbblog.com/\n        description: prowlarr\n        icon: prowlarr\n        siteMonitor: https://prowlarr2.asbblog.com/\n        widget:\n            type: prowlarr\n            url: https://prowlarr2.asbblog.com\n            key: 16bc79a702aa44d1987f7c62efd3d706\n- Monitoring:\n    - Pi-One:\n        href: https://pi.asbblog.com/admin\n        description: pi hole - main\n        icon: pi-hole\n        siteMonitor: https://pi.asbblog.com/admin\n        widget:\n            type: pihole\n            url: https://pi.asbblog.com\n            key: 5536c470d038c11793b535e8c1176817c001d6f20a4704fa7908939be82e2922\n    - Pi-two:\n        href: http://pi2.asbblog.com/admin\n        description: pi2 hole - main\n        siteMonitor: https://pi2.asbblog.com/admin\n        icon: pi-hole\n        widget:\n            type: pihole\n            url: https://pi2.asbblog.com\n            key: 5536c470d038c11793b535e8c1176817c001d6f20a4704fa7908939be82e2922\n    - Portainer:\n        href: http://192.168.68.78:9000\n        description: portainer container\n        siteMonitor: http://192.168.68.78:9000\n        icon: portainer\n        widget:\n            type: portainer\n            url: http://192.168.68.78:9000\n            env: 2\n            key: ptr_T4o9B+spPrciNRWmFjdv5volVpHDrxehs9OfcOWzwAA=\n    - Portainer:\n        href: http://192.168.68.132:944\n        description: portainer container\n        siteMonitor: http://192.168.68.132:9443\n        icon: portainer\n        widget:\n            type: portainer\n            url: http://192.168.68.132:9443\n            env: 2\n            key: \n\n\n\n\n    - InfluxDB:\n        href: https://192.168.68.100:8086\n        icon: influxdb.png\n        description: influx on home assistance\n    - Proxmox:\n        href: https://pve.asbblog.com\n        description: proxmox server\n        siteMonitor: https://pve.asbblog.com\n        icon: proxmox\n        widget:\n          type: proxmox\n          url: https://pve.asbblog.com\n          username: api@pam!homepage\n          password: 71c80cc0-b50c-43a8-9277-3b6d9f27bab9\n- Storage Server:\n    - unraid:\n        href: http://unraid.asbblog.com/login/\n        description: Unraid\n        siteMonitor: https://unraid.asbblog.com/login\n        icon: unraid\n    - synology:\n        href: https://abambah.synology.me:5001/#/signin/\n        description: synology\n        siteMonitor: https://nas1.asbblog.com/signin/\n        icon: si-synology\n    - True Nas:\n        href: https://true-nas.asblog.com\n        description: True Nas\n        siteMonitor: https://true-nas.asbblog.com\n        icon: truenas\n        widget:\n          type: truenas\n          url : https://true-nas.asbblog.com/\n          username : root\n          password : golD123@\n          enablePools: true\n          nasType: scale\n- Automation:\n    - Home: \n        href: https://home.asbblog.com\n        description: Home Assistance for home\n        icon: home-assistant\n        siteMonitor: https://home.asbblog.com\n        widget:\n            type: homeassistant\n            url: https://home.asbblog.com\n            key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzZGZkZDUzM2EwMWY0N2ZmYjViYmZmZTZmNGI0NDgwNSIsImlhdCI6MTcwNzkzODA2MywiZXhwIjoyMDIzMjk4MDYzfQ.SzfzMZnVBsexBFO2VIFZQekmN7CnrMd0Ld28sgFe-TI\n            fields: [\"people_home\", \"lights_on\",\"swtiches_on\"]\n    - Casaos:\n        href: http://casaos.asbblog.com\n        description : Casaos Asbblog\n        icon: casaos\n    - Casaos-Ubuntu:\n        href: http://ubuntu2.asbblog.com/\n        descripition: Casaos Ubuntu\n        icon: casaos\n    - Docker-web:\n        href: https://docker.asbblog.com/\n        description: Docker on Unraid\n        icon: docker.png\n        siteMonitor: https://docker.asbblog.com\n    - Jacket:\n        href: http://jacket.asbblog.com/\n        description: Jacket on Orange Pi \n        icon: jackett.png\n        widget: \n            type: jackett\n            url: http://jacket.asbblog.com\n            fields: [\"configured\", \"errored\"]\n            password: x4w1b60du1bvovzmhclpwgbdfmtjai2q \n- Business:\n    - Vikunja:\n        href: http://vj.asbblog.com/\n        description: Project management tool \n        icon: vikunja\n        siteMonitor: http://vj.asbblog.com/\n    - Ceipal:\n        href: https://talenthire.ceipal.com/signin/\n        description: CEIPAL for candidate and job management. \n        icon: mdi-application\n    - Timesheet: \n        href: https://kimai.asbblog.com\n      # href: https://www.appsheet.com/start/757b606f-8201-467a-a20a-42d247bf53b9?platform=desktop#vss=H4sIAAAAAAAAA6XOsQ7CIBQF0H-5M1_AahyM0UXjIg7P8poQKTSFVhvCvwumxlkdueTcdxMmw_dDpOYGeU6f15ZnSCSF49yzglRYeRcHbxWEwp66JSTLTtOgkJEv4u0jB8j0HZf_XRcwml00reGhdlVZOhZXvquqwWKQBbox0tXya3AxOZes9c0YWJ_KlB8mhI1bP3pyeud1qWzJBs5PZkXeSmUBAAA=&view=Calendar&appName=TimesheetTracker-330590035\n        description: Timesheet for ASB Employees\n- Other: \n    - Calander: \n        widget:\n            type: calendar\n            firstDayInWeek: sunday # optional - defaults to monday\n            view: monthly # optional - possible values monthly, agenda\n            maxEvents: 10 # optional - defaults to 10\n            showTime: true # optional - show time for event happening today - defaults to false\n            timezone: America/Los_Angeles # optional and only when timezone is not detected \n            integrations: # optional\n                - type: sonarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical\n                  service_group: Media2 # group name where widget exists\n                  service_name: Sonarr # service name for that widget\n                  color: teal # optional - defaults to pre-defined color for the service (teal for sonarr)\n    - Grafana:\n        href: http://grafana.asbblog.com\n        icon: grafana.png\n        widget:\n            type: grafana\n            url: http://192.168.68.84:3010\n            username: admin\n            password: golD123@\n    - ESPHome:\n        widget:\n          type: esphome\n          url: http://192.168.68.84:6052\n    - Calibre-web:\n        href: http://calibre.asbblog.com\n        icon: calibre.png\n        widget: \n          type: calibreweb\n          url: http://calibre.asbblog.com\n          username: admin\n          password: golD123@\n"
+  settings.yaml: "# https://gethomepage.dev/configs/settings\ntitle: ASB Solutions Home Page\nstartUrl: https://asbblog.com\n#background: https://wallpapercave.com/wp/wp2765466.jpg\n#background: https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\n# background: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80\ntheme: dark # or light\ncolor: cyan\nlayout:\n  Hypervisor:\n    header: true\n    style: row\n    columns: 4\n  Business: \n    header: true\n    style: row\n    columns: 4\n  DNS:\n    header: true\n    style: row\n    columns: 4\n  Monitoring:\n    header: true\n    style: row\n    columns: 4\n  Automation:\n    style: row\n    columns: 4\n  Storage-Server:\n    style: row\n    columns: 2\n  Media:\n    style: row\n    columns: 4\n  Media2:\n    style: row\n    columns: 4\n  Other:\n    style: row\n    columns: 2\nquicklaunch:\n  searchDescriptions: true\n  hideInternetSearch: true\n  hideVisitURL: true\nhideVersion: true\n#logpath: /root/homepage\nshowStats: true\nproviders:\n  openweathermap: openweathermapapikey\n  weatherapi: weatherapiapikey\n  finnhub: cvjjgu9r01qlscpcir7gcvjjgu9r01qlscpcir80\n"
+  widgets.yaml: "---\n# For configuration options and examples, please see:\n# https://gethomepage.dev/configs/info-widgets/\n\n- weatherapi:\n    # label: San Jose # optional\n    # latitude: 37.29402454636174 \n    # longitude: 121.87890364473624\n    units: metric # or imperial\n    apiKey: 37a1a38835174500ae5200432241202\n    cache: 5 \n\n- datetime:\n    text_size: xl\n    format:\n      timeStyle: short\n\n- resources:\n    cpu: true\n    memory: true\n    disk: /\n\n- search:\n    provider: google\n    target: _blank\n\n- openmeteo:\n    label: Current\n    latitude: 37.29\n    longitude: -121.88\n    cache: 5\n\n- stocks:\n    label: Stocks\n    provider: finnhub\n    watchlist:\n      - AAPL\n      - MSFT\n      - AMZN\n      - GOOGL\n      - META\n      - TSLA\n      - NVDA\n      - BRK.B      \n    showUSMarketStatus: true\n\n"
+kind: ConfigMap
+metadata:
+  labels:
+    io.kompose.service: homepage
+  name: homepage-cm0
