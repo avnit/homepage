@@ -4,6 +4,7 @@
             icon: proxmox.svg
             href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
             description: pve1
+            siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
             widget:
                 type: proxmox
                 url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
@@ -13,6 +14,7 @@
             icon: proxmox.svg
             href: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
             description: pve-dell
+            siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
             widget:
                 type: proxmox
                 url: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
@@ -23,6 +25,7 @@
             icon: proxmox.svg
             href: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
             description: pve-truenas
+            siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
             widget:
                 type: proxmox
                 url: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
@@ -33,6 +36,7 @@
             icon: proxmox.svg
             href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
             description: pve4
+            siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
             widget:
                 type: proxmox
                 url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
@@ -290,7 +294,7 @@
             widget:
                 type: portainer
                 url: "{{HOMEPAGE_VAR_PORTAINER_URL_3}}"
-                env: 2
+                env: 1
                 key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY_3}}"
       - Portainer-132:
             href: "{{HOMEPAGE_VAR_PORTAINER_URL_2}}"
