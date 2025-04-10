@@ -52,8 +52,8 @@ LABEL org.opencontainers.image.licenses='Apache-2.0'
 WORKDIR /app
 
 # Copy only necessary files from the build stage
-COPY --link --from=builder --chown=1000:1000 /app/.next/standalone/ ./
-COPY --link --from=builder --chown=1000:1000 /app/.next/static/ ./.next/static
+COPY  --from=builder --chown=1000:1000 /app/.next/standalone/ ./
+COPY  --from=builder --chown=1000:1000 /app/.next/static/ ./.next/static
 
 RUN apk add --no-cache su-exec iputils-ping
 
