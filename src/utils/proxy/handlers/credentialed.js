@@ -1,9 +1,9 @@
-import getServiceWidget from "utils/config/service-helpers";
-import { formatApiCall, sanitizeErrorURL } from "utils/proxy/api-helpers";
-import validateWidgetData from "utils/proxy/validate-widget-data";
-import { httpProxy } from "utils/proxy/http";
-import createLogger from "utils/logger";
 import { getSettings } from "utils/config/config";
+import getServiceWidget from "utils/config/service-helpers";
+import createLogger from "utils/logger";
+import { formatApiCall, sanitizeErrorURL } from "utils/proxy/api-helpers";
+import { httpProxy } from "utils/proxy/http";
+import validateWidgetData from "utils/proxy/validate-widget-data";
 import widgets from "widgets/widgets";
 
 const logger = createLogger("credentialedProxyHandler");
@@ -41,6 +41,8 @@ export default async function credentialedProxyHandler(req, res, map) {
           "cloudflared",
           "ghostfolio",
           "headscale",
+          "hoarder",
+          "karakeep",
           "linkwarden",
           "mealie",
           "netalertx",
@@ -63,7 +65,7 @@ export default async function credentialedProxyHandler(req, res, map) {
       } else if (widget.type === "proxmoxbackupserver") {
         delete headers["Content-Type"];
         headers.Authorization = `PBSAPIToken=${widget.username}:${widget.password}`;
-      } else if (widget.type === "autobrr") {
+      } else if (["autobrr", "jellystat"].includes(widget.type)) {
         headers["X-API-Token"] = `${widget.key}`;
       } else if (widget.type === "tubearchivist") {
         headers.Authorization = `Token ${widget.key}`;

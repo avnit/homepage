@@ -148,7 +148,9 @@
         "up": "Activo",
         "received": "Recibido",
         "sent": "Enviado",
-        "externalIPAddress": "IP ext."
+        "externalIPAddress": "IP ext.",
+        "externalIPv6Address": "IPv6 ext.",
+        "externalIPv6Prefix": "Prefijo IPv6 ext."
     },
     "caddy": {
         "upstreams": "Upstream (desarrollo de software)",
@@ -176,7 +178,7 @@
         "connectedAp": "AP conectados",
         "activeUser": "Dispositivos activos",
         "alerts": "Alertas",
-        "connectedGateway": "Puertas de enlace conectadas",
+        "connectedGateways": "Puertas de enlace conectadas",
         "connectedSwitches": "Conmutadores conectados"
     },
     "nzbget": {
@@ -702,6 +704,10 @@
         "processed": "Procesado",
         "time": "Tiempo"
     },
+    "firefly": {
+        "networth": "Patrimonio neto",
+        "budget": "Presupuesto"
+    },
     "grafana": {
         "dashboards": "Tableros",
         "datasources": "Fuentes de datos",
@@ -879,7 +885,8 @@
     "gitea": {
         "notifications": "Notificaciones",
         "issues": "Números",
-        "pulls": "Solicitudes de cambios"
+        "pulls": "Solicitudes de cambios",
+        "repositories": "Repositorios"
     },
     "stash": {
         "scenes": "Escenas",
@@ -1010,5 +1017,30 @@
         "issues": "Números",
         "merges": "Solicitudes de fusión",
         "projects": "Proyectos"
+    },
+    "apcups": {
+        "status": "Estado",
+        "load": "Carga",
+        "bcharge": "Carga de la batería",
+        "timeleft": "Tiempo restante"
+    },
+    "karakeep": {
+        "bookmarks": "Bookmarks",
+        "favorites": "Favorites",
+        "archived": "Archived",
+        "highlights": "Highlights",
+        "lists": "Lists",
+        "tags": "Etiquetas"
+    },
+    "slskd": {
+        "slskStatus": "Red",
+        "connected": "Conectado",
+        "disconnected": "Desconectado",
+        "updateStatus": "Actualización",
+        "update_yes": "Disponible",
+        "update_no": "Actualizado",
+        "downloads": "Descargas",
+        "uploads": "Subidas",
+        "sharedFiles": "Archivos"
     }
 }
