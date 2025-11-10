@@ -1,0 +1,139 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Developer:
+  - IT Tools:
+    - abbr: IT
+      href: https://tools.asbblog.com/
+  - Github - avnit: 
+    - abbr: GT
+      href: https://https://github.com/avnit/
+- Social:
+  - Reddit:
+    - abbr: RE
+      href: https://reddit.com/
+- Entertainment:
+  - Youtube:
+    - icon: si-youtube-#FF0000
+      href: https://youtube.com/
+  - Netflix:
+    - icon: si-netflix-#E50914
+      href: https://netflix.com/
+  - Prime Video:
+    - icon: si-amazon-#FF9900
+      href: https://primevideo.com/
+  - Disney+:
+    - icon: si-disneyplus-#000000
+      abbr: DP
+      href: https://www.disneyplus.com/
+  - Disney+ Hotstar:
+    - abbr: DH
+      href: https://www.disneyplus.com/
+  - Hulu:
+    - icon: si-hulu-#000000
+      href: https://hulu.com/
+  - HBO Max:
+    - icon: si-hbo-#000000
+      href: https://hbomax.com/
+  - Apple TV+:
+    - abbr: ATV
+      icon: si-apple-#000000
+      href: https://tv.apple.com/
+  - Peacock:
+    - icon: si-peacocktv-#000000
+      href: https://peacocktv.com/
+  - Paramount+:
+    - icon: si-paramount-#000000
+      href: https://paramountplus.com/
+  - Discovery+:
+    - abbr: D+
+      icon: si-discoveryplus-#000000
+      href: https://discoveryplus.com/
+  - Starz:
+    - abbr: SZ
+      icon: si-starz-#000000
+      href: https://starz.com/
+  - Showtime:
+    - abbr: ST
+      icon: si-showtime-#000000
+      href: https://showtime.com/
+  - AMC+:
+    - abbr: AC
+      icon: si-amc-#000000
+      href: https://amcplus.com/
+  - Epix:
+    - abbr: EP
+      icon: si-epix-#000000
+      href: https://epix.com/
+  - Crunchyroll:
+    - abbr: CR
+      icon: si-crunchyroll-#000000
+      href: https://crunchyroll.com/
+  - Funimation:
+    - abbr: FN
+      href: https://funimation.com/
+  - VRV:
+    - abbr: VR
+      icon: si-vrv-#000000
+      href: https://vrv.co/
+  - Shudder:
+    - abbr: SH
+      icon: si-shudder-#000000
+      href: https://shudder.com/
+- Repositories:
+  - Homelab:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/avnit/homepage
+  - Boilerplates:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/christianlempa/boilerplates
+  - Cheat-Sheets:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/christianlempa/cheat-sheets
+  - Scripts:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/christianlempa/scripts
+  - Python4Eeryone:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/avnit/Python-for-everyone
+  - Bigbear-Video-Assets:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/bigbeartechworld/big-bear-video-assets
+
+- Cloud Services:
+  - Sophos Cloud:
+    - icon: data:image/jpeg;base64,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
+      href: https://cloud.sophos.com
+  - Cloudflare:
+    - icon: cloudflare.png
+      href: https://dash.cloudflare.com
+  - Teleport:
+    - icon: teleport.png
+      href: https://clcreative.teleport.sh
+  - Twingate:
+    - icon: twingate.png
+      href: https://clcreative.twingate.com
+  - Netbird:
+    - icon: https://netbird.io/_next/static/media/netbird-icon.00225e97.svg
+      href: https://app.netbird.io
+  - Tailscale:
+    - icon: tailscale.png
+      href: https://login.tailscale.com
+
+- Cloud Platforms:
+  - AWS:
+    - icon: aws.png
+      href: https://aws.amazon.com
+  - Google Cloud:
+    - icon: google.png
+      href: https://console.cloud.google.com
+  - Microsoft Azure:
+    - icon: azure.png
+      href: https://portal.azure.com
+  - Digital Ocean:
+    - icon: si-digitalocean-#0080FF
+      href: https://cloud.digitalocean.com
+  - CIVO:
+    - icon: si-civo-#239DFF
+      href: https://www.civo.com

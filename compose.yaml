@@ -1,0 +1,13 @@
+services:
+  homepage:
+    container_name: homepage
+    image: abambah/homepage2:latest
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    volumes:
+      - /root/homepage/config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock
+    env_file: /root/homepage/.env
+    privileged: true
+    hostname: homepage
