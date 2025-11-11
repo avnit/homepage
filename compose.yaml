@@ -1,7 +1,8 @@
 services:
   homepage:
-    container_name: homepage
+    container_name: homepage-latest
     image: abambah/homepage2:latest
+    # image: ghcr.io/gethomepage/homepage:latest
     ports:
       - 3000:3000
     restart: unless-stopped
