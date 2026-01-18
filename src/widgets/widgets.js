@@ -78,6 +78,7 @@ import netdata from "./netdata/widget";
 import nextcloud from "./nextcloud/widget";
 import nextdns from "./nextdns/widget";
 import npm from "./npm/widget";
+import n8n from "./n8n/widget";
 import nzbget from "./nzbget/widget";
 import octoprint from "./octoprint/widget";
 import omada from "./omada/widget";
@@ -227,6 +228,7 @@ const widgets = {
   nextcloud,
   nextdns,
   npm,
+  n8n,
   nzbget,
   octoprint,
   omada,
