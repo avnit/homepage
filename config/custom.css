@@ -1,0 +1,189 @@
+/* Custom CSS for Homepage Dashboard */
+/* Author: ASB Solutions */
+
+/* =====================================================
+   GLOBAL STYLES
+   ===================================================== */
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom glassmorphism effect for cards */
+.service-card,
+.widget-container {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* =====================================================
+   SERVICE CARDS
+   ===================================================== */
+
+/* Enhance service card hover effects */
+.service-card:hover {
+    transform: translateY(-3px) scale(1.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Service icon glow effect on hover */
+.service-card:hover img,
+.service-card:hover svg {
+    filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.5));
+    transition: filter 0.3s ease;
+}
+
+/* =====================================================
+   BOOKMARKS
+   ===================================================== */
+
+/* Bookmark hover animation */
+.bookmark-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* =====================================================
+   WIDGETS
+   ===================================================== */
+
+/* Resource widget progress bars with gradient */
+.resource-bar {
+    background: linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6);
+    border-radius: 4px;
+}
+
+/* Stock widget styling */
+.stock-up {
+    color: #22c55e !important;
+    text-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+}
+
+.stock-down {
+    color: #ef4444 !important;
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+}
+
+/* =====================================================
+   HEADER & NAVIGATION
+   ===================================================== */
+
+/* Subtle header animation */
+.header-title {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* =====================================================
+   STATUS INDICATORS
+   ===================================================== */
+
+/* Pulsing status dot for online services */
+.status-online {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+/* =====================================================
+   SCROLLBAR STYLING
+   ===================================================== */
+
+/* Custom scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #06b6d4, #8b5cf6);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #22d3ee, #a78bfa);
+}
+
+/* =====================================================
+   DARK MODE ENHANCEMENTS
+   ===================================================== */
+
+/* Enhanced dark mode shadows */
+.dark .service-card {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtle border glow for cards in dark mode */
+.dark .service-card {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark .service-card:hover {
+    border: 1px solid rgba(34, 211, 238, 0.3);
+}
+
+/* =====================================================
+   RESPONSIVE ADJUSTMENTS
+   ===================================================== */
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .service-card:hover {
+        transform: none;
+    }
+}
+
+/* =====================================================
+   LOADING & TRANSITIONS
+   ===================================================== */
+
+/* Fade in animation for page load */
+.page-content {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
