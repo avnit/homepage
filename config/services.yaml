@@ -415,11 +415,6 @@
           url: "{{HOMEPAGE_VAR_CADDY_ADMIN_URL}}"
 
 - Business:
-    - Books:
-        href: https://books.asbsolutionsgroup.com
-        description: Zoho Books for timesheet and invoicing
-        icon: mdi-book-account
-        siteMonitor: https://books.asbsolutionsgroup.com/
     - Ceipal:
         href: https://talenthire.ceipal.com/signin/
         description: CEIPAL for candidate and job management.
