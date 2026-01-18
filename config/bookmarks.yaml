@@ -6,125 +6,164 @@
     - IT Tools:
         - abbr: IT
           href: https://tools.asbblog.com/
+          description: Developer utility tools
     - Github - avnit:
         - icon: si-github
           href: https://github.com/avnit/
+          description: My GitHub profile
     - Reddit:
         - icon: si-reddit
           href: https://reddit.com/
+          description: The front page of the internet
 
 - Cloud Services:
     - Sophos Cloud:
         - icon: mdi-shield-check
           href: https://cloud.sophos.com
+          description: Cloud security management
     - Cloudflare:
         - icon: si-cloudflare
           href: https://dash.cloudflare.com
+          description: DNS and CDN management
     - Teleport:
         - icon: mdi-lan-connect
           href: https://clcreative.teleport.sh
+          description: Secure infrastructure access
     - Twingate:
         - icon: mdi-security-network
           href: https://clcreative.twingate.com
+          description: Zero trust network access
     - Netbird:
         - icon: mdi-bird
           href: https://app.netbird.io
+          description: P2P VPN platform
     - Tailscale:
         - icon: si-tailscale
           href: https://login.tailscale.com
+          description: Mesh VPN network
 
 - Cloud Platforms:
     - AWS:
         - icon: si-amazonaws
           href: https://aws.amazon.com
+          description: Amazon Web Services
     - Google Cloud:
         - icon: si-googlecloud
           href: https://console.cloud.google.com
+          description: Google Cloud Platform
     - Microsoft Azure:
         - icon: si-microsoftazure
           href: https://portal.azure.com
+          description: Azure Cloud Portal
     - Digital Ocean:
         - icon: si-digitalocean
           href: https://cloud.digitalocean.com
+          description: Developer Cloud Computing
     - CIVO:
         - icon: si-civo
           href: https://www.civo.com
+          description: Kubernetes Cloud
 
 - Entertainment:
     - Youtube:
         - icon: si-youtube
           href: https://youtube.com/
+          description: Video sharing platform
     - Netflix:
         - icon: si-netflix
           href: https://netflix.com/
+          description: Streaming movies & TV
     - Prime Video:
         - abbr: PV
           href: https://primevideo.com/
+          description: Amazon Prime Video
     - Disney+:
         - abbr: D+
           href: https://www.disneyplus.com/
+          description: Disney, Pixar, Marvel
     - Disney+ Hotstar:
         - abbr: DH
           href: https://www.disneyplus.com/
+          description: Indian content streaming
     - Hulu:
         - icon: si-hulu
           href: https://hulu.com/
+          description: TV shows & movies
     - HBO Max:
         - icon: si-hbo
           href: https://hbomax.com/
+          description: HBO blockbuster movies
     - Apple TV+:
         - icon: si-appletv
           href: https://tv.apple.com/
+          description: Apple Originals
     - Peacock:
         - abbr: PC
           href: https://peacocktv.com/
+          description: NBCUniversal streaming
     - Paramount+:
         - abbr: P+
           href: https://paramountplus.com/
+          description: Live sports & news
     - Discovery+:
         - abbr: D+
           href: https://discoveryplus.com/
+          description: Real life entertainment
     - Starz:
         - abbr: SZ
           href: https://starz.com/
+          description: Premium movies
     - Showtime:
         - abbr: ST
           href: https://showtime.com/
+          description: Original series & boxing
     - AMC+:
         - abbr: AC
           href: https://amcplus.com/
+          description: The Walking Dead universe
     - Epix:
         - abbr: EP
           href: https://epix.com/
+          description: Premium cable network
     - Crunchyroll:
         - icon: si-crunchyroll
           href: https://crunchyroll.com/
+          description: Anime streaming
     - Funimation:
         - abbr: FN
           href: https://funimation.com/
+          description: Anime & manga
     - VRV:
         - abbr: VR
           href: https://vrv.co/
+          description: Fandom streaming
     - Shudder:
         - abbr: SH
           href: https://shudder.com/
+          description: Horror & thrillers
 
 - Repositories:
     - Homelab:
         - icon: si-github
           href: https://github.com/avnit/homepage
+          description: Private homelab config
     - Boilerplates:
         - icon: si-github
           href: https://github.com/christianlempa/boilerplates
+          description: Infrastructure templates
     - Cheat-Sheets:
         - icon: si-github
           href: https://github.com/christianlempa/cheat-sheets
+          description: Useful command references
     - Scripts:
         - icon: si-github
           href: https://github.com/christianlempa/scripts
+          description: Automation scripts
     - Python4Eeryone:
         - icon: si-github
           href: https://github.com/avnit/Python-for-everyone
+          description: Python learning resources
     - Bigbear-Video-Assets:
         - icon: si-github
           href: https://github.com/bigbeartechworld/big-bear-video-assets
+          description: Tech tutorial assets
