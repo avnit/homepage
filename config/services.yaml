@@ -58,6 +58,16 @@
           type: radarr
           url: "{{HOMEPAGE_VAR_RADARR_URL}}"
           key: "{{HOMEPAGE_VAR_RADARR_API_KEY}}"
+    - Immich:
+        href: "{{HOMEPAGE_VAR_IMMICH_URL}}"
+        description: Photo management
+        icon: immich
+        siteMonitor: "{{HOMEPAGE_VAR_IMMICH_URL}}"
+        widget:
+          type: immich
+          url: "{{HOMEPAGE_VAR_IMMICH_URL}}"
+          key: "{{HOMEPAGE_VAR_IMMICH_API_KEY}}"
+          version: 2
     - QbTorrent:
         href: "{{HOMEPAGE_VAR_QB_URL}}"
         description: Bit torrent
@@ -403,6 +413,11 @@
         href: https://ubuntu2.asbblog.com/
         description: Casaos Ubuntu
         icon: casaos
+    - n8n:
+        href: https://n8n.asbblog.com
+        description: Workflow automation
+        icon: n8n
+        siteMonitor: https://n8n.asbblog.com
     - caddy:
         href: "{{HOMEPAGE_VAR_CADDY_URL}}"
         description: caddy
