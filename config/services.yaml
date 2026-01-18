@@ -61,14 +61,14 @@
             siteMonitor: "{{HOMEPAGE_VAR_QB_URL}}"
             widget:
                 type: qbittorrent
-                url: "{{HOMEPAGE_VAR_QB_URL}"
+                url: "{{HOMEPAGE_VAR_QB_URL}}"
                 username: "{{HOMEPAGE_VAR_QB_USER}}"
                 password: "{{HOMEPAGE_VAR_QB_API_KEY}}"
       - jellyseerr:
             href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
             description: jellyseerr
             icon: jellyseerr
-            siteMontior: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+            siteMonitor: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
             widget:
                 type: jellyseerr
                 url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
@@ -204,7 +204,7 @@
             href: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
             description: jellyseerr
             icon: jellyseerr
-            siteMontior: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
+            siteMonitor: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
             widget:
                 type: jellyseerr
                 url: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
@@ -372,7 +372,7 @@
             icon: casaos
       - Casaos-Ubuntu:
             href: https://ubuntu2.asbblog.com/
-            descripition: Casaos Ubuntu
+            description: Casaos Ubuntu
             icon: casaos
       - caddy:
             href: "{{HOMEPAGE_VAR_CADDY_URL}}"
