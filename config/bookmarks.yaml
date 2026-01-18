@@ -23,13 +23,13 @@
         - icon: si-netflix
           href: https://netflix.com/
     - Prime Video:
-        - icon: si-amazonprimevideo
+        - abbr: PV
           href: https://primevideo.com/
     - Disney+:
-        - icon: si-disneyplus
+        - abbr: D+
           href: https://www.disneyplus.com/
     - Disney+ Hotstar:
-        - icon: si-disneyplus
+        - abbr: DH
           href: https://www.disneyplus.com/
     - Hulu:
         - icon: si-hulu
