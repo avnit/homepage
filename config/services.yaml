@@ -340,7 +340,7 @@
         href: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
         description: speedtest
         siteMonitor: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
-        icon: speedtest
+        icon: speedtest-tracker
         widget:
           type: speedtest
           url: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
