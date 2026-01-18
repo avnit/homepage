@@ -191,6 +191,14 @@
           url: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
           key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_3}}"
           version: 6
+    - Tailscale:
+        icon: tailscale
+        href: https://login.tailscale.com/admin/machines
+        description: VPN mesh network
+        widget:
+          type: tailscale
+          deviceid: "{{HOMEPAGE_VAR_TAILSCALE_DEVICE_ID}}"
+          key: "{{HOMEPAGE_VAR_TAILSCALE_API_KEY}}"
 
 - Media2:
     - jellyfin:
@@ -414,10 +422,14 @@
         description: Casaos Ubuntu
         icon: casaos
     - n8n:
-        href: https://n8n.asbblog.com
+        href: "{{HOMEPAGE_VAR_N8N_URL}}"
         description: Workflow automation
         icon: n8n
-        siteMonitor: https://n8n.asbblog.com
+        siteMonitor: "{{HOMEPAGE_VAR_N8N_URL}}"
+        widget:
+          type: n8n
+          url: "{{HOMEPAGE_VAR_N8N_URL}}"
+          key: "{{HOMEPAGE_VAR_N8N_API_KEY}}"
     - caddy:
         href: "{{HOMEPAGE_VAR_CADDY_URL}}"
         description: caddy
