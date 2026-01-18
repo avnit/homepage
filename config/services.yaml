@@ -415,11 +415,6 @@
           url: "{{HOMEPAGE_VAR_CADDY_ADMIN_URL}}"
 
 - Business:
-    - Vikunja:
-        href: https://vj.asbblog.com/
-        description: Project management tool
-        icon: vikunja
-        siteMonitor: https://vj.asbblog.com/
     - Books:
         href: https://books.asbsolutionsgroup.com
         description: Zoho Books for timesheet and invoicing
