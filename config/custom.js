@@ -434,6 +434,50 @@ c     - Toggle chatbot
         );
     }
 
+    /**
+     * Initialize fancy bookmark tooltips
+     */
+    function initBookmarkTooltips() {
+        const bookmarks = document.querySelectorAll('.bookmark');
+
+        bookmarks.forEach(bookmark => {
+            // Get description source
+            // 1. data-description (added in item.jsx)
+            // 2. .bookmark-description (visible text in list view)
+            let description = bookmark.getAttribute('data-description');
+
+            if (!description) {
+                const descEl = bookmark.querySelector('.bookmark-description');
+                if (descEl) description = descEl.textContent.trim();
+            }
+
+            if (description) {
+                // Find icon container
+                const iconContainer = bookmark.querySelector('.bookmark-icon');
+                if (iconContainer && !iconContainer.querySelector('.custom-tooltip')) {
+                    // Create tooltip
+                    const tooltip = document.createElement('span');
+                    tooltip.className = 'custom-tooltip';
+                    tooltip.textContent = description;
+
+                    iconContainer.appendChild(tooltip);
+
+                    // Remove native title from link to avoid double tooltip
+                    const link = bookmark.querySelector('a');
+                    if (link && link.hasAttribute('title')) {
+                        // Only remove if it matches description or if we just want to suppress it
+                        // link.removeAttribute('title'); 
+                        // Actually, let's keep it as fallback for accessibility, but standard browser behavior might show both.
+                        // Often better to remove it if we have a custom one.
+                        link.removeAttribute('title');
+                    }
+                }
+            }
+        });
+
+        debugLog('Bookmark tooltips initialized');
+    }
+
     // ========================================
     // INITIALIZATION
     // ========================================
@@ -446,6 +490,7 @@ c     - Toggle chatbot
         enhanceServiceStatus();
         initClock();
         initScrollToTop();
+        initBookmarkTooltips(); // Add this line
         initChatbot();
         showConsoleBranding();
 

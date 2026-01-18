@@ -13,10 +13,11 @@ export default function Item({ bookmark, iconOnly = false }) {
       id={bookmark.id}
       className={classNames("bookmark", iconOnly && "grid")}
       data-name={bookmark.name}
+      data-description={description}
     >
       <a
         href={bookmark.href}
-        title={bookmark.name}
+        title={description}
         rel="noreferrer"
         target={bookmark.target ?? settings.target ?? "_blank"}
         className={classNames(
