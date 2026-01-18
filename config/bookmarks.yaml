@@ -2,7 +2,7 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/bookmarks
 
-- Developer & Social:
+- Development & Social:
     - IT Tools:
         - abbr: IT
           href: https://tools.asbblog.com/
@@ -15,6 +15,30 @@
         - icon: si-reddit
           href: https://reddit.com/
           description: The front page of the internet
+    - Homelab:
+        - icon: si-github
+          href: https://github.com/avnit/homepage
+          description: Private homelab config
+    - Boilerplates:
+        - icon: si-github
+          href: https://github.com/christianlempa/boilerplates
+          description: Infrastructure templates
+    - Cheat-Sheets:
+        - icon: si-github
+          href: https://github.com/christianlempa/cheat-sheets
+          description: Useful command references
+    - Scripts:
+        - icon: si-github
+          href: https://github.com/christianlempa/scripts
+          description: christianlempa Automation scripts
+    - Python4Eeryone:
+        - icon: si-github
+          href: https://github.com/avnit/Python-for-everyone
+          description: Python learning resources
+    - Bigbear-Video-Assets:
+        - icon: si-github
+          href: https://github.com/bigbeartechworld/big-bear-video-assets
+          description: Tech tutorial assets
 
 - Cloud Services:
     - Sophos Cloud:
@@ -141,29 +165,3 @@
         - abbr: SH
           href: https://shudder.com/
           description: Horror & thrillers
-
-- Repositories:
-    - Homelab:
-        - icon: si-github
-          href: https://github.com/avnit/homepage
-          description: Private homelab config
-    - Boilerplates:
-        - icon: si-github
-          href: https://github.com/christianlempa/boilerplates
-          description: Infrastructure templates
-    - Cheat-Sheets:
-        - icon: si-github
-          href: https://github.com/christianlempa/cheat-sheets
-          description: Useful command references
-    - Scripts:
-        - icon: si-github
-          href: https://github.com/christianlempa/scripts
-          description: christianlempa Automation scripts
-    - Python4Eeryone:
-        - icon: si-github
-          href: https://github.com/avnit/Python-for-everyone
-          description: Python learning resources
-    - Bigbear-Video-Assets:
-        - icon: si-github
-          href: https://github.com/bigbeartechworld/big-bear-video-assets
-          description: Tech tutorial assets
