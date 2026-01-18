@@ -2,18 +2,53 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/bookmarks
 
-- Developer:
+- Developer & Social:
     - IT Tools:
         - abbr: IT
           href: https://tools.asbblog.com/
     - Github - avnit:
         - icon: si-github
           href: https://github.com/avnit/
-
-- Social:
     - Reddit:
         - icon: si-reddit
           href: https://reddit.com/
+
+- Cloud Services:
+    - Sophos Cloud:
+        - icon: mdi-shield-check
+          href: https://cloud.sophos.com
+    - Cloudflare:
+        - icon: si-cloudflare
+          href: https://dash.cloudflare.com
+    - Teleport:
+        - icon: mdi-lan-connect
+          href: https://clcreative.teleport.sh
+    - Twingate:
+        - icon: mdi-security-network
+          href: https://clcreative.twingate.com
+    - Netbird:
+        - icon: mdi-bird
+          href: https://app.netbird.io
+    - Tailscale:
+        - icon: si-tailscale
+          href: https://login.tailscale.com
+
+- Cloud Platforms:
+    - AWS:
+        - icon: si-amazonaws
+          href: https://aws.amazon.com
+    - Google Cloud:
+        - icon: si-googlecloud
+          href: https://console.cloud.google.com
+    - Microsoft Azure:
+        - icon: si-microsoftazure
+          href: https://portal.azure.com
+    - Digital Ocean:
+        - icon: si-digitalocean
+          href: https://cloud.digitalocean.com
+    - CIVO:
+        - icon: si-civo
+          href: https://www.civo.com
 
 - Entertainment:
     - Youtube:
@@ -93,40 +128,3 @@
     - Bigbear-Video-Assets:
         - icon: si-github
           href: https://github.com/bigbeartechworld/big-bear-video-assets
-
-- Cloud Services:
-    - Sophos Cloud:
-        - icon: mdi-shield-check
-          href: https://cloud.sophos.com
-    - Cloudflare:
-        - icon: si-cloudflare
-          href: https://dash.cloudflare.com
-    - Teleport:
-        - icon: mdi-lan-connect
-          href: https://clcreative.teleport.sh
-    - Twingate:
-        - icon: mdi-security-network
-          href: https://clcreative.twingate.com
-    - Netbird:
-        - icon: mdi-bird
-          href: https://app.netbird.io
-    - Tailscale:
-        - icon: si-tailscale
-          href: https://login.tailscale.com
-
-- Cloud Platforms:
-    - AWS:
-        - icon: si-amazonaws
-          href: https://aws.amazon.com
-    - Google Cloud:
-        - icon: si-googlecloud
-          href: https://console.cloud.google.com
-    - Microsoft Azure:
-        - icon: si-microsoftazure
-          href: https://portal.azure.com
-    - Digital Ocean:
-        - icon: si-digitalocean
-          href: https://cloud.digitalocean.com
-    - CIVO:
-        - icon: si-civo
-          href: https://www.civo.com
