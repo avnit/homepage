@@ -367,16 +367,6 @@
             widget:
                 type: caddy
                 url: "{{HOMEPAGE_VAR_CADDY_ADMIN_URL}}"
-- Business:
-      - Ceipal:
-            href: https://talenthire.ceipal.com/signin/
-            description: CEIPAL for candidate and job management.
-            icon: mdi-application
-      - IT-Tools:
-            href: https://tools.asbblog.com/
-            description: IT Tools for the developers
-            icon: mdi-tools
-            siteMonitor: https://tools.asbblog.com/
 - Other:
       - Calander:
             widget:
