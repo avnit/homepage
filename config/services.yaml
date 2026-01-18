@@ -345,15 +345,15 @@
           type: speedtest
           url: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
     - opnsense:
-        href: https://opnsense.asbblog.com/
+        href: "{{HOMEPAGE_VAR_OPNSENSE_URL}}"
         description: opnsense router
-        siteMonitor: https://opnsense.asbblog.com
+        siteMonitor: "{{HOMEPAGE_VAR_OPNSENSE_URL}}"
         icon: opnsense
         widget:
           type: opnsense
-          url: https://opnsense.asbblog.com
-          username: homeassistance
-          password: 2pJdpFWjGq/UkeNvlb1zuL1NCBWMtQ4vEoUbBldcDS4hPQ4Twztz+gjRXaRYjhV4S8IsHp4AgqhL/0SV
+          url: "{{HOMEPAGE_VAR_OPNSENSE_URL}}"
+          username: "{{HOMEPAGE_VAR_OPNSENSE_API_KEY}}"
+          password: "{{HOMEPAGE_VAR_OPNSENSE_API_SECRET}}"
 
 - Storage-Server:
     - Unraid:
