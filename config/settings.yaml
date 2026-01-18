@@ -12,6 +12,10 @@ theme: dark
 color: cyan
 iconStyle: theme
 
+# Performance optimizations
+statusStyle: dot  # Lighter than "full" status style
+disableCollapse: true  # Reduces re-renders
+
 layout:
   Servers:
     Hypervisor:
@@ -45,12 +49,12 @@ layout:
     columns: 2
 
 quicklaunch:
-  searchDescriptions: true
+  searchDescriptions: false  # Faster search
   hideInternetSearch: true
   hideVisitURL: true
 
 hideVersion: true
-showStats: true
+showStats: false  # Disable stats to reduce API calls
 
 providers:
   openweathermap: openweathermapapikey
