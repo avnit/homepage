@@ -201,13 +201,13 @@
                 password: "{{HOMEPAGE_VAR_QB_API_KEY_2}}"
 
       - jellyseerr:
-            href: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
+            href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
             description: jellyseerr
             icon: jellyseerr
-            siteMonitor: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
+            siteMonitor: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
             widget:
                 type: jellyseerr
-                url: "{{HOMEPAGE_VAR_JELLYFIN_UR}}"
+                url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
                 key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
       - Sonarr:
             href: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
