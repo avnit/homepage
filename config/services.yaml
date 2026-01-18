@@ -386,6 +386,15 @@
           type: homeassistant
           url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
           key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}"
+    - Home-Assistant-PVE2:
+        icon: home-assistant.svg
+        href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
+        siteMonitor: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
+        description: home assistant on PVE2
+        widget:
+          type: homeassistant
+          url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
+          key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY_2}}"
     - Casaos:
         href: https://casaos.asbblog.com/
         description: Casaos Asbblog
