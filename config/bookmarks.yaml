@@ -158,7 +158,7 @@
     - Scripts:
         - icon: si-github
           href: https://github.com/christianlempa/scripts
-          description: Automation scripts
+          description: christianlempa Automation scripts
     - Python4Eeryone:
         - icon: si-github
           href: https://github.com/avnit/Python-for-everyone
