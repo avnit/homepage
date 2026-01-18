@@ -27,7 +27,7 @@ jobs:
 
   test:
     name: Test Build Docs
-    if: github.repository == 'avnit/homepage' 
+    if: github.repository == 'avnit/homepage'
     runs-on: ubuntu-latest
     needs:
       - pre-commit
