@@ -331,11 +331,6 @@
             description: Unraid
             siteMonitor: https://unraid.asbblog.com/login
             icon: unraid
-      - Synology:
-            href: https://192-168-68-80.abambah.direct.quickconnect.to:5001/#/signin/
-            description: synology
-            siteMonitor: https://192-168-68-80.abambah.direct.quickconnect.to:5001/#/signin/
-            icon: si-synology
       - TrueNas:
             href: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
             description: scale
@@ -373,16 +368,6 @@
                 type: caddy
                 url: "{{HOMEPAGE_VAR_CADDY_ADMIN_URL}}"
 - Business:
-      - Vikunja:
-            href: https://vj.asbblog.com/
-            description: Project management tool
-            icon: vikunja
-            siteMonitor: https://vj.asbblog.com/
-      - Books:
-            href: https://books.asbsolutionsgroup.com
-            description: Zoho Books for timesheet and invoicing
-            icon: mdi-book-account
-            siteMonitor: https://books.asbsolutionsgroup.com/
       - Ceipal:
             href: https://talenthire.ceipal.com/signin/
             description: CEIPAL for candidate and job management.
