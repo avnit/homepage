@@ -324,6 +324,16 @@
             widget:
                 type: speedtest
                 url:  "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
+      - opnsense:
+            href: https://opnsense.asbblog.com/
+            description: opnsense router
+            siteMonitor: https://opnsense.asbblog.com
+            icon: opnsense
+            widget:
+              type: opnsense
+              url: https://opnsense.asbblog.com
+              username: homeassistance
+              password: 2pJdpFWjGq/UkeNvlb1zuL1NCBWMtQ4vEoUbBldcDS4hPQ4Twztz+gjRXaRYjhV4S8IsHp4AgqhL/0SV
 
 - Storage-Server:
       - Unraid:
