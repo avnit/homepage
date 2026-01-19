@@ -113,7 +113,7 @@
         widget:
           type: prowlarr
           url: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
-          key: "{{HOMEPAGE_VAR_PROWLARR_API_TOKEN}}"
+          key: "{{HOMEPAGE_VAR_PROWLARR_API_KEY}}"
           cache: 300000
     - readarr:
         href: "{{HOMEPAGE_VAR_READARR_URL}}"
@@ -124,7 +124,7 @@
         widget:
           type: readarr
           url: "{{HOMEPAGE_VAR_READARR_URL}}"
-          key: "{{HOMEPAGE_VAR_READARR_API_TOKEN}}"
+          key: "{{HOMEPAGE_VAR_READARR_API_KEY}}"
           cache: 300000
     - lidarr:
         href: "{{HOMEPAGE_VAR_LIDARR_URL}}"
@@ -135,7 +135,7 @@
         widget:
           type: lidarr
           url: "{{HOMEPAGE_VAR_LIDARR_URL}}"
-          key: "{{HOMEPAGE_VAR_LIDARR_API_TOKEN}}"
+          key: "{{HOMEPAGE_VAR_LIDARR_API_KEY}}"
           cache: 300000
     - Plex:
         icon: plex.svg
