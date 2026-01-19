@@ -12,6 +12,8 @@
           url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
           username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
           password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+          cache: 300000
+          refreshInterval: 60000
     - Proxmox2:
         icon: proxmox.svg
         href: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
@@ -22,6 +24,8 @@
           url: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
           username: "{{HOMEPAGE_VAR_PROXMOX_USER_2}}"
           password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_2}}"
+          cache: 300000
+          refreshInterval: 60000
           node: pve-dell2
     - Proxmox3:
         icon: proxmox.svg
@@ -33,6 +37,8 @@
           url: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
           username: "{{HOMEPAGE_VAR_PROXMOX_USER_3}}"
           password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_3}}"
+          cache: 300000
+          refreshInterval: 60000
           node: pve2
     - Proxmox4:
         icon: proxmox.svg
@@ -44,6 +50,8 @@
           url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
           username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
           password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+          cache: 300000
+          refreshInterval: 60000
           node: pve
 
 - Media:
@@ -80,17 +88,7 @@
           url: "{{HOMEPAGE_VAR_QB_URL}}"
           username: "{{HOMEPAGE_VAR_QB_USER}}"
           password: "{{HOMEPAGE_VAR_QB_API_KEY}}"
-    - jellyseerr:
-        href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
-        description: jellyseerr
-        icon: jellyseerr
-        siteMonitor: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
-        server: my-docker
-        container: jellyseerr
-        widget:
-          type: jellyseerr
-          url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
-          key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
+
     - Sonarr:
         href: "{{HOMEPAGE_VAR_SONARR_URL}}"
         description: Sonarr
@@ -243,7 +241,8 @@
         widget:
           type: jellyseerr
           url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
-          key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
+          key: "{{HOMEPAGE_VAR_JELLYSEERR_API_KEY}}"
+          cache: 300000
     - Sonarr:
         href: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
         description: Sonarr
