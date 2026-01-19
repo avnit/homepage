@@ -11,7 +11,7 @@
     cpu: true
     memory: true
     disk: /
-    cacheTime: 60  # Cache for 60 seconds
+    cacheTime: 360  # Cache for 60 seconds
 
 - search:
     provider: google
@@ -35,4 +35,4 @@
       - GOOGL
       - NVDA
     showUSMarketStatus: true
-    cache: 5
+    cache: 15

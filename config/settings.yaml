@@ -15,6 +15,8 @@ iconStyle: theme
 # Performance optimizations
 statusStyle: dot  # Lighter than "full" status style
 disableCollapse: true  # Reduces re-renders
+logLevel: debug
+
 
 layout:
   Servers:
