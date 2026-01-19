@@ -441,7 +441,7 @@
         widget:
           type: homeassistant
           url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
-          key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY_2}}"
+          key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}"
     - Casaos:
         href: https://casaos.asbblog.com/
         description: Casaos Asbblog
