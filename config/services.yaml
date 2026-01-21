@@ -5,8 +5,6 @@
         href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
         description: pve1
         siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
-        server: my-docker
-        container: proxmox
         widget:
           type: proxmox
           url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
@@ -14,6 +12,7 @@
           password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
           cache: 300000
           refreshInterval: 60000
+          node: pve
     - Proxmox2:
         icon: proxmox.svg
         href: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
@@ -26,11 +25,11 @@
           password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_2}}"
           cache: 300000
           refreshInterval: 60000
-          node: pve-dell2
+          node: pve2
     - Proxmox3:
         icon: proxmox.svg
         href: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
-        description: pve-truenas
+        description: pve-backup
         siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
         widget:
           type: proxmox
@@ -39,11 +38,11 @@
           password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_3}}"
           cache: 300000
           refreshInterval: 60000
-          node: pve2
+          node: pve-backup
     - Proxmox4:
         icon: proxmox.svg
         href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
-        description: pve4
+        description: pve6
         siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
         widget:
           type: proxmox
@@ -52,7 +51,7 @@
           password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
           cache: 300000
           refreshInterval: 60000
-          node: pve
+          node: pve6
 
 - Media:
     - Radarr:
