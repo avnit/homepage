@@ -384,7 +384,7 @@
         siteMonitor: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
         icon: speedtest-tracker
         version: 2
-        key: base64:5KA4VBox2Lhb6FXFq/1DW4KBOgU3IN3aGGwso8Tqpq0=
+        key: "{{HOMEPAGE_VAR_SPEEDTEST_API}}"
         widget:
           type: speedtest
           url: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
