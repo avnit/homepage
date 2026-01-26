@@ -18,10 +18,11 @@
         // Ollama Configuration
         // Read from environment when available (Next.js: NEXT_PUBLIC_OLLAMA_URL)
         // or from a global `window.OLLAMA_URL` set at runtime. Fallback to localhost.
-        ollamaUrl: (typeof process !== 'undefined' && process.env && process.env.NEXT_PUBLIC_OLLAMA_URL)
-            ? process.env.NEXT_PUBLIC_OLLAMA_URL
-            : (typeof window !== 'undefined' && window.OLLAMA_URL) ? window.OLLAMA_URL : 'http://192.168.0.159:11434',
-        ollamaModel: 'llama3.2'  // Change to your preferred model
+        // ollamaUrl: (typeof process !== 'undefined' && process.env && process.env.NEXT_PUBLIC_OLLAMA_URL)
+        //    ? process.env.NEXT_PUBLIC_OLLAMA_URL
+        //    : (typeof window !== 'undefined' && window.OLLAMA_URL) ? window.OLLAMA_URL : 'http://192.168.0.159:11434',
+        ollamaUrl: 'http://192.168.0.159:11434',
+        ollamaModel: 'gemma3:12b'  // Change to your preferred model
     };
 
     // ========================================
