@@ -145,6 +145,15 @@
           url: "{{HOMEPAGE_VAR_PLEX_URL}}"
           key: "{{HOMEPAGE_VAR_PLEX_API_TOKEN}}"
           cache: 300000
+    - Jellyseerr:
+        href: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
+        description: jellyseerr
+        icon: jellyseerr
+        siteMonitor: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
+        widget:
+          type: jellyseerr
+          url: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
+          key: "{{HOMEPAGE_VAR_JELLYSEER_KEY}}"
     - HDHomerun:
         icon: hdhomerun.png
         href: "{{HOMEPAGE_VAR_HDHOMERUN_URL}}"
@@ -251,14 +260,14 @@
           username: "{{HOMEPAGE_VAR_QB_USER_2}}"
           password: "{{HOMEPAGE_VAR_QB_API_KEY_2}}"
     - jellyseerr:
-        href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+        href: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
         description: jellyseerr
         icon: jellyseerr
-        siteMonitor: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+        siteMonitor: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
         widget:
           type: jellyseerr
-          url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
-          key: "{{HOMEPAGE_VAR_JELLYSEERR_API_KEY}}"
+          url: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
+          key: "{{HOMEPAGE_VAR_JELLYSEER__KEY}}"
           cache: 300000
     - Sonarr:
         href: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
