@@ -14,88 +14,106 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/gethomepage/homepage/actions/workflows/docker-publish.yml"><img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/gethomepage/homepage/docker-publish.yml"></a>
- ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄                                         
-▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌                                        
-▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌                                       
-▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌                                       
-▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌                                       
-▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌                                        
-▐░█▀▀▀▀▀▀▀█░▌ ▀▀▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌                                       
-▐░▌       ▐░▌          ▐░▌▐░▌       ▐░▌                                       
-▐░▌       ▐░▌ ▄▄▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄█░▌                                       
-▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌                                        
- ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀                                         
-                                                                              
- ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄            ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
+
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌
+▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌
+▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀█░▌ ▀▀▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌
+▐░▌       ▐░▌          ▐░▌▐░▌       ▐░▌
+▐░▌       ▐░▌ ▄▄▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄█░▌
+▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌
+ ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀
+
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄            ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄
 ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌          ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
-▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░▌          ▐░▌       ▐░▌ ▀▀▀▀█░█▀▀▀▀  ▀▀▀▀█░█▀▀▀▀ 
-▐░▌          ▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌     
-▐░█▄▄▄▄▄▄▄▄▄ ▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌     
-▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌     
- ▀▀▀▀▀▀▀▀▀█░▌▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌     
-          ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌     
- ▄▄▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌     ▐░▌      ▄▄▄▄█░█▄▄▄▄ 
+▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░▌          ▐░▌       ▐░▌ ▀▀▀▀█░█▀▀▀▀  ▀▀▀▀█░█▀▀▀▀
+▐░▌          ▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌
+▐░█▄▄▄▄▄▄▄▄▄ ▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌
+▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌
+ ▀▀▀▀▀▀▀▀▀█░▌▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌
+          ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌
+ ▄▄▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌     ▐░▌      ▄▄▄▄█░█▄▄▄▄
 ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░▌     ▐░░░░░░░░░░░▌
- ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀       ▀       ▀▀▀▀▀▀▀▀▀▀▀ 
-                                                                              
- ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄▄                                        
-▐░░░░░░░░░░░▌▐░░▌      ▐░▌▐░░░░░░░░░░░▌                                       
-▐░█▀▀▀▀▀▀▀█░▌▐░▌░▌     ▐░▌▐░█▀▀▀▀▀▀▀▀▀                                        
-▐░▌       ▐░▌▐░▌▐░▌    ▐░▌▐░▌                                                 
-▐░▌       ▐░▌▐░▌ ▐░▌   ▐░▌▐░█▄▄▄▄▄▄▄▄▄                                        
-▐░▌       ▐░▌▐░▌  ▐░▌  ▐░▌▐░░░░░░░░░░░▌                                       
-▐░▌       ▐░▌▐░▌   ▐░▌ ▐░▌ ▀▀▀▀▀▀▀▀▀█░▌                                       
-▐░▌       ▐░▌▐░▌    ▐░▌▐░▌          ▐░▌                                       
-▐░█▄▄▄▄▄▄▄█░▌▐░▌     ▐░▐░▌ ▄▄▄▄▄▄▄▄▄█░▌                                       
-▐░░░░░░░░░░░▌▐░▌      ▐░░▌▐░░░░░░░░░░░▌                                       
- ▀▀▀▀▀▀▀▀▀▀▀  ▀        ▀▀  ▀▀▀▀▀▀▀▀▀▀▀                                        
-                                                                              
-  <a href="https://crowdin.com/project/gethomepage" target="_blank"><img src="https://badges.crowdin.net/gethomepage/localized.svg"></a>
-  &nbsp;
-  <a href="https://discord.gg/k4ruYNrudu"><img alt="Discord" src="https://img.shields.io/discord/1019316731635834932"></a>
-  &nbsp;
-  <a href="http://gethomepage.dev/latest/" title="Docs"><img title="Docs" src="https://github.com/gethomepage/homepage/actions/workflows/docs-publish.yml/badge.svg"/></a>
-  &nbsp;
-  <a href="https://paypal.me/phelpsben" title="Donate"><img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/benphelps"></a>
-</p>
+ ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀       ▀       ▀▀▀▀▀▀▀▀▀▀▀
 
-<p align="center">
-  <a href="https://www.digitalocean.com/?refcode=df14bcb7c016&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="DigitalOcean Referral Badge" /></a>
-</p>
-<p align="center">
-<em>Homepage builds are kindly powered by DigitalOcean.</em>
-</p>
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄▄
+▐░░░░░░░░░░░▌▐░░▌      ▐░▌▐░░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀█░▌▐░▌░▌     ▐░▌▐░█▀▀▀▀▀▀▀▀▀
+▐░▌       ▐░▌▐░▌▐░▌    ▐░▌▐░▌
+▐░▌       ▐░▌▐░▌ ▐░▌   ▐░▌▐░█▄▄▄▄▄▄▄▄▄
+▐░▌       ▐░▌▐░▌  ▐░▌  ▐░▌▐░░░░░░░░░░░▌
+▐░▌       ▐░▌▐░▌   ▐░▌ ▐░▌ ▀▀▀▀▀▀▀▀▀█░▌
+▐░▌       ▐░▌▐░▌    ▐░▌▐░▌          ▐░▌
+▐░█▄▄▄▄▄▄▄█░▌▐░▌     ▐░▐░▌ ▄▄▄▄▄▄▄▄▄█░▌
+▐░░░░░░░░░░░▌▐░▌      ▐░░▌▐░░░░░░░░░░░▌
+ ▀▀▀▀▀▀▀▀▀▀▀  ▀        ▀▀  ▀▀▀▀▀▀▀▀▀▀▀
 
-# Features
 
-With features like quick search, bookmarks, weather support, a wide range of integrations and widgets, an elegant and modern design, and a focus on performance, Homepage is your ideal start to the day and a handy companion throughout it.
 
-- **Fast** - The site is statically generated at build time for instant load times.
-- **Secure** - All API requests to backend services are proxied, keeping your API keys hidden. Constantly reviewed for security by the community.
-- **For Everyone** - Images built for AMD64, ARM64, ARMv7, and ARMv6.
-- **Full i18n** - Support for over 40 languages.
-- **Service & Web Bookmarks** - Add custom links to the homepage.
-- **Docker Integration** - Container status and stats. Automatic service discovery via labels.
-- **Service Integration** - Over 100 service integrations, including popular starr and self-hosted apps.
-- **Information & Utility Widgets** - Weather, time, date, search, and more.
-- **And much more...**
+# homepage2.asbblog.com - My Personal Homepage
 
-## Docker Integration
+This repository hosts the source code for my personal homepage, homepage2.asbblog.com. It's designed to showcase my projects, skills, and personal information in a clean and accessible format.
 
-Homepage has built-in support for Docker, and can automatically discover and add services to the homepage based on labels. See the [Docker Service Discovery](https://gethomepage.dev/latest/configs/docker/#automatic-service-discovery) page for more information.
+The code repo has been forked from homepage.dev and additional functionality is added to make it personal
 
-## Service Widgets
+## Technologies Used
 
-Homepage also has support for over 100 3rd party services, including all popular starr apps, and most popular self-hosted apps. Some examples include: Radarr, Sonarr, Lidarr, Bazarr, Ombi, Tautulli, Plex, Jellyfin, Emby, Transmission, qBittorrent, Deluge, Jackett, NZBGet, SABnzbd, etc. As well as service integrations, Homepage also has a number of information providers, sourcing information from a variety of external 3rd party APIs. See the [Service](https://gethomepage.dev/latest/widgets/) page for more information.
+* **HTML**: For structuring the content.
+* **CSS**: For styling and layout.
+* **JavaScript**: For interactive elements (if any are implemented).
+* **GitHub Pages**: For hosting the website.
 
-## Information Widgets
+## Structure
 
-Homepage has built-in support for a number of information providers, including weather, time, date, search, glances and more. System and status information presented at the top of the page. See the [Information Providers](https://gethomepage.dev/latest/widgets/) page for more information.
+The repository is structured as follows:
+
+* `index.html`: The main HTML file for the homepage.
+* `style.css`: The stylesheet for the homepage's design.
+* `script.js`: JavaScript files if there are any interactive elements.
+* `assets/`: A directory for images and other static assets.
+* `README.md`: This file.
 
 ## Customization
 
-Homepage is highly customizable, with support for custom themes, custom CSS & JS, custom layouts, formatting, localization and more. See the [Settings](https://gethomepage.dev/latest/configs/settings/) page for more information.
+If you'd like to use this repository as a template for your own homepage, you can follow these steps:
+
+1.  **Fork the Repository:** Click the "Fork" button on the top right of the repository page.
+2.  **Clone the Fork:** Clone the forked repository to your local machine:
+
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/homepage.git](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/homepage.git)
+    ```
+
+3.  **Customize the Content:**
+    * Edit `config\*` directory to make the files personal.
+    * edit run.sh and compose.yaml to point to the correct home directory
+
+4.  **Deploy to Linux server **
+    * Go to your promox and opne the console of the VM where you have debian linux installed.
+    * clone the repo and do docker login 
+    * execute run.sh .
+    * Make sure that docker hub has the homepage app and you are using right tags in compose.yaml
+    * The service is exposed on port 3000 
+    
+
+## Docker Integration ( Added to run.sh ) 
+
+Homepage has built-in support for Docker, and can automatically discover and add services to the homepage based on labels. See the [Docker Service Discovery](https://gethomepage.dev/configs/docker/#automatic-service-discovery) page for more information.
+
+## Service Widgets
+
+Homepage also has support for hundreds of 3rd-party services, including all popular \*arr apps, and most popular self-hosted apps. Some examples include: Radarr, Sonarr, Lidarr, Bazarr, Ombi, Tautulli, Plex, Jellyfin, Emby, Transmission, qBittorrent, Deluge, Jackett, NZBGet, SABnzbd, etc. As well as service integrations, Homepage also has a number of information providers, sourcing information from a variety of external 3rd-party APIs. See the [Service](https://gethomepage.dev/widgets/) page for more information.
+
+## Information Widgets
+
+Homepage has built-in support for a number of information providers, including weather, time, date, search, glances and more. System and status information presented at the top of the page. See the [Information Providers](https://gethomepage.dev/widgets/) page for more information.
+
+## Customization
+
+Homepage is highly customizable, with support for custom themes, custom CSS & JS, custom layouts, formatting, localization and more. See the [Settings](https://gethomepage.dev/configs/settings/) page for more information.
 
 # Getting Started
 
@@ -115,8 +133,9 @@ services:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
     environment:
-      PUID: 1000 -- optional, your user id
-      PGID: 1000 -- optional, your group id
+      HOMEPAGE_ALLOWED_HOSTS: gethomepage.dev # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
+      PUID: 1000 # optional, your user id
+      PGID: 1000 # optional, your group id
     ports:
       - 3000:3000
     volumes:
@@ -129,6 +148,7 @@ or docker run:
 
 ```bash
 docker run --name homepage \
+  -e HOMEPAGE_ALLOWED_HOSTS=gethomepage.dev \
   -e PUID=1000 \
   -e PGID=1000 \
   -p 3000:3000 \
@@ -138,7 +158,7 @@ docker run --name homepage \
   ghcr.io/gethomepage/homepage:latest
 ```
 
-## With Node
+## From Source
 
 First, clone the repository:
 
@@ -146,7 +166,7 @@ First, clone the repository:
 git clone https://github.com/gethomepage/homepage.git
 ```
 
-Then install dependencies and build the production bundle (I'm using pnpm here, you can use npm or yarn if you like):
+Then install dependencies and build the production bundle:
 
 ```bash
 pnpm install
@@ -161,15 +181,9 @@ Finally, run the server in production mode:
 pnpm start
 ```
 
-or development mode:
-
-```bash
-pnpm dev
-```
-
 # Configuration
 
-Please refer to the [homepage documentation](https://gethomepage.dev/) website for more information. Everything you need to know about configuring Homepage is there. Please read everything carefully before asking for help, as most questions are answered there or are simple YAML configuration issues.
+Please refer to the [homepage documentation website](https://gethomepage.dev/) for more information. Everything you need to know about configuring Homepage is there. Please read everything carefully before asking for help, as most questions are answered there or are simple YAML configuration issues.
 
 # Development
 
@@ -205,14 +219,3 @@ Then run the development server:
 mkdocs serve # or build, to build the static site
 ```
 
-# Support & Suggestions
-
-If you have any questions, suggestions, or general issues, please start a discussion on the [Discussions](https://github.com/gethomepage/homepage/discussions) page.
-
-## Contributing & Contributors
-
-Contributions are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
-
-Thanks to the over 200 contributors who have helped make this project what it is today!
-
-Especially huge thanks to [@shamoon](https://github.com/shamoon), who has been the backbone of this community from the very start.

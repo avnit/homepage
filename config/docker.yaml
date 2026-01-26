@@ -1,10 +1,58 @@
 ---
 # For configuration options and examples, please see:
-# https://gethomepage.dev/latest/configs/docker/
+# https://gethomepage.dev/configs/docker/
 
-my-remote-docker:
-  host: 192.168.68.84
-  port: 2375
-
+# Local Docker (where Homepage is running)
+# Uses the Docker socket for direct access
 my-docker:
   socket: /var/run/docker.sock
+
+# Unraid Server at 192.168.0.4
+# Option 1: Using Docker socket over TCP (requires Docker to expose TCP port)
+# Uncomment and use this if Docker on Unraid is configured to listen on TCP port 2375
+# unraid-docker:
+#   host: 192.168.0.4
+#   port: 2375
+
+# Option 2: Using Docker socket over TLS (more secure, requires certificates)
+# Uncomment and use this if Docker on Unraid is configured with TLS on port 2376
+# unraid-docker:
+#   host: 192.168.0.4
+#   port: 2376
+#   tls:
+#     ca: /path/to/ca.pem
+#     cert: /path/to/cert.pem
+#     key: /path/to/key.pem
+
+# Option 3: Using Docker socket file mounted from Unraid (if using a shared mount)
+# Uncomment if you have mounted Unraid's docker socket
+# unraid-docker:
+#   socket: /var/run/unraid-docker.sock
+
+# NOTE: To enable remote Docker monitoring on Unraid:
+# 1. SSH into Unraid
+# 2. Edit /boot/config/docker.cfg
+# 3. Add: DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"
+# 4. Restart Docker: /etc/rc.d/rc.docker restart
+# WARNING: Port 2375 is unencrypted. Use 2376 with TLS for production!
+
+# Active configuration for Unraid (TCP without TLS - for testing)
+unraid-docker:
+  host: 192.168.0.4
+  port: 2375
+
+portainer-docker:
+  host: 192.168.0.117
+  port: 2375 
+
+orange-docker:
+  host: 192.168.0.185
+  port: 2375
+
+self:
+  host: 192.168.0.17
+  port: 2375
+
+portainer2-docker:
+  host: 192.168.0.179
+  port: 2375

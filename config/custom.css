@@ -1,0 +1,465 @@
+/* Custom CSS for Homepage Dashboard */
+/* Author: ASB Solutions */
+
+/* =====================================================
+   GLOBAL STYLES
+   ===================================================== */
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom glassmorphism effect for cards */
+.service-card,
+.widget-container {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* =====================================================
+   SERVICE CARDS
+   ===================================================== */
+
+/* Enhance service card hover effects */
+.service-card:hover {
+    transform: translateY(-3px) scale(1.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Service icon glow effect on hover */
+.service-card:hover img,
+.service-card:hover svg {
+    filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.5));
+    transition: filter 0.3s ease;
+}
+
+/* =====================================================
+   BOOKMARKS
+   ===================================================== */
+
+/* Bookmark hover animation */
+.bookmark-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* Custom Tooltip */
+.bookmark-icon {
+    position: relative;
+    /* Ensure tooltip positioning context */
+}
+
+.custom-tooltip {
+    visibility: hidden;
+    width: max-content;
+    max-width: 200px;
+    background: rgba(17, 24, 39, 0.95);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 8px 12px;
+    position: absolute;
+    z-index: 100;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: normal;
+    line-height: 1.4;
+}
+
+.bookmark-icon:hover .custom-tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Tooltip Arrow */
+.custom-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(17, 24, 39, 0.95) transparent transparent transparent;
+}
+
+/* =====================================================
+   WIDGETS
+   ===================================================== */
+
+/* Resource widget progress bars with gradient */
+.resource-bar {
+    background: linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6);
+    border-radius: 4px;
+}
+
+/* Stock widget styling */
+.stock-up {
+    color: #22c55e !important;
+    text-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+}
+
+.stock-down {
+    color: #ef4444 !important;
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+}
+
+/* =====================================================
+   HEADER & NAVIGATION
+   ===================================================== */
+
+/* Subtle header animation */
+.header-title {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* =====================================================
+   STATUS INDICATORS
+   ===================================================== */
+
+/* Pulsing status dot for online services */
+.status-online {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+/* =====================================================
+   SCROLLBAR STYLING
+   ===================================================== */
+
+/* Custom scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #06b6d4, #8b5cf6);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #22d3ee, #a78bfa);
+}
+
+/* =====================================================
+   DARK MODE ENHANCEMENTS
+   ===================================================== */
+
+/* Enhanced dark mode shadows */
+.dark .service-card {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtle border glow for cards in dark mode */
+.dark .service-card {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark .service-card:hover {
+    border: 1px solid rgba(34, 211, 238, 0.3);
+}
+
+/* =====================================================
+   RESPONSIVE ADJUSTMENTS
+   ===================================================== */
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .service-card:hover {
+        transform: none;
+    }
+}
+
+/* =====================================================
+   LOADING & TRANSITIONS
+   ===================================================== */
+
+/* Fade in animation for page load */
+.page-content {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================================
+   AI CHATBOT
+   ===================================================== */
+
+/* Chatbot wrapper */
+#chatbot-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Toggle button */
+#chatbot-toggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#chatbot-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(6, 182, 212, 0.4);
+}
+
+#chatbot-toggle.chatbot-toggle-hidden {
+    display: none;
+}
+
+/* Chatbot container */
+#chatbot-container {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    width: 350px;
+    height: 450px;
+    background: rgba(17, 24, 39, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#chatbot-container.chatbot-hidden {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    pointer-events: none;
+}
+
+/* Header */
+#chatbot-header {
+    background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#chatbot-minimize {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    transition: background 0.2s;
+}
+
+#chatbot-minimize:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Messages area */
+#chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chat-message {
+    max-width: 85%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.4;
+    animation: messageIn 0.3s ease;
+}
+
+@keyframes messageIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bot-message {
+    background: rgba(6, 182, 212, 0.2);
+    color: #e2e8f0;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.user-message {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+/* Typing indicator */
+.typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 12px 16px;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background: #06b6d4;
+    border-radius: 50%;
+    animation: typing 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+
+    30% {
+        transform: translateY(-8px);
+        opacity: 1;
+    }
+}
+
+/* Input area */
+#chatbot-input-container {
+    display: flex;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    gap: 8px;
+}
+
+#chatbot-input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: white;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#chatbot-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#chatbot-input:focus {
+    border-color: #06b6d4;
+}
+
+#chatbot-send {
+    background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#chatbot-send:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    #chatbot-container {
+        width: calc(100vw - 40px);
+        height: 400px;
+        bottom: 70px;
+        right: -10px;
+    }
+}

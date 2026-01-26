@@ -1,6 +1,4 @@
----
-# For configuration options and examples, please see:
-# https://gethomepage.dev/latest/configs/settings
+# https://gethomepage.dev/configs/settings
 title: ASB Solutions Home Page
 startUrl: https://asbblog.com
 #background: https://wallpapercave.com/wp/wp2765466.jpg
@@ -9,16 +7,26 @@ startUrl: https://asbblog.com
 theme: dark # or light
 color: cyan
 layout:
+  Hypervisor:
+    header: true
+    style: row
+    columns: 4
   Business: 
+    header: true
+    style: row
+    columns: 4
+  DNS:
+    header: true
     style: row
     columns: 4
   Monitoring:
+    header: true
     style: row
     columns: 4
   Automation:
     style: row
     columns: 4
-  Storage Server:
+  Storage-Server:
     style: row
     columns: 2
   Media:
@@ -27,14 +35,17 @@ layout:
   Media2:
     style: row
     columns: 4
+  Other:
+    style: row
+    columns: 2
 quicklaunch:
   searchDescriptions: true
   hideInternetSearch: true
   hideVisitURL: true
 hideVersion: true
-logpath: /logfile/path
+#logpath: /root/homepage
 showStats: true
-
 providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
+  finnhub: cvjjgu9r01qlscpcir7gcvjjgu9r01qlscpcir80

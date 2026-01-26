@@ -1,6 +1,6 @@
-import { httpProxy } from "utils/proxy/http";
 import getServiceWidget from "utils/config/service-helpers";
 import createLogger from "utils/logger";
+import { httpProxy } from "utils/proxy/http";
 
 const proxyName = "omadaProxyHandler";
 
@@ -33,10 +33,10 @@ async function login(loginUrl, username, password, controllerVersionMajor) {
 }
 
 export default async function omadaProxyHandler(req, res) {
-  const { group, service } = req.query;
+  const { group, service, index } = req.query;
 
   if (group && service) {
-    const widget = await getServiceWidget(group, service);
+    const widget = await getServiceWidget(group, service, index);
 
     if (widget) {
       const { url } = widget;
@@ -66,7 +66,7 @@ export default async function omadaProxyHandler(req, res) {
 
       const controllerVersionMajor = parseInt(controllerVersion.split(".")[0], 10);
 
-      if (![3, 4, 5].includes(controllerVersionMajor)) {
+      if (![3, 4, 5, 6].includes(controllerVersionMajor)) {
         return res.status(500).json({ error: { message: "Error determining controller version", data } });
       }
 
@@ -80,6 +80,7 @@ export default async function omadaProxyHandler(req, res) {
           loginUrl = `${url}/api/v2/login`;
           break;
         case 5:
+        case 6:
           loginUrl = `${url}/${cId}/api/v2/login`;
           break;
         default:
@@ -122,6 +123,7 @@ export default async function omadaProxyHandler(req, res) {
           sitesUrl = `${url}/api/v2/sites?token=${token}&currentPage=1&currentPageSize=1000`;
           break;
         case 5:
+        case 6:
           sitesUrl = `${url}/${cId}/api/v2/sites?token=${token}&currentPage=1&currentPageSize=1000`;
           break;
         default:
@@ -138,7 +140,7 @@ export default async function omadaProxyHandler(req, res) {
       const sitesResponseData = JSON.parse(data);
 
       if (status !== 200 || sitesResponseData.errorCode > 0) {
-        logger.debug(`HTTTP ${status} getting sites list: ${sitesResponseData.msg}`);
+        logger.debug(`HTTP ${status} getting sites list: ${sitesResponseData.msg}`);
         return res
           .status(status)
           .json({ error: { message: "Error getting sites list", url, data: sitesResponseData } });
@@ -207,8 +209,8 @@ export default async function omadaProxyHandler(req, res) {
         connectedAp = siteResponseData.result.connectedAp;
         activeUser = siteResponseData.result.activeUser;
         alerts = siteResponseData.result.alerts;
-      } else if (controllerVersionMajor === 4 || controllerVersionMajor === 5) {
-        const siteName = controllerVersionMajor === 5 ? site.id : site.key;
+      } else if ([4, 5, 6].includes(controllerVersionMajor)) {
+        const siteName = controllerVersionMajor > 4 ? site.id : site.key;
         const siteStatsUrl =
           controllerVersionMajor === 4
             ? `${url}/api/v2/sites/${siteName}/dashboard/overviewDiagram?token=${token}&currentPage=1&currentPageSize=1000`

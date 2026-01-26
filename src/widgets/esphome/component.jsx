@@ -1,7 +1,7 @@
-import { useTranslation } from "next-i18next";
-
 import Block from "components/services/widget/block";
 import Container from "components/services/widget/container";
+import { useTranslation } from "next-i18next";
+
 import useWidgetAPI from "utils/proxy/use-widget-api";
 
 export default function Component({ service }) {
@@ -12,6 +12,12 @@ export default function Component({ service }) {
 
   if (resultError) {
     return <Container service={service} error={resultError} />;
+  }
+
+  if (!widget.fields || widget.fields.length === 0) {
+    widget.fields = ["online", "offline", "offline_alt", "total"];
+  } else if (widget.fields.length > 4) {
+    widget.fields = widget.fields.slice(0, 4);
   }
 
   if (!resultData) {

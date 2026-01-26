@@ -13,7 +13,7 @@
         "ms": "{{value, number}}",
         "date": "{{value, date}}",
         "relativeDate": "{{value, relativeDate}}",
-        "uptime": "{{value, uptime}}",
+        "duration": "{{value, duration}}",
         "months": "mån",
         "days": "d",
         "hours": "h",
@@ -63,7 +63,7 @@
         "wlan_users": "WLAN-användare",
         "up": "UP",
         "down": "MOTTAGIT",
-        "wait": "Vänligen vänta",
+        "wait": "Please wait",
         "empty_data": "Subsystem status unknown"
     },
     "docker": {
@@ -120,7 +120,7 @@
         "grid_power": "Grid",
         "home_power": "Consumption",
         "charge_power": "Charger",
-        "watt_hour": "Wh"
+        "kilowatt": "kW"
     },
     "flood": {
         "download": "Download",
@@ -148,7 +148,9 @@
         "up": "Up",
         "received": "Received",
         "sent": "Sent",
-        "externalIPAddress": "Ext. IP"
+        "externalIPAddress": "Ext. IP",
+        "externalIPv6Address": "Ext. IPv6",
+        "externalIPv6Prefix": "Ext. IPv6-Prefix"
     },
     "caddy": {
         "upstreams": "Upstreams",
@@ -166,17 +168,17 @@
         "passes": "Passes"
     },
     "tautulli": {
-        "playing": "Spelar",
-        "transcoding": "Omkodning",
+        "playing": "Playing",
+        "transcoding": "Transcoding",
         "bitrate": "Bitrate",
-        "no_active": "Inga aktiva strömmar",
+        "no_active": "No Active Streams",
         "plex_connection_error": "Check Plex Connection"
     },
     "omada": {
         "connectedAp": "Connected APs",
         "activeUser": "Active devices",
         "alerts": "Alerts",
-        "connectedGateway": "Connected gateways",
+        "connectedGateways": "Connected gateways",
         "connectedSwitches": "Connected switches"
     },
     "nzbget": {
@@ -191,7 +193,7 @@
         "tv": "TV-serier"
     },
     "sabnzbd": {
-        "rate": "Hastighet",
+        "rate": "Rate",
         "queue": "Kö",
         "timeleft": "Tid kvar"
     },
@@ -226,6 +228,10 @@
         "leech": "Leech",
         "seed": "Seed"
     },
+    "develancacheui": {
+        "cachehitbytes": "Cache Hit Bytes",
+        "cachemissbytes": "Cache Miss Bytes"
+    },
     "downloadstation": {
         "download": "Download",
         "upload": "Upload",
@@ -236,25 +242,25 @@
         "wanted": "Eftersöker",
         "queued": "I kö",
         "series": "Series",
-        "queue": "Kö",
+        "queue": "Queue",
         "unknown": "Unknown"
     },
     "radarr": {
-        "wanted": "Eftersöker",
+        "wanted": "Wanted",
         "missing": "Missing",
-        "queued": "I kö",
+        "queued": "Queued",
         "movies": "Movies",
-        "queue": "Kö",
+        "queue": "Queue",
         "unknown": "Unknown"
     },
     "lidarr": {
-        "wanted": "Eftersöker",
-        "queued": "I kö",
+        "wanted": "Wanted",
+        "queued": "Queued",
         "artists": "Artists"
     },
     "readarr": {
-        "wanted": "Eftersöker",
-        "queued": "I kö",
+        "wanted": "Wanted",
+        "queued": "Queued",
         "books": "Böcker"
     },
     "bazarr": {
@@ -267,15 +273,16 @@
         "available": "Tillgänglig"
     },
     "jellyseerr": {
-        "pending": "Avvaktar",
-        "approved": "Godkända",
-        "available": "Tillgänglig"
+        "pending": "Pending",
+        "approved": "Approved",
+        "available": "Available",
+        "issues": "Open Issues"
     },
     "overseerr": {
-        "pending": "Avvaktar",
+        "pending": "Pending",
         "processing": "Processing",
-        "approved": "Godkända",
-        "available": "Tillgänglig"
+        "approved": "Approved",
+        "available": "Available"
     },
     "netalertx": {
         "total": "Total",
@@ -290,8 +297,8 @@
         "gravity": "Gravity"
     },
     "adguard": {
-        "queries": "Förfrågningar",
-        "blocked": "Blockerad",
+        "queries": "Queries",
+        "blocked": "Blocked",
         "filtered": "Filtrerad",
         "latency": "Svarstid"
     },
@@ -304,6 +311,16 @@
         "running": "Running",
         "stopped": "Stoppade",
         "total": "Total"
+    },
+    "suwayomi": {
+        "download": "Downloaded",
+        "nondownload": "Non-Downloaded",
+        "read": "Read",
+        "unread": "Unread",
+        "downloadedread": "Downloaded & Read",
+        "downloadedunread": "Downloaded & Unread",
+        "nondownloadedread": "Non-Downloaded & Read",
+        "nondownloadedunread": "Non-Downloaded & Unread"
     },
     "tailscale": {
         "address": "Address",
@@ -319,8 +336,21 @@
         "seconds": "{{number}}s",
         "ago": "{{value}} Ago"
     },
+    "technitium": {
+        "totalQueries": "Queries",
+        "totalNoError": "Success",
+        "totalServerFailure": "Failures",
+        "totalNxDomain": "NX Domains",
+        "totalRefused": "Refused",
+        "totalAuthoritative": "Authoritative",
+        "totalRecursive": "Recursive",
+        "totalCached": "Cached",
+        "totalBlocked": "Blocked",
+        "totalDropped": "Dropped",
+        "totalClients": "Klienter"
+    },
     "tdarr": {
-        "queue": "Kö",
+        "queue": "Queue",
         "processed": "Processed",
         "errored": "Errored",
         "saved": "Saved"
@@ -330,8 +360,14 @@
         "services": "Tjänster",
         "middleware": "Middleware"
     },
+    "trilium": {
+        "version": "Version",
+        "notesCount": "Notes",
+        "dbSize": "Database Size",
+        "unknown": "Unknown"
+    },
     "navidrome": {
-        "nothing_streaming": "Inga aktiva strömmar",
+        "nothing_streaming": "No Active Streams",
         "please_wait": "Please Wait"
     },
     "npm": {
@@ -348,13 +384,13 @@
     },
     "gotify": {
         "apps": "Program",
-        "clients": "Klienter",
+        "clients": "Clients",
         "messages": "Meddelande"
     },
     "prowlarr": {
         "enableIndexers": "Indexerare",
         "numberOfGrabs": "Hämtningar",
-        "numberOfQueries": "Förfrågningar",
+        "numberOfQueries": "Queries",
         "numberOfFailGrabs": "Misslyckade hämtningar",
         "numberOfFailQueries": "Misslyckade hämtningar"
     },
@@ -366,16 +402,16 @@
         "numActiveSessions": "Sessioner",
         "numConnections": "Anslutningar",
         "dataRelayed": "Relayed",
-        "transferRate": "Hastighet"
+        "transferRate": "Rate"
     },
     "mastodon": {
-        "user_count": "Användare",
+        "user_count": "Users",
         "status_count": "Posts",
         "domain_count": "Domains"
     },
     "medusa": {
-        "wanted": "Eftersöker",
-        "queued": "I kö",
+        "wanted": "Wanted",
+        "queued": "Queued",
         "series": "Series"
     },
     "minecraft": {
@@ -390,7 +426,7 @@
         "unread": "Unread"
     },
     "authentik": {
-        "users": "Användare",
+        "users": "Users",
         "loginsLast24H": "Inloggningar (24h)",
         "failedLoginsLast24H": "Misslyckade inloggningar (24h)"
     },
@@ -402,15 +438,15 @@
     },
     "glances": {
         "cpu": "CPU",
-        "load": "Laddar",
-        "wait": "Vänligen vänta",
+        "load": "Load",
+        "wait": "Please wait",
         "temp": "TEMP",
         "_temp": "Temp",
         "warn": "Warn",
         "uptime": "UP",
         "total": "Total",
-        "free": "Ledigt",
-        "used": "Använt",
+        "free": "Free",
+        "used": "Used",
         "days": "d",
         "hours": "h",
         "crit": "Crit",
@@ -495,7 +531,7 @@
         "child_bridges": "Child Bridges",
         "child_bridges_status": "{{ok}}/{{total}}",
         "up": "Up",
-        "pending": "Avvaktar",
+        "pending": "Pending",
         "down": "Down"
     },
     "healthchecks": {
@@ -514,13 +550,13 @@
         "containers_failed": "Failed"
     },
     "autobrr": {
-        "approvedPushes": "Godkända",
+        "approvedPushes": "Approved",
         "rejectedPushes": "Rejected",
         "filters": "Filters",
-        "indexers": "Indexerare"
+        "indexers": "Indexers"
     },
     "tubearchivist": {
-        "downloads": "Kö",
+        "downloads": "Queue",
         "videos": "Videos",
         "channels": "Channels",
         "playlists": "Playlists"
@@ -532,14 +568,15 @@
     },
     "pyload": {
         "speed": "Speed",
-        "active": "Aktiva",
-        "queue": "Kö",
+        "active": "Active",
+        "queue": "Queue",
         "total": "Total"
     },
     "gluetun": {
         "public_ip": "Public IP",
         "region": "Region",
-        "country": "Country"
+        "country": "Country",
+        "port_forwarded": "Port Forwarded"
     },
     "hdhomerun": {
         "channels": "Channels",
@@ -582,7 +619,7 @@
     },
     "xteve": {
         "streams_all": "All Streams",
-        "streams_active": "Aktiva strömmar",
+        "streams_active": "Active Streams",
         "streams_xepg": "XEPG Channels"
     },
     "opendtu": {
@@ -630,7 +667,7 @@
         "memory_usage": "Memory"
     },
     "immich": {
-        "users": "Användare",
+        "users": "Users",
         "photos": "Photos",
         "videos": "Videos",
         "storage": "Storage"
@@ -651,17 +688,17 @@
     "komga": {
         "libraries": "Libraries",
         "series": "Series",
-        "books": "Böcker"
+        "books": "Books"
     },
     "diskstation": {
-        "days": "Dagar",
+        "days": "Days",
         "uptime": "Uptime",
-        "volumeAvailable": "Tillgänglig"
+        "volumeAvailable": "Available"
     },
     "mylar": {
         "series": "Series",
         "issues": "Issues",
-        "wanted": "Eftersöker"
+        "wanted": "Wanted"
     },
     "photoprism": {
         "albums": "Albums",
@@ -670,10 +707,14 @@
         "people": "People"
     },
     "fileflows": {
-        "queue": "Kö",
+        "queue": "Queue",
         "processing": "Processing",
         "processed": "Processed",
         "time": "Time"
+    },
+    "firefly": {
+        "networth": "Net Worth",
+        "budget": "Budget"
     },
     "grafana": {
         "dashboards": "Dashboards",
@@ -722,7 +763,7 @@
     },
     "audiobookshelf": {
         "podcasts": "Podcasts",
-        "books": "Böcker",
+        "books": "Books",
         "podcastsDuration": "Duration",
         "booksDuration": "Duration"
     },
@@ -736,14 +777,14 @@
         "updates": "Updates"
     },
     "calibreweb": {
-        "books": "Böcker",
+        "books": "Books",
         "authors": "Authors",
         "categories": "Categories",
         "series": "Series"
     },
     "jdownloader": {
-        "downloadCount": "Kö",
-        "downloadBytesRemaining": "Återstående",
+        "downloadCount": "Queue",
+        "downloadBytesRemaining": "Remaining",
         "downloadTotalBytes": "Size",
         "downloadSpeed": "Speed"
     },
@@ -762,7 +803,7 @@
         "inProgress": "In Progress",
         "totalPrs": "Total PRs",
         "myPrs": "My PRs",
-        "approved": "Godkända"
+        "approved": "Approved"
     },
     "gamedig": {
         "status": "Status",
@@ -784,7 +825,7 @@
     },
     "mealie": {
         "recipes": "Recipes",
-        "users": "Användare",
+        "users": "Users",
         "categories": "Categories",
         "tags": "Tags"
     },
@@ -792,7 +833,7 @@
         "downloading": "Downloading",
         "total": "Total",
         "running": "Running",
-        "stopped": "Stoppade",
+        "stopped": "Stopped",
         "passed": "Passed",
         "failed": "Failed"
     },
@@ -823,11 +864,22 @@
         "physicalRelease": "Physical release",
         "digitalRelease": "Digital release",
         "noEventsToday": "No events for today!",
-        "noEventsFound": "No events found"
+        "noEventsFound": "No events found",
+        "errorWhenLoadingData": "Error when loading calendar data"
     },
     "romm": {
         "platforms": "Platforms",
-        "totalRoms": "Total ROMs"
+        "totalRoms": "Games",
+        "saves": "Saves",
+        "states": "States",
+        "screenshots": "Screenshots",
+        "totalfilesize": "Total Size"
+    },
+    "mailcow": {
+        "domains": "Domains",
+        "mailboxes": "Mailboxes",
+        "mails": "Mails",
+        "storage": "Storage"
     },
     "netdata": {
         "warnings": "Warnings",
@@ -842,7 +894,8 @@
     "gitea": {
         "notifications": "Notifications",
         "issues": "Issues",
-        "pulls": "Pull Requests"
+        "pulls": "Pull Requests",
+        "repositories": "Repositories"
     },
     "stash": {
         "scenes": "Scenes",
@@ -861,7 +914,7 @@
         "oCount": "O Count"
     },
     "tandoor": {
-        "users": "Användare",
+        "users": "Users",
         "recipes": "Recipes",
         "keywords": "Keywords"
     },
@@ -870,7 +923,7 @@
         "totalWithWarranty": "With Warranty",
         "locations": "Locations",
         "labels": "Labels",
-        "users": "Användare",
+        "users": "Users",
         "totalValue": "Total Value"
     },
     "crowdsec": {
@@ -879,8 +932,8 @@
     },
     "wgeasy": {
         "connected": "Connected",
-        "enabled": "Aktiverad",
-        "disabled": "Inaktiverad",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
         "total": "Total"
     },
     "swagdashboard": {
@@ -905,5 +958,166 @@
         "cameras": "Cameras",
         "uptime": "Uptime",
         "version": "Version"
+    },
+    "linkwarden": {
+        "links": "Länkar",
+        "collections": "Samlingar",
+        "tags": "Tags"
+    },
+    "zabbix": {
+        "unclassified": "Not classified",
+        "information": "Information",
+        "warning": "Warning",
+        "average": "Average",
+        "high": "High",
+        "disaster": "Disaster"
+    },
+    "lubelogger": {
+        "vehicle": "Vehicle",
+        "vehicles": "Vehicles",
+        "serviceRecords": "Service Records",
+        "reminders": "Reminders",
+        "nextReminder": "Next Reminder",
+        "none": "None"
+    },
+    "vikunja": {
+        "projects": "Active Projects",
+        "tasks7d": "Tasks Due This Week",
+        "tasksOverdue": "Overdue Tasks",
+        "tasksInProgress": "Tasks In Progress"
+    },
+    "headscale": {
+        "name": "Name",
+        "address": "Address",
+        "last_seen": "Last Seen",
+        "status": "Status",
+        "online": "Online",
+        "offline": "Offline"
+    },
+    "beszel": {
+        "name": "Name",
+        "systems": "Systems",
+        "up": "Up",
+        "down": "Down",
+        "paused": "Paused",
+        "pending": "Pending",
+        "status": "Status",
+        "updated": "Updated",
+        "cpu": "CPU",
+        "memory": "MEM",
+        "disk": "Disk",
+        "network": "NET"
+    },
+    "argocd": {
+        "apps": "Apps",
+        "synced": "Synced",
+        "outOfSync": "Out Of Sync",
+        "healthy": "Healthy",
+        "degraded": "Degraded",
+        "progressing": "Progressing",
+        "missing": "Missing",
+        "suspended": "Suspended"
+    },
+    "spoolman": {
+        "loading": "Loading"
+    },
+    "gitlab": {
+        "groups": "Groups",
+        "issues": "Issues",
+        "merges": "Merge Requests",
+        "projects": "Projects"
+    },
+    "apcups": {
+        "status": "Status",
+        "load": "Load",
+        "bcharge": "Battery Charge",
+        "timeleft": "Time Left"
+    },
+    "karakeep": {
+        "bookmarks": "Bookmarks",
+        "favorites": "Favorites",
+        "archived": "Archived",
+        "highlights": "Highlights",
+        "lists": "Lists",
+        "tags": "Tags"
+    },
+    "slskd": {
+        "slskStatus": "Network",
+        "connected": "Connected",
+        "disconnected": "Disconnected",
+        "updateStatus": "Update",
+        "update_yes": "Available",
+        "update_no": "Up to Date",
+        "downloads": "Downloads",
+        "uploads": "Uploads",
+        "sharedFiles": "Files"
+    },
+    "jellystat": {
+        "songs": "Songs",
+        "movies": "Movies",
+        "episodes": "Episodes",
+        "other": "Other"
+    },
+    "checkmk": {
+        "serviceErrors": "Service issues",
+        "hostErrors": "Host issues"
+    },
+    "komodo": {
+        "total": "Total",
+        "running": "Running",
+        "stopped": "Stopped",
+        "down": "Down",
+        "unhealthy": "Unhealthy",
+        "unknown": "Unknown",
+        "servers": "Servers",
+        "stacks": "Stacks",
+        "containers": "Containers"
+    },
+    "filebrowser": {
+        "available": "Available",
+        "used": "Used",
+        "total": "Total"
+    },
+    "wallos": {
+        "activeSubscriptions": "Subscriptions",
+        "thisMonthlyCost": "This Month",
+        "nextMonthlyCost": "Next Month",
+        "previousMonthlyCost": "Prev. Month",
+        "nextRenewingSubscription": "Next Payment"
+    },
+    "unraid": {
+        "STARTED": "Started",
+        "STOPPED": "Stopped",
+        "NEW_ARRAY": "New Array",
+        "RECON_DISK": "Reconstructing Disk",
+        "DISABLE_DISK": "Disk Disabled",
+        "SWAP_DSBL": "Swap Disable",
+        "INVALID_EXPANSION": "Invalid Expansion",
+        "PARITY_NOT_BIGGEST": "Parity Not Biggest",
+        "TOO_MANY_MISSING_DISKS": "Too Many Missing Disks",
+        "NEW_DISK_TOO_SMALL": "New Disk Too Small",
+        "NO_DATA_DISKS": "No Data Disks",
+        "notifications": "Notifications",
+        "status": "Status",
+        "cpu": "CPU",
+        "memoryUsed": "Memory Used",
+        "memoryAvailable": "Memory Available",
+        "arrayUsed": "Array Used",
+        "arrayFree": "Array Free",
+        "poolUsed": "{{pool}} Used",
+        "poolFree": "{{pool}} Free"
+    },
+    "backrest": {
+        "num_plans": "Plans",
+        "num_success_30": "Successes",
+        "num_failure_30": "Failures",
+        "num_success_latest": "Succeeding",
+        "num_failure_latest": "Failing",
+        "bytes_added_30": "Bytes Added"
+    },
+    "yourspotify": {
+        "songs": "Songs",
+        "time": "Time",
+        "artists": "Artists"
     }
 }

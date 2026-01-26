@@ -13,7 +13,7 @@
         "ms": "{{value, number}}",
         "date": "{{value, date}}",
         "relativeDate": "{{value, relativeDate}}",
-        "uptime": "{{value, uptime}}",
+        "duration": "{{value, duration}}",
         "months": "hó",
         "days": "n",
         "hours": "ó",
@@ -25,7 +25,7 @@
         "api_error": "API Hiba",
         "information": "Információ",
         "status": "Státusz",
-        "url": "LINK",
+        "url": "URL",
         "raw_error": "Nyers hiba",
         "response_data": "Válaszadatok"
     },
@@ -69,7 +69,7 @@
     "docker": {
         "rx": "RX",
         "tx": "TX",
-        "mem": "RAM",
+        "mem": "MEM",
         "cpu": "Processzor",
         "running": "Futó",
         "offline": "Nem elérhető",
@@ -93,8 +93,8 @@
         "http_status": "HTTP állapot",
         "error": "Hiba",
         "response": "Válasz",
-        "down": "Le",
-        "up": "Fel",
+        "down": "Leállt",
+        "up": "Fut",
         "not_available": "Nem elérhető"
     },
     "emby": {
@@ -120,7 +120,7 @@
         "grid_power": "Rács",
         "home_power": "Fogyasztás",
         "charge_power": "Töltő",
-        "watt_hour": "Wh"
+        "kilowatt": "kW"
     },
     "flood": {
         "download": "Letöltés",
@@ -141,14 +141,16 @@
         "connectionStatusDisconnecting": "Kapcsolat bontása",
         "connectionStatusDisconnected": "Kapcsolat bontva",
         "connectionStatusConnected": "Csatlakozva",
-        "uptime": "Üzemidő",
+        "uptime": "Működési idő",
         "maxDown": "Max let.",
         "maxUp": "Max felt.",
-        "down": "Le",
-        "up": "Fel",
+        "down": "Leállt",
+        "up": "Fut",
         "received": "Fogadott",
         "sent": "Küldött",
-        "externalIPAddress": "Külső IP cím"
+        "externalIPAddress": "Külső IP cím",
+        "externalIPv6Address": "Küls. IPv6",
+        "externalIPv6Prefix": "Küls. IPv6-Prefix"
     },
     "caddy": {
         "upstreams": "Upstreamek",
@@ -167,7 +169,7 @@
     },
     "tautulli": {
         "playing": "Lejátszás",
-        "transcoding": "Átkódolás",
+        "transcoding": "Transzkódolás",
         "bitrate": "Bitráta",
         "no_active": "Nincs aktív lejátszás",
         "plex_connection_error": "Plex kapcsolat ellenőrzése"
@@ -176,7 +178,7 @@
         "connectedAp": "Csatlakoztatott AP-k",
         "activeUser": "Aktív eszközök",
         "alerts": "Riasztások",
-        "connectedGateway": "Csatlakoztatott gateway-ek",
+        "connectedGateways": "Csatlakoztatott gateway-ek",
         "connectedSwitches": "Csatlakoztatott switch-ek"
     },
     "nzbget": {
@@ -187,7 +189,7 @@
     "plex": {
         "streams": "Aktív Stream-ek",
         "albums": "Albumok",
-        "movies": "Film",
+        "movies": "Filmek",
         "tv": "TV műsorok"
     },
     "sabnzbd": {
@@ -226,6 +228,10 @@
         "leech": "Leech",
         "seed": "Seed"
     },
+    "develancacheui": {
+        "cachehitbytes": "Gyorsítótárban Sikeres Bitek",
+        "cachemissbytes": "Gyorsítótárban Hibás Bitek"
+    },
     "downloadstation": {
         "download": "Letöltés",
         "upload": "Feltöltés",
@@ -235,16 +241,16 @@
     "sonarr": {
         "wanted": "Keresett",
         "queued": "Sorban áll",
-        "series": "Sorozat",
-        "queue": "Sor",
+        "series": "Sorozatok",
+        "queue": "Várólista",
         "unknown": "Ismeretlen"
     },
     "radarr": {
         "wanted": "Keresett",
         "missing": "Hiányzik",
         "queued": "Sorban áll",
-        "movies": "Film",
-        "queue": "Sor",
+        "movies": "Filmek",
+        "queue": "Várólista",
         "unknown": "Ismeretlen"
     },
     "lidarr": {
@@ -267,19 +273,20 @@
         "available": "Elérhető"
     },
     "jellyseerr": {
-        "pending": "Függőben",
-        "approved": "Engedélyezett",
-        "available": "Elérhető"
+        "pending": "Függőben lévő",
+        "approved": "Jóváhagyott",
+        "available": "Elérhető",
+        "issues": "Nyitott problémák"
     },
     "overseerr": {
-        "pending": "Függőben",
+        "pending": "Függőben lévő",
         "processing": "Feldolgozás",
-        "approved": "Engedélyezett",
+        "approved": "Jóváhagyott",
         "available": "Elérhető"
     },
     "netalertx": {
         "total": "Összes",
-        "connected": "Csatlakozva",
+        "connected": "Csatlakoztatott",
         "new_devices": "Új eszközök",
         "down_alerts": "Leállási riasztások"
     },
@@ -301,9 +308,19 @@
         "ping": "Ping"
     },
     "portainer": {
-        "running": "Futó",
+        "running": "Folyamatban",
         "stopped": "Megállított",
         "total": "Összes"
+    },
+    "suwayomi": {
+        "download": "Letöltött",
+        "nondownload": "Nem Letöltött",
+        "read": "Olvasott",
+        "unread": "Olvasatlan",
+        "downloadedread": "Letöltött & Olvasott",
+        "downloadedunread": "Letöltött & Olvasatlan",
+        "nondownloadedread": "Nem Letöltött & Olvasatlan",
+        "nondownloadedunread": "Nem Letöltött & Olvasatlan"
     },
     "tailscale": {
         "address": "Cím",
@@ -319,8 +336,21 @@
         "seconds": "{{number}}mp",
         "ago": "{{value}} Ezelőtt"
     },
+    "technitium": {
+        "totalQueries": "Lekérdezések",
+        "totalNoError": "Sikerek",
+        "totalServerFailure": "Hibák",
+        "totalNxDomain": "NX Domainek",
+        "totalRefused": "Elutasított",
+        "totalAuthoritative": "Irányadó",
+        "totalRecursive": "Rekurzív",
+        "totalCached": "Gyorsítótárazott",
+        "totalBlocked": "Blokkolt",
+        "totalDropped": "Eldobott",
+        "totalClients": "Kliensek"
+    },
     "tdarr": {
-        "queue": "Sor",
+        "queue": "Várólista",
         "processed": "Feldolgozott",
         "errored": "Hibás",
         "saved": "Mentett"
@@ -329,6 +359,12 @@
         "routers": "Routerek",
         "services": "Folyamatok",
         "middleware": "Közvetítő"
+    },
+    "trilium": {
+        "version": "Verzió",
+        "notesCount": "Jegyzetek",
+        "dbSize": "Adatbázis mérete",
+        "unknown": "Ismeretlen"
     },
     "navidrome": {
         "nothing_streaming": "Nincs aktív lejátszás",
@@ -360,7 +396,7 @@
     },
     "jackett": {
         "configured": "Beállított",
-        "errored": "Hibás"
+        "errored": "Hibák"
     },
     "strelaysrv": {
         "numActiveSessions": "Munkamenetek",
@@ -376,13 +412,13 @@
     "medusa": {
         "wanted": "Keresett",
         "queued": "Sorban áll",
-        "series": "Sorozat"
+        "series": "Sorozatok"
     },
     "minecraft": {
         "players": "Lejátszók",
         "version": "Verzió",
         "status": "Státusz",
-        "up": "Csatlakozva",
+        "up": "Kapcsolódva",
         "down": "Nem elérhető"
     },
     "miniflux": {
@@ -395,7 +431,7 @@
         "failedLoginsLast24H": "Sikertelen bejelentkezések (24h)"
     },
     "proxmox": {
-        "mem": "RAM",
+        "mem": "MEM",
         "cpu": "Processzor",
         "lxc": "LXC-k",
         "vms": "VM-ek"
@@ -403,14 +439,14 @@
     "glances": {
         "cpu": "Processzor",
         "load": "Terhelés",
-        "wait": "Kérjük várjon",
+        "wait": "Kérem várjon",
         "temp": "HŐM",
         "_temp": "Hőmérséklet",
         "warn": "Figyelmeztet",
         "uptime": "FUT",
         "total": "Összes",
         "free": "Szabad",
-        "used": "Használt",
+        "used": "Felhasznált",
         "days": "n",
         "hours": "ó",
         "crit": "Kritikus",
@@ -426,7 +462,7 @@
         "search": "Keresés",
         "custom": "Egyedi",
         "visit": "Megnéz",
-        "url": "LINK",
+        "url": "URL",
         "searchsuggestion": "Javaslat"
     },
     "wmo": {
@@ -465,7 +501,7 @@
         "71-day": "Enyhe havazás",
         "71-night": "Enyhe havazás",
         "73-day": "Hó",
-        "73-night": "Hó",
+        "73-night": "Havazás",
         "75-day": "Erős havazás",
         "75-night": "Erős havazás",
         "77-day": "Hódara",
@@ -481,7 +517,7 @@
         "86-day": "Hózáporok",
         "86-night": "Hózáporok",
         "95-day": "Zivatar",
-        "95-night": "Zivatar",
+        "95-night": "Vihar",
         "96-day": "Zivatar jégesővel",
         "96-night": "Zivatar jégesővel",
         "99-day": "Zivatar jégesővel",
@@ -494,15 +530,15 @@
         "up_to_date": "Naprakész",
         "child_bridges": "Gyerek Hidak",
         "child_bridges_status": "{{ok}}/{{total}}",
-        "up": "Fel",
-        "pending": "Függőben",
-        "down": "Le"
+        "up": "Fut",
+        "pending": "Függőben lévő",
+        "down": "Leállt"
     },
     "healthchecks": {
         "new": "Új",
-        "up": "Fel",
+        "up": "Fut",
         "grace": "Türelmi idő alatt",
-        "down": "Le",
+        "down": "Leállt",
         "paused": "Szünetel",
         "status": "Státusz",
         "last_ping": "Legutóbbi Ping",
@@ -514,75 +550,76 @@
         "containers_failed": "Sikertelen"
     },
     "autobrr": {
-        "approvedPushes": "Engedélyezett",
+        "approvedPushes": "Jóváhagyott",
         "rejectedPushes": "Elutasított",
         "filters": "Szűrők",
         "indexers": "Indexerek"
     },
     "tubearchivist": {
-        "downloads": "Sor",
+        "downloads": "Várólista",
         "videos": "Videók",
         "channels": "Csatornák",
         "playlists": "Lejátszási listák"
     },
     "truenas": {
         "load": "Rendszerterhelés",
-        "uptime": "Üzemidő",
-        "alerts": "Riasztások"
+        "uptime": "Működési idő",
+        "alerts": "Figyelmeztetések"
     },
     "pyload": {
         "speed": "Sebesség",
-        "active": "Aktív",
-        "queue": "Sor",
-        "total": "Összes"
+        "active": "Active",
+        "queue": "Queue",
+        "total": "Total"
     },
     "gluetun": {
         "public_ip": "Nyilvános IP-cím",
         "region": "Régió",
-        "country": "Ország"
+        "country": "Ország",
+        "port_forwarded": "Port Forwarded"
     },
     "hdhomerun": {
-        "channels": "Csatornák",
+        "channels": "Channels",
         "hd": "HD",
         "tunerCount": "Tuner-ek",
         "channelNumber": "Csatorna",
         "channelNetwork": "Hálózat",
         "signalStrength": "Erősség",
         "signalQuality": "Minőség",
-        "symbolQuality": "Minőség",
-        "networkRate": "Bitráta",
+        "symbolQuality": "Quality",
+        "networkRate": "Bitrate",
         "clientIP": "Kliens"
     },
     "scrutiny": {
         "passed": "Megfelelt",
-        "failed": "Sikertelen",
-        "unknown": "Ismeretlen"
+        "failed": "Failed",
+        "unknown": "Unknown"
     },
     "paperlessngx": {
         "inbox": "Beérkezett",
-        "total": "Összes"
+        "total": "Total"
     },
     "peanut": {
         "battery_charge": "Akku töltöttsége",
         "ups_load": "UPS terheltsége",
         "ups_status": "UPS állapot",
-        "online": "Csatlakozva",
+        "online": "Online",
         "on_battery": "Akkuról",
         "low_battery": "Alacsony töltöttség"
     },
     "nextdns": {
-        "wait": "Kérjük Várjon",
+        "wait": "Please Wait",
         "no_devices": "Nincs fogadott eszközadat"
     },
     "mikrotik": {
         "cpuLoad": "Processzor Terhelés",
         "memoryUsed": "Felhasznált Memória",
-        "uptime": "Üzemidő",
+        "uptime": "Uptime",
         "numberOfLeases": "Bérletek"
     },
     "xteve": {
         "streams_all": "Minden Stream",
-        "streams_active": "Aktív Stream-ek",
+        "streams_active": "Active Streams",
         "streams_xepg": "XEPG Csatornák"
     },
     "opendtu": {
@@ -592,7 +629,7 @@
         "limit": "Korlát"
     },
     "opnsense": {
-        "cpu": "Processzor Terhelés",
+        "cpu": "CPU Load",
         "memory": "Aktív Memória",
         "wanUpload": "WAN Feltöltés",
         "wanDownload": "WAN Letöltés"
@@ -604,76 +641,80 @@
         "layers": "Rétegek"
     },
     "octoprint": {
-        "printer_state": "Státusz",
+        "printer_state": "Status",
         "temp_tool": "Szerszám hőmérséklet",
         "temp_bed": "Ágy Hőmérséklet",
         "job_completion": "Teljesítés"
     },
     "cloudflared": {
         "origin_ip": "Eredeti IP",
-        "status": "Státusz"
+        "status": "Status"
     },
     "pfsense": {
         "load": "Átlagos terhelés",
         "memory": "RAM Használat",
         "wanStatus": "WAN Állapot",
-        "up": "Fel",
-        "down": "Le",
-        "temp": "Hőmérséklet",
+        "up": "Up",
+        "down": "Down",
+        "temp": "Temp",
         "disk": "Lemezhasználat",
         "wanIP": "WAN IP"
     },
     "proxmoxbackupserver": {
         "datastore_usage": "Adattár",
         "failed_tasks_24h": "Sikertelen feladatok 24h",
-        "cpu_usage": "Processzor",
+        "cpu_usage": "CPU",
         "memory_usage": "Memória"
     },
     "immich": {
-        "users": "Felhasználók",
+        "users": "Users",
         "photos": "Fényképek",
-        "videos": "Videók",
+        "videos": "Videos",
         "storage": "Tárhely"
     },
     "uptimekuma": {
         "up": "Futó Webhelyek",
         "down": "Nem Elérhető Webhelyek",
-        "uptime": "Üzemidő",
+        "uptime": "Uptime",
         "incident": "Incidens",
-        "m": "p"
+        "m": "m"
     },
     "atsumeru": {
-        "series": "Sorozat",
+        "series": "Series",
         "archives": "Archívum",
         "chapters": "Fejezetek",
         "categories": "Kategóriák"
     },
     "komga": {
         "libraries": "Könyvtárak",
-        "series": "Sorozat",
-        "books": "Könyvek"
+        "series": "Series",
+        "books": "Books"
     },
     "diskstation": {
-        "days": "Napok",
-        "uptime": "Üzemidő",
-        "volumeAvailable": "Elérhető"
+        "days": "Days",
+        "uptime": "Uptime",
+        "volumeAvailable": "Available"
     },
     "mylar": {
-        "series": "Sorozat",
+        "series": "Series",
         "issues": "Problémák",
-        "wanted": "Keresett"
+        "wanted": "Wanted"
     },
     "photoprism": {
-        "albums": "Albumok",
-        "photos": "Fényképek",
-        "videos": "Videók",
+        "albums": "Albums",
+        "photos": "Photos",
+        "videos": "Videos",
         "people": "Emberek"
     },
     "fileflows": {
-        "queue": "Sor",
-        "processing": "Feldolgozás",
-        "processed": "Feldolgozott",
+        "queue": "Queue",
+        "processing": "Processing",
+        "processed": "Processed",
         "time": "Idő"
+    },
+    "firefly": {
+        "networth": "Nettó érték",
+        "budget": "Költségkeret"
     },
     "grafana": {
         "dashboards": "Műszerfalak",
@@ -690,11 +731,11 @@
         "numshares": "Megosztott Elemek"
     },
     "kopia": {
-        "status": "Státusz",
+        "status": "Status",
         "size": "Méret",
         "lastrun": "Legutóbbi futtatás",
         "nextrun": "Következő Futtatás",
-        "failed": "Sikertelen"
+        "failed": "Failed"
     },
     "unmanic": {
         "active_workers": "Aktív Dolgozók",
@@ -711,20 +752,20 @@
         "targets_total": "Összes Célpont"
     },
     "gatus": {
-        "up": "Futó Webhelyek",
-        "down": "Nem Elérhető Webhelyek",
-        "uptime": "Üzemidő"
+        "up": "Sites Up",
+        "down": "Sites Down",
+        "uptime": "Uptime"
     },
     "ghostfolio": {
-        "gross_percent_today": "Ma",
+        "gross_percent_today": "Today",
         "gross_percent_1y": "Egy év",
         "gross_percent_max": "Mindig"
     },
     "audiobookshelf": {
         "podcasts": "Podcast",
-        "books": "Könyvek",
+        "books": "Books",
         "podcastsDuration": "Időtartam",
-        "booksDuration": "Időtartam"
+        "booksDuration": "Duration"
     },
     "homeassistant": {
         "people_home": "Emberek otthon",
@@ -733,45 +774,45 @@
     },
     "whatsupdocker": {
         "monitoring": "Nyomonkövetés",
-        "updates": "Frissítések"
+        "updates": "Updates"
     },
     "calibreweb": {
-        "books": "Könyvek",
+        "books": "Books",
         "authors": "Szerzők",
-        "categories": "Kategóriák",
-        "series": "Sorozat"
+        "categories": "Categories",
+        "series": "Series"
     },
     "jdownloader": {
-        "downloadCount": "Sor",
-        "downloadBytesRemaining": "Hátralévő",
-        "downloadTotalBytes": "Méret",
-        "downloadSpeed": "Sebesség"
+        "downloadCount": "Queue",
+        "downloadBytesRemaining": "Remaining",
+        "downloadTotalBytes": "Size",
+        "downloadSpeed": "Speed"
     },
     "kavita": {
-        "seriesCount": "Sorozat",
-        "totalFiles": "Fájlok"
+        "seriesCount": "Series",
+        "totalFiles": "Files"
     },
     "azuredevops": {
         "result": "Eredmény",
-        "status": "Státusz",
+        "status": "Status",
         "buildId": "Gyártás ID",
         "succeeded": "Sikerült",
         "notStarted": "Nem indult",
-        "failed": "Sikertelen",
+        "failed": "Failed",
         "canceled": "Megszakítva",
         "inProgress": "Folyamatban",
         "totalPrs": "Minden PR",
         "myPrs": "Saját PR-ek",
-        "approved": "Engedélyezett"
+        "approved": "Approved"
     },
     "gamedig": {
-        "status": "Státusz",
-        "online": "Csatlakozva",
-        "offline": "Nem elérhető",
+        "status": "Status",
+        "online": "Online",
+        "offline": "Offline",
         "name": "Név",
         "map": "Térkép",
         "currentPlayers": "Jelenlegi játékosok",
-        "players": "Lejátszók",
+        "players": "Players",
         "maxPlayers": "Max. játékosok",
         "bots": "Botok",
         "ping": "Ping"
@@ -784,50 +825,61 @@
     },
     "mealie": {
         "recipes": "Receptek",
-        "users": "Felhasználók",
-        "categories": "Kategóriák",
+        "users": "Users",
+        "categories": "Categories",
         "tags": "Címkék"
     },
     "openmediavault": {
         "downloading": "Letöltés folyamatban",
-        "total": "Összes",
-        "running": "Futó",
-        "stopped": "Megállított",
-        "passed": "Megfelelt",
-        "failed": "Sikertelen"
+        "total": "Total",
+        "running": "Running",
+        "stopped": "Stopped",
+        "passed": "Passed",
+        "failed": "Failed"
     },
     "openwrt": {
-        "uptime": "Üzemidő",
+        "uptime": "Uptime",
         "cpuLoad": "Átlag CPU terhelés (5p)",
-        "up": "Fel",
-        "down": "Le",
+        "up": "Up",
+        "down": "Down",
         "bytesTx": "Továbbított",
-        "bytesRx": "Fogadott"
+        "bytesRx": "Received"
     },
     "uptimerobot": {
-        "status": "Státusz",
-        "uptime": "Üzemidő",
+        "status": "Status",
+        "uptime": "Uptime",
         "lastDown": "Utolsó leállás",
         "downDuration": "Leállás ideje",
-        "sitesUp": "Futó Webhelyek",
-        "sitesDown": "Nem Elérhető Webhelyek",
-        "paused": "Szünetel",
+        "sitesUp": "Sites Up",
+        "sitesDown": "Sites Down",
+        "paused": "Paused",
         "notyetchecked": "Még nincs ellenőrizve",
-        "up": "Fel",
+        "up": "Up",
         "seemsdown": "Elérhetetlennek tűnik",
-        "down": "Le",
-        "unknown": "Ismeretlen"
+        "down": "Down",
+        "unknown": "Unknown"
     },
     "calendar": {
         "inCinemas": "Mozikban",
         "physicalRelease": "Fizikai kiadás",
         "digitalRelease": "Digitális kiadás",
         "noEventsToday": "Ezen a napon nincsenek események!",
-        "noEventsFound": "Nem található esemény"
+        "noEventsFound": "Nem található esemény",
+        "errorWhenLoadingData": "Error when loading calendar data"
     },
     "romm": {
         "platforms": "Felület",
-        "totalRoms": "Minden ROM"
+        "totalRoms": "Játékok",
+        "saves": "Mentések",
+        "states": "Állapotok",
+        "screenshots": "Képernyőképek",
+        "totalfilesize": "Teljes méret"
+    },
+    "mailcow": {
+        "domains": "Domains",
+        "mailboxes": "E-mail fiókok",
+        "mails": "Mailek",
+        "storage": "Storage"
     },
     "netdata": {
         "warnings": "Figyelmeztetések",
@@ -836,13 +888,14 @@
     "plantit": {
         "events": "Események",
         "plants": "Növények",
-        "photos": "Fényképek",
+        "photos": "Photos",
         "species": "Fajok"
     },
     "gitea": {
         "notifications": "Üzenetek",
-        "issues": "Problémák",
-        "pulls": "Pull request-ek"
+        "issues": "Issues",
+        "pulls": "Pull request-ek",
+        "repositories": "Repositories"
     },
     "stash": {
         "scenes": "Jelenetek",
@@ -856,13 +909,13 @@
         "galleries": "Galériák",
         "performers": "Előadók",
         "studios": "Stúdiók",
-        "movies": "Film",
-        "tags": "Címkék",
+        "movies": "Movies",
+        "tags": "Tags",
         "oCount": "O szám"
     },
     "tandoor": {
-        "users": "Felhasználók",
-        "recipes": "Receptek",
+        "users": "Users",
+        "recipes": "Recipes",
         "keywords": "Kulcsszavak"
     },
     "homebox": {
@@ -870,40 +923,201 @@
         "totalWithWarranty": "Garanciával",
         "locations": "Helyek",
         "labels": "Címkék",
-        "users": "Felhasználók",
+        "users": "Users",
         "totalValue": "Teljes érték"
     },
     "crowdsec": {
-        "alerts": "Riasztások",
-        "bans": "Bans"
+        "alerts": "Alerts",
+        "bans": "Kitiltások"
     },
     "wgeasy": {
-        "connected": "Csatlakozva",
-        "enabled": "Bekapcsolva",
-        "disabled": "Kikapcsolva",
-        "total": "Összes"
+        "connected": "Connected",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "total": "Total"
     },
     "swagdashboard": {
-        "proxied": "Proxied",
-        "auth": "With Auth",
-        "outdated": "Outdated",
-        "banned": "Banned"
+        "proxied": "Proxyzott",
+        "auth": "Hitelesítéssel",
+        "outdated": "Elavult",
+        "banned": "Kitiltott"
     },
     "myspeed": {
         "ping": "Ping",
-        "download": "Letöltés",
-        "upload": "Feltöltés"
+        "download": "Download",
+        "upload": "Upload"
     },
     "stocks": {
-        "stocks": "Stocks",
-        "loading": "Loading",
-        "open": "Open - US Market",
-        "closed": "Closed - US Market",
-        "invalidConfiguration": "Invalid Configuration"
+        "stocks": "Tőzsde",
+        "loading": "Betöltés",
+        "open": "Nyitva - US Piac",
+        "closed": "Zárva - US Piac",
+        "invalidConfiguration": "Érvénytelen konfiguráció"
     },
     "frigate": {
-        "cameras": "Cameras",
-        "uptime": "Üzemidő",
-        "version": "Verzió"
+        "cameras": "Kamerák",
+        "uptime": "Uptime",
+        "version": "Version"
+    },
+    "linkwarden": {
+        "links": "Linkek",
+        "collections": "Gyűjtemény",
+        "tags": "Tags"
+    },
+    "zabbix": {
+        "unclassified": "Nem titkosított",
+        "information": "Information",
+        "warning": "Figyelmeztetés",
+        "average": "Átlag",
+        "high": "Magas",
+        "disaster": "Katasztrófa"
+    },
+    "lubelogger": {
+        "vehicle": "Jármű",
+        "vehicles": "Járművek",
+        "serviceRecords": "Szolgáltatások nyílvántartása",
+        "reminders": "Emlékeztetők",
+        "nextReminder": "Következő emlékeztető",
+        "none": "Semmi"
+    },
+    "vikunja": {
+        "projects": "Aktív Projektek",
+        "tasks7d": "Hátralévő feladatok a héten",
+        "tasksOverdue": "Lejárt feladatok",
+        "tasksInProgress": "Folyamatban levő Feladatok"
+    },
+    "headscale": {
+        "name": "Name",
+        "address": "Address",
+        "last_seen": "Last Seen",
+        "status": "Status",
+        "online": "Online",
+        "offline": "Offline"
+    },
+    "beszel": {
+        "name": "Name",
+        "systems": "Rendszerek",
+        "up": "Up",
+        "down": "Down",
+        "paused": "Paused",
+        "pending": "Pending",
+        "status": "Status",
+        "updated": "Updated",
+        "cpu": "CPU",
+        "memory": "MEM",
+        "disk": "Lemez",
+        "network": "Hálózat"
+    },
+    "argocd": {
+        "apps": "Alkalmazások",
+        "synced": "Szinkronizált",
+        "outOfSync": "Nincs szinkronban",
+        "healthy": "Healthy",
+        "degraded": "Leépült",
+        "progressing": "Halad",
+        "missing": "Missing",
+        "suspended": "Felfüggesztett"
+    },
+    "spoolman": {
+        "loading": "Loading"
+    },
+    "gitlab": {
+        "groups": "Csoportok",
+        "issues": "Issues",
+        "merges": "Merge kérések",
+        "projects": "Projektek"
+    },
+    "apcups": {
+        "status": "Status",
+        "load": "Load",
+        "bcharge": "Battery Charge",
+        "timeleft": "Time Left"
+    },
+    "karakeep": {
+        "bookmarks": "Bookmarks",
+        "favorites": "Favorites",
+        "archived": "Archived",
+        "highlights": "Highlights",
+        "lists": "Lists",
+        "tags": "Tags"
+    },
+    "slskd": {
+        "slskStatus": "Network",
+        "connected": "Connected",
+        "disconnected": "Disconnected",
+        "updateStatus": "Update",
+        "update_yes": "Available",
+        "update_no": "Up to Date",
+        "downloads": "Downloads",
+        "uploads": "Uploads",
+        "sharedFiles": "Files"
+    },
+    "jellystat": {
+        "songs": "Songs",
+        "movies": "Movies",
+        "episodes": "Episodes",
+        "other": "Other"
+    },
+    "checkmk": {
+        "serviceErrors": "Service issues",
+        "hostErrors": "Host issues"
+    },
+    "komodo": {
+        "total": "Total",
+        "running": "Running",
+        "stopped": "Stopped",
+        "down": "Down",
+        "unhealthy": "Unhealthy",
+        "unknown": "Unknown",
+        "servers": "Servers",
+        "stacks": "Stacks",
+        "containers": "Containers"
+    },
+    "filebrowser": {
+        "available": "Available",
+        "used": "Used",
+        "total": "Total"
+    },
+    "wallos": {
+        "activeSubscriptions": "Subscriptions",
+        "thisMonthlyCost": "This Month",
+        "nextMonthlyCost": "Next Month",
+        "previousMonthlyCost": "Prev. Month",
+        "nextRenewingSubscription": "Next Payment"
+    },
+    "unraid": {
+        "STARTED": "Started",
+        "STOPPED": "Stopped",
+        "NEW_ARRAY": "New Array",
+        "RECON_DISK": "Reconstructing Disk",
+        "DISABLE_DISK": "Disk Disabled",
+        "SWAP_DSBL": "Swap Disable",
+        "INVALID_EXPANSION": "Invalid Expansion",
+        "PARITY_NOT_BIGGEST": "Parity Not Biggest",
+        "TOO_MANY_MISSING_DISKS": "Too Many Missing Disks",
+        "NEW_DISK_TOO_SMALL": "New Disk Too Small",
+        "NO_DATA_DISKS": "No Data Disks",
+        "notifications": "Notifications",
+        "status": "Status",
+        "cpu": "CPU",
+        "memoryUsed": "Memory Used",
+        "memoryAvailable": "Memory Available",
+        "arrayUsed": "Array Used",
+        "arrayFree": "Array Free",
+        "poolUsed": "{{pool}} Used",
+        "poolFree": "{{pool}} Free"
+    },
+    "backrest": {
+        "num_plans": "Plans",
+        "num_success_30": "Successes",
+        "num_failure_30": "Failures",
+        "num_success_latest": "Succeeding",
+        "num_failure_latest": "Failing",
+        "bytes_added_30": "Bytes Added"
+    },
+    "yourspotify": {
+        "songs": "Songs",
+        "time": "Time",
+        "artists": "Artists"
     }
 }
