@@ -9,7 +9,8 @@ import Network from "./network";
 import Uptime from "./uptime";
 
 export default function Resources({ options }) {
-  const { expanded, units, diskUnits, tempmin, tempmax } = options;
+const { expanded, units, diskUnits, tempmin, tempmax } = options;
+
   let { refresh } = options;
   if (!refresh) refresh = 1500;
   refresh = Math.max(refresh, 1000);

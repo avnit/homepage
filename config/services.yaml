@@ -1,0 +1,514 @@
+---
+- Hypervisor:
+    - Proxmox:
+        icon: proxmox.svg
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        description: pve1
+        siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+          username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+          password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+          cache: 300000
+          refreshInterval: 60000
+          node: pve
+    - Proxmox2:
+        icon: proxmox.svg
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
+        description: pve-dell
+        siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
+          username: "{{HOMEPAGE_VAR_PROXMOX_USER_2}}"
+          password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_2}}"
+          cache: 300000
+          refreshInterval: 60000
+          node: pve2
+    - Proxmox3:
+        icon: proxmox.svg
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
+        description: pve-backup
+        siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
+          username: "{{HOMEPAGE_VAR_PROXMOX_USER_3}}"
+          password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_3}}"
+          cache: 300000
+          refreshInterval: 60000
+          node: pve-backup
+    - Proxmox4:
+        icon: proxmox.svg
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        description: pve6
+        siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+          username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+          password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+          cache: 300000
+          refreshInterval: 60000
+          node: pve6
+
+- Media:
+    - Radarr:
+        href: "{{HOMEPAGE_VAR_RADARR_URL}}"
+        description: Radarr
+        icon: radarr
+        siteMonitor: "{{HOMEPAGE_VAR_RADARR_URL}}"
+        server: my-docker
+        container: radarr
+        widget:
+          type: radarr
+          url: "{{HOMEPAGE_VAR_RADARR_URL}}"
+          key: "{{HOMEPAGE_VAR_RADARR_API_KEY}}"
+          cache: 300000
+    - Immich:
+        href: "{{HOMEPAGE_VAR_IMMICH_URL}}"
+        description: Photo management
+        icon: immich
+        siteMonitor: "{{HOMEPAGE_VAR_IMMICH_URL}}"
+        widget:
+          type: immich
+          url: "{{HOMEPAGE_VAR_IMMICH_URL}}"
+          key: "{{HOMEPAGE_VAR_IMMICH_API_KEY}}"
+          cache: 300000
+          version: 2
+    - QbTorrent:
+        href: "{{HOMEPAGE_VAR_QB_URL}}"
+        description: Bit torrent
+        icon: qbittorrent
+        siteMonitor: "{{HOMEPAGE_VAR_QB_URL}}"
+        server: my-docker
+        container: qbittorrent
+        widget:
+          type: qbittorrent
+          url: "{{HOMEPAGE_VAR_QB_URL}}"
+          username: "{{HOMEPAGE_VAR_QB_USER}}"
+          password: "{{HOMEPAGE_VAR_QB_API_KEY}}"
+          cache: 300000
+
+    - Sonarr:
+        href: "{{HOMEPAGE_VAR_SONARR_URL}}"
+        description: Sonarr
+        siteMonitor: "{{HOMEPAGE_VAR_SONARR_URL}}"
+        icon: sonarr
+        server: my-docker
+        container: sonarr
+        widget:
+          type: sonarr
+          url: "{{HOMEPAGE_VAR_SONARR_URL}}"
+          key: "{{HOMEPAGE_VAR_SONARR_API_KEY}}"
+          cache: 300000
+    - prowlarr:
+        href: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
+        description: prowlarr
+        icon: prowlarr
+        server: my-docker
+        container: prowlarr
+        widget:
+          type: prowlarr
+          url: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
+          key: "{{HOMEPAGE_VAR_PROWLARR_API_KEY}}"
+          cache: 300000
+    - readarr:
+        href: "{{HOMEPAGE_VAR_READARR_URL}}"
+        description: readarr
+        icon: readarr
+        server: my-docker
+        container: readarr
+        widget:
+          type: readarr
+          url: "{{HOMEPAGE_VAR_READARR_URL}}"
+          key: "{{HOMEPAGE_VAR_READARR_API_KEY}}"
+          cache: 300000
+    - lidarr:
+        href: "{{HOMEPAGE_VAR_LIDARR_URL}}"
+        description: lidarr
+        icon: lidarr
+        server: my-docker
+        container: lidarr
+        widget:
+          type: lidarr
+          url: "{{HOMEPAGE_VAR_LIDARR_URL}}"
+          key: "{{HOMEPAGE_VAR_LIDARR_API_KEY}}"
+          cache: 300000
+    - Plex:
+        icon: plex.svg
+        href: https://plex.tv
+        description: media server
+        widget:
+          type: plex
+          url: "{{HOMEPAGE_VAR_PLEX_URL}}"
+          key: "{{HOMEPAGE_VAR_PLEX_API_TOKEN}}"
+          cache: 300000
+    - Jellyseerr:
+        href: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
+        description: jellyseerr
+        icon: jellyseerr
+        siteMonitor: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
+        widget:
+          type: jellyseerr
+          url: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
+          key: "{{HOMEPAGE_VAR_JELLYSEER_KEY}}"
+    - HDHomerun:
+        icon: hdhomerun.png
+        href: "{{HOMEPAGE_VAR_HDHOMERUN_URL}}"
+        description: flex 4k
+        widget:
+          type: hdhomerun
+          url: "{{HOMEPAGE_VAR_HDHOMERUN_URL}}"
+          tuner: 0
+          fields: ["channels", "hd", "tunerCount", "channelNumber", "channelNetwork", "signalStrength", "signalQuality", "symbolQuality", "networkRate", "clientIP"]
+
+- DNS:
+    - cloudflare:
+        icon: cloudflare.svg
+        href: https://dash.cloudflare.com/
+        description: Cloudflare
+        siteMonitor: https://dash.cloudflare.com/
+        widget:
+          type: cloudflared
+          accountid: "{{HOMEPAGE_VAR_CLOUDFLARE_ACCOUNT_ID}}"
+          key: "{{HOMEPAGE_VAR_CLOUDFLARE_API_KEY}}"
+          tunnelid: "{{HOMEPAGE_VAR_CLOUDFLARE_TUNNEL_ID}}"
+          cache: 300000
+          refreshInterval: 60000
+    - Pi-Hole1:
+        icon: pi-hole.svg
+        href: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}/admin"
+        description: orange-pi-hole
+        siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}/admin"
+        widget:
+          type: pihole
+          url: "{{HOMEPAGE_VAR_PIHOLE_URL_1}}"
+          key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_1}}"
+          version: 6
+          cache: 300000
+          refreshInterval: 60000
+    - Pi-Hole2:
+        icon: pi-hole.svg
+        href: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}/admin"
+        siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}/admin"
+        description: proxmox-lxc-128
+        widget:
+          type: pihole
+          url: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
+          key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_2}}"
+          version: 6
+          cache: 300000
+          refreshInterval: 60000
+    - Pi-Hole3:
+        icon: pi-hole.svg
+        href: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}/admin"
+        siteMonitor: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}/admin"
+        description: pve-3-pihole-unbound
+        widget:
+          type: pihole
+          url: "{{HOMEPAGE_VAR_PIHOLE_URL_3}}"
+          key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_3}}"
+          version: 6
+          cache: 300000
+          refreshInterval: 60000
+    - Tailscale:
+        icon: tailscale
+        href: https://login.tailscale.com/admin/machines
+        description: VPN mesh network
+        widget:
+          type: tailscale
+          deviceid: "{{HOMEPAGE_VAR_TAILSCALE_DEVICE_ID}}"
+          key: "{{HOMEPAGE_VAR_TAILSCALE_API_KEY}}"
+          cache: 300000
+          refreshInterval: 60000
+
+- Media2:
+    - jellyfin:
+        href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+        description: jellyfin
+        icon: jellyfin
+        siteMonitor: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+        server: my-docker
+        container: jellyfin
+        widget:
+          type: jellyfin
+          url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+          key: "{{HOMEPAGE_VAR_JELLYFIN_API_TOKEN}}"
+          enableBlock: true
+          enableUser: true
+          showEpisodeCount: true
+          expandOneStreamToTwoRows: true
+    - Radarr:
+        href: "{{HOMEPAGE_VAR_RADARR_URL_2}}"
+        description: Radarr
+        icon: radarr
+        siteMonitor: "{{HOMEPAGE_VAR_RADARR_URL_2}}"
+        widget:
+          type: radarr
+          url: "{{HOMEPAGE_VAR_RADARR_URL_2}}"
+          key: "{{HOMEPAGE_VAR_RADARR_API_KEY_2}}"
+    - QbTorrent:
+        href: "{{HOMEPAGE_VAR_QB_URL_2}}"
+        description: Bit torrent on Orange Pi
+        icon: qbittorrent
+        siteMonitor: "{{HOMEPAGE_VAR_QB_URL_2}}"
+        widget:
+          type: qbittorrent
+          url: "{{HOMEPAGE_VAR_QB_URL_2}}"
+          username: "{{HOMEPAGE_VAR_QB_USER_2}}"
+          password: "{{HOMEPAGE_VAR_QB_API_KEY_2}}"
+    - jellyseerr:
+        href: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
+        description: jellyseerr
+        icon: jellyseerr
+        siteMonitor: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
+        widget:
+          type: jellyseerr
+          url: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
+          key: "{{HOMEPAGE_VAR_JELLYSEER__KEY}}"
+          cache: 300000
+    - Sonarr:
+        href: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
+        description: Sonarr
+        siteMonitor: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
+        icon: sonarr
+        widget:
+          type: sonarr
+          url: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
+          key: "{{HOMEPAGE_VAR_SONARR_API_KEY_2}}"
+    - prowlarr:
+        href: "{{HOMEPAGE_VAR_PROWLARR_URL_2}}"
+        description: prowlarr
+        icon: prowlarr
+        siteMonitor: "{{HOMEPAGE_VAR_PROWLARR_URL_2}}"
+        widget:
+          type: prowlarr
+          url: "{{HOMEPAGE_VAR_PROWLARR_URL_2}}"
+          key: "{{HOMEPAGE_VAR_PROWLARR_API_TOKEN_2}}"
+    - lidarr:
+        href: "{{HOMEPAGE_VAR_LIDARR_URL_2}}"
+        description: lidarr
+        icon: lidarr
+        siteMonitor: "{{HOMEPAGE_VAR_LIDARR_URL_2}}"
+        widget:
+          type: lidarr
+          url: "{{HOMEPAGE_VAR_LIDARR_URL_2}}"
+          key: "{{HOMEPAGE_VAR_LIDARR_API_TOKEN_2}}"
+    - Jackett:
+        href: "{{HOMEPAGE_VAR_JACKETT_URL}}"
+        description: Jackett
+        icon: jackett
+        siteMonitor: "{{HOMEPAGE_VAR_JACKETT_URL}}"
+        widget:
+          type: jackett
+          url: "{{HOMEPAGE_VAR_JACKETT_URL}}"
+          fields: ["configured", "errored"]
+          key: "{{HOMEPAGE_VAR_JACKETT_API_KEY}}"
+    - Docker-web:
+        href: "{{HOMEPAGE_VAR_DOCKER_WEB_URL}}"
+        description: Docker on Unraid
+        icon: docker.png
+        siteMonitor: "{{HOMEPAGE_VAR_DOCKER_WEB_URL}}"
+    - ESPHome:
+        href: "{{HOMEPAGE_VAR_ESP_HOME_URL}}"
+        description: ESPHome
+        icon: esphome
+        siteMonitor: "{{HOMEPAGE_VAR_ESP_HOME_URL}}"
+        widget:
+          type: esphome
+          url: "{{HOMEPAGE_VAR_ESP_HOME_URL}}"
+    - Calibre-web:
+        href: "{{HOMEPAGE_VAR_CALIBRE_URL}}"
+        description: Calibre
+        siteMonitor: "{{HOMEPAGE_VAR_CALIBRE_URL}}"
+        icon: calibre.png
+        widget:
+          type: calibreweb
+          fields: ["books", "authors", "categories", "series"]
+          url: "{{HOMEPAGE_VAR_CALIBRE_URL}}"
+          username: "{{HOMEPAGE_VAR_CALIBRE_ADMIN}}"
+          password: "{{HOMEPAGE_VAR_CALIBRE_PASSWORD}}"
+    - MusicAssistant:
+        href: https://music.asbblog.com
+        description: Music Assistant
+        icon: music-assistant
+        siteMonitor: https://music.asbblog.com
+
+- Monitoring:
+    - Portainer:
+        href: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
+        description: portainer container
+        siteMonitor: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
+        icon: portainer
+        server: my-docker
+        container: portainer
+        widget:
+          type: portainer
+          url: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
+          env: 2
+          key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY}}"
+          cache: 300000
+          refreshInterval: 60000
+    - Portainer-129:
+        href: "{{HOMEPAGE_VAR_PORTAINER_URL_3}}"
+        description: portainer container
+        siteMonitor: "{{HOMEPAGE_VAR_PORTAINER_URL_3}}"
+        icon: portainer
+        widget:
+          type: portainer
+          url: "{{HOMEPAGE_VAR_PORTAINER_URL_3}}"
+          env: 1
+          key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY_3}}"
+          cache: 300000
+          refreshInterval: 60000
+    - Portainer-132:
+        href: "{{HOMEPAGE_VAR_PORTAINER_URL_2}}"
+        description: portainer container
+        siteMonitor: "{{HOMEPAGE_VAR_PORTAINER_URL_2}}"
+        icon: portainer
+        widget:
+          type: portainer
+          url: "{{HOMEPAGE_VAR_PORTAINER_URL_2}}"
+          env: 2
+          key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY_2}}"
+          cache: 300000
+          refreshInterval: 60000
+    - Grafana:
+        href: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
+        description: Grafana unraid
+        siteMonitor: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
+        icon: grafana
+        widget:
+          type: grafana
+          url: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
+          username: admin
+          password: "{{HOMEPAGE_VAR_GRAFANA_API_TOKEN}}"
+          cache: 300000
+          refreshInterval: 60000
+    - speedtest:
+        href: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
+        description: speedtest
+        siteMonitor: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
+        icon: speedtest-tracker
+        version: 2
+        key: "{{HOMEPAGE_VAR_SPEEDTEST_API}}"
+        widget:
+          type: speedtest
+          url: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
+    - opnsense:
+        href: "{{HOMEPAGE_VAR_OPNSENSE_URL}}"
+        description: opnsense router
+        siteMonitor: "{{HOMEPAGE_VAR_OPNSENSE_URL}}"
+        icon: opnsense
+        widget:
+          type: opnsense
+          url: "{{HOMEPAGE_VAR_OPNSENSE_URL}}"
+          username: "{{HOMEPAGE_VAR_OPNSENSE_API_KEY}}"
+          password: "{{HOMEPAGE_VAR_OPNSENSE_API_SECRET}}"
+          cache: 300000
+          refreshInterval: 60000
+
+- Storage-Server:
+    - Unraid:
+        href: https://unraid.asbblog.com/login/
+        description: Unraid
+        siteMonitor: https://unraid.asbblog.com/login
+        icon: unraid
+    - Synology:
+        href: https://192-168-68-80.abambah.direct.quickconnect.to:5001/#/signin/
+        description: synology
+        siteMonitor: https://192-168-68-80.abambah.direct.quickconnect.to:5001/#/signin/
+        icon: si-synology
+    - TrueNas:
+        href: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
+        description: scale
+        siteMonitor: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
+        icon: truenas.svg
+        widget:
+          type: truenas
+          url: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
+          key: "{{HOMEPAGE_VAR_TRUENAS_PASSWORD}}"
+          cache: 300000
+          refreshInterval: 60000
+
+- Automation:
+    - Home-Assistant:
+        icon: home-assistant.svg
+        href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+        siteMonitor: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+        description: home assistant
+        widget:
+          type: homeassistant
+          url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+          key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}"
+    - Home-Assistant-PVE2:
+        icon: home-assistant.svg
+        href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
+        siteMonitor: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
+        description: home assistant on PVE2
+        widget:
+          type: homeassistant
+          url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
+          key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}"
+    - Casaos:
+        href: https://casaos.asbblog.com/
+        description: Casaos Asbblog
+        icon: casaos
+    - Casaos-Ubuntu:
+        href: https://ubuntu2.asbblog.com/
+        description: Casaos Ubuntu
+        icon: casaos
+    - n8n:
+        href: "{{HOMEPAGE_VAR_N8N_URL}}"
+        description: Workflow automation
+        icon: n8n
+        siteMonitor: "{{HOMEPAGE_VAR_N8N_URL}}"
+        widget:
+          type: n8n
+          url: "{{HOMEPAGE_VAR_N8N_URL}}"
+          key: "{{HOMEPAGE_VAR_N8N_API_KEY}}"
+    - caddy:
+        href: "{{HOMEPAGE_VAR_CADDY_URL}}"
+        description: caddy
+        icon: caddy
+        siteMonitor: "{{HOMEPAGE_VAR_CADDY_URL}}"
+        server: my-docker
+        container: caddy
+        widget:
+          type: caddy
+          url: "{{HOMEPAGE_VAR_CADDY_ADMIN_URL}}"
+
+- Other:
+    - Calendar:
+        widget:
+          type: calendar
+          firstDayInWeek: sunday
+          view: monthly
+          maxEvents: 10
+          showTime: true
+          timezone: America/Los_Angeles
+          integrations:
+            - type: sonarr
+              service_group: Media
+              service_name: Sonarr
+              color: teal
+            - type: radarr
+              service_group: Media
+              service_name: Radarr
+              color: red
+            - type: lidarr
+              service_group: Media2
+              service_name: lidarr
+              color: blue
+            - type: readarr
+              service_group: Media
+              service_name: readarr
+              color: purple
+            - type: ical
+              name: Coursera
+              color: zinc
+              url: http://www.coursera.org/api/learnerCalendars.v1/46974119/uRHz9JWGSM2swl2Uux8vHg.ics
+              params:
+                showName: true

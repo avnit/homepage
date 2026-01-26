@@ -1,0 +1,14 @@
+services:
+  homepage:
+    container_name: homepage-latest
+    image: abambah/homepage2:latest
+    # image: ghcr.io/gethomepage/homepage:latest
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    volumes:
+      - /root/homepage/config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock
+    env_file: /root/homepage/.env
+    privileged: true
+    hostname: homepage

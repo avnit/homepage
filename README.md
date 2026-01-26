@@ -14,39 +14,92 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/gethomepage/homepage/actions/workflows/docker-publish.yml"><img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/gethomepage/homepage/docker-publish.yml"></a>
-  &nbsp;
-  <a href="https://crowdin.com/project/gethomepage" target="_blank"><img src="https://badges.crowdin.net/gethomepage/localized.svg"></a>
-  &nbsp;
-  <a href="https://discord.gg/k4ruYNrudu"><img alt="Discord" src="https://img.shields.io/discord/1019316731635834932"></a>
-  &nbsp;
-  <a href="https://gethomepage.dev/" title="Docs"><img title="Docs" src="https://github.com/gethomepage/homepage/actions/workflows/docs-publish.yml/badge.svg"/></a>
-  &nbsp;
-  <a href="https://paypal.me/phelpsben" title="Donate"><img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/benphelps"></a>
-</p>
 
-<p align="center">
-  <a href="https://www.digitalocean.com/?refcode=df14bcb7c016&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="DigitalOcean Referral Badge" /></a>
-</p>
-<p align="center">
-<em>Homepage builds are kindly powered by DigitalOcean.</em>
-</p>
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌
+▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌
+▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀█░▌ ▀▀▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌
+▐░▌       ▐░▌          ▐░▌▐░▌       ▐░▌
+▐░▌       ▐░▌ ▄▄▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄█░▌
+▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌
+ ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀
 
-# Features
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄            ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌          ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░▌          ▐░▌       ▐░▌ ▀▀▀▀█░█▀▀▀▀  ▀▀▀▀█░█▀▀▀▀
+▐░▌          ▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌
+▐░█▄▄▄▄▄▄▄▄▄ ▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌
+▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌
+ ▀▀▀▀▀▀▀▀▀█░▌▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌
+          ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌     ▐░▌          ▐░▌
+ ▄▄▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌     ▐░▌      ▄▄▄▄█░█▄▄▄▄
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░▌     ▐░░░░░░░░░░░▌
+ ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀       ▀       ▀▀▀▀▀▀▀▀▀▀▀
 
-With features like quick search, bookmarks, weather support, a wide range of integrations and widgets, an elegant and modern design, and a focus on performance, Homepage is your ideal start to the day and a handy companion throughout it.
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄▄
+▐░░░░░░░░░░░▌▐░░▌      ▐░▌▐░░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀█░▌▐░▌░▌     ▐░▌▐░█▀▀▀▀▀▀▀▀▀
+▐░▌       ▐░▌▐░▌▐░▌    ▐░▌▐░▌
+▐░▌       ▐░▌▐░▌ ▐░▌   ▐░▌▐░█▄▄▄▄▄▄▄▄▄
+▐░▌       ▐░▌▐░▌  ▐░▌  ▐░▌▐░░░░░░░░░░░▌
+▐░▌       ▐░▌▐░▌   ▐░▌ ▐░▌ ▀▀▀▀▀▀▀▀▀█░▌
+▐░▌       ▐░▌▐░▌    ▐░▌▐░▌          ▐░▌
+▐░█▄▄▄▄▄▄▄█░▌▐░▌     ▐░▐░▌ ▄▄▄▄▄▄▄▄▄█░▌
+▐░░░░░░░░░░░▌▐░▌      ▐░░▌▐░░░░░░░░░░░▌
+ ▀▀▀▀▀▀▀▀▀▀▀  ▀        ▀▀  ▀▀▀▀▀▀▀▀▀▀▀
 
-- **Fast** - The site is statically generated at build time for instant load times.
-- **Secure** - All API requests to backend services are proxied, keeping your API keys hidden. Constantly reviewed for security by the community.
-- **For Everyone** - Images built for AMD64, ARM64.
-- **Full i18n** - Support for over 40 languages.
-- **Service & Web Bookmarks** - Add custom links to the homepage.
-- **Docker Integration** - Container status and stats. Automatic service discovery via labels.
-- **Service Integration** - Over 100 service integrations, including popular starr and self-hosted apps.
-- **Information & Utility Widgets** - Weather, time, date, search, and more.
-- **And much more...**
 
-## Docker Integration
+
+# homepage2.asbblog.com - My Personal Homepage
+
+This repository hosts the source code for my personal homepage, homepage2.asbblog.com. It's designed to showcase my projects, skills, and personal information in a clean and accessible format.
+
+The code repo has been forked from homepage.dev and additional functionality is added to make it personal
+
+## Technologies Used
+
+* **HTML**: For structuring the content.
+* **CSS**: For styling and layout.
+* **JavaScript**: For interactive elements (if any are implemented).
+* **GitHub Pages**: For hosting the website.
+
+## Structure
+
+The repository is structured as follows:
+
+* `index.html`: The main HTML file for the homepage.
+* `style.css`: The stylesheet for the homepage's design.
+* `script.js`: JavaScript files if there are any interactive elements.
+* `assets/`: A directory for images and other static assets.
+* `README.md`: This file.
+
+## Customization
+
+If you'd like to use this repository as a template for your own homepage, you can follow these steps:
+
+1.  **Fork the Repository:** Click the "Fork" button on the top right of the repository page.
+2.  **Clone the Fork:** Clone the forked repository to your local machine:
+
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/homepage.git](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/homepage.git)
+    ```
+
+3.  **Customize the Content:**
+    * Edit `config\*` directory to make the files personal.
+    * edit run.sh and compose.yaml to point to the correct home directory
+
+4.  **Deploy to Linux server **
+    * Go to your promox and opne the console of the VM where you have debian linux installed.
+    * clone the repo and do docker login 
+    * execute run.sh .
+    * Make sure that docker hub has the homepage app and you are using right tags in compose.yaml
+    * The service is exposed on port 3000 
+    
+
+## Docker Integration ( Added to run.sh ) 
 
 Homepage has built-in support for Docker, and can automatically discover and add services to the homepage based on labels. See the [Docker Service Discovery](https://gethomepage.dev/configs/docker/#automatic-service-discovery) page for more information.
 
@@ -166,18 +219,3 @@ Then run the development server:
 mkdocs serve # or build, to build the static site
 ```
 
-# Support & Suggestions
-
-If you have any questions, suggestions, or general issues, please start a discussion on the [Discussions](https://github.com/gethomepage/homepage/discussions) page.
-
-## Troubleshooting
-
-In addition to the docs, the [troubleshooting guide](https://gethomepage.dev/troubleshooting/) can help reveal many basic config or network issues. If you're having a problem, it's a good place to start.
-
-## Contributing & Contributors
-
-Contributions are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
-
-Thanks to the over 200 contributors who have helped make this project what it is today!
-
-Especially huge thanks to [@shamoon](https://github.com/shamoon), who has been the backbone of this community from the very start.

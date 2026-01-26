@@ -1,7 +1,23 @@
-# =========================
-# Builder Stage
-# =========================
-FROM node:22-slim AS builder
+
+# Install dependencies only when needed
+FROM docker.io/node:22-alpine AS deps
+
+WORKDIR /app
+
+COPY package.json pnpm-lock.yaml* ./
+
+SHELL ["/bin/ash", "-xeo", "pipefail", "-c"]
+RUN apk add --no-cache libc6-compat \
+  && apk add --no-cache --virtual .gyp python3 make g++ \
+  && npm install -g pnpm
+
+RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store pnpm fetch | grep -v "cross-device link not permitted\|Falling back to copying packages from store"
+
+RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store pnpm install -r --offline
+
+# Rebuild the source code only when needed
+FROM docker.io/node:22-alpine AS builder
+
 WORKDIR /app
 
 # Setup
@@ -12,27 +28,21 @@ ARG CI
 ARG BUILDTIME
 ARG VERSION
 ARG REVISION
-ENV CI=$CI
 
-# Install and build only outside CI
-RUN if [ "$CI" != "true" ]; then \
-      corepack enable && corepack prepare pnpm@latest --activate && \
-      pnpm install --frozen-lockfile --prefer-offline && \
-      NEXT_TELEMETRY_DISABLED=1 \
-      NEXT_PUBLIC_BUILDTIME=$BUILDTIME \
-      NEXT_PUBLIC_VERSION=$VERSION \
-      NEXT_PUBLIC_REVISION=$REVISION \
-      pnpm run build; \
-    else \
-      echo "✅ Using prebuilt app from CI context"; \
-    fi
 
-# =========================
-# Runtime Stage
-# =========================
-FROM node:22-alpine AS runner
+COPY  --from=deps /app/node_modules ./node_modules/
+COPY . .
+
+SHELL ["/bin/ash", "-xeo", "pipefail", "-c"]
+RUN npm install -g pnpm \
+  && pnpm run telemetry \
+  && NEXT_PUBLIC_BUILDTIME=$BUILDTIME NEXT_PUBLIC_VERSION=$VERSION NEXT_PUBLIC_REVISION=$REVISION pnpm run build
+
+# Production image, copy all the files and run next
+FROM docker.io/node:22-alpine AS runner
 LABEL org.opencontainers.image.title="Homepage"
 LABEL org.opencontainers.image.description="A self-hosted services landing page, with docker and service integrations."
+
 LABEL org.opencontainers.image.url="https://github.com/gethomepage/homepage"
 LABEL org.opencontainers.image.documentation='https://github.com/gethomepage/homepage/wiki'
 LABEL org.opencontainers.image.source='https://github.com/gethomepage/homepage'
@@ -41,13 +51,10 @@ LABEL org.opencontainers.image.licenses='Apache-2.0'
 # Setup
 WORKDIR /app
 
-# Copy some files from context
-COPY --link --chown=1000:1000 /public ./public/
-COPY --link --chmod=755 docker-entrypoint.sh /usr/local/bin/
-
 # Copy only necessary files from the build stage
-COPY --link --from=builder --chown=1000:1000 /app/.next/standalone/ ./
-COPY --link --from=builder --chown=1000:1000 /app/.next/static/ ./.next/static
+COPY  --from=builder --chown=1000:1000 /app/.next/standalone/ ./
+COPY  --from=builder --chown=1000:1000 /app/.next/static/ ./.next/static
+COPY  --from=builder --chown=1000:1000 /app/public/ ./public
 
 RUN apk add --no-cache su-exec iputils-ping shadow
 
