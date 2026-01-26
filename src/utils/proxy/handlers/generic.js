@@ -1,17 +1,17 @@
 import getServiceWidget from "utils/config/service-helpers";
-import { formatApiCall, sanitizeErrorURL } from "utils/proxy/api-helpers";
-import validateWidgetData from "utils/proxy/validate-widget-data";
-import { httpProxy } from "utils/proxy/http";
 import createLogger from "utils/logger";
+import { formatApiCall, sanitizeErrorURL } from "utils/proxy/api-helpers";
+import { httpProxy } from "utils/proxy/http";
+import validateWidgetData from "utils/proxy/validate-widget-data";
 import widgets from "widgets/widgets";
 
 const logger = createLogger("genericProxyHandler");
 
 export default async function genericProxyHandler(req, res, map) {
-  const { group, service, endpoint } = req.query;
+  const { group, service, endpoint, index } = req.query;
 
   if (group && service) {
-    const widget = await getServiceWidget(group, service);
+    const widget = await getServiceWidget(group, service, index);
 
     if (!widgets?.[widget.type]?.api) {
       return res.status(403).json({ error: "Service does not support API calls" });
@@ -19,11 +19,13 @@ export default async function genericProxyHandler(req, res, map) {
 
     if (widget) {
       // if there are more than one question marks, replace others to &
-      const url = new URL(
-        formatApiCall(widgets[widget.type].api, { endpoint, ...widget }).replace(/(?<=\?.*)\?/g, "&"),
-      );
+      let urlString = formatApiCall(widgets[widget.type].api, { endpoint, ...widget }).replace(/(?<=\?.*)\?/g, "&");
+      if (widget.type === "customapi" && widget.url?.endsWith("/")) {
+        urlString += "/"; // Ensure we dont lose the trailing slash for custom API calls
+      }
+      const url = new URL(urlString);
 
-      const headers = req.extraHeaders ?? widget.headers ?? {};
+      const headers = req.extraHeaders ?? widget.headers ?? widgets[widget.type].headers ?? {};
 
       if (widget.username && widget.password) {
         headers.Authorization = `Basic ${Buffer.from(`${widget.username}:${widget.password}`).toString("base64")}`;
@@ -75,7 +77,13 @@ export default async function genericProxyHandler(req, res, map) {
           url.port ? `:${url.port}` : "",
           url.pathname,
         );
-        return res.status(status).json({ error: { message: "HTTP Error", url: sanitizeErrorURL(url), resultData } });
+        return res.status(status).json({
+          error: {
+            message: "HTTP Error",
+            url: sanitizeErrorURL(url),
+            data: Buffer.isBuffer(resultData) ? Buffer.from(resultData).toString() : resultData,
+          },
+        });
       }
 
       return res.status(status).send(resultData);

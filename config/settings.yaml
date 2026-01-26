@@ -1,40 +1,64 @@
 ---
-# For configuration options and examples, please see:
-# https://gethomepage.dev/latest/configs/settings
+# https://gethomepage.dev/configs/settings
 title: ASB Solutions Home Page
 startUrl: https://asbblog.com
-#background: https://wallpapercave.com/wp/wp2765466.jpg
-#background: https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
-# background: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
-theme: dark # or light
+headerStyle: clean
+hideErrors: true
+bookmarksStyle: icons
+fullWidth: true
+language: en
+locale: en
+theme: dark
 color: cyan
+iconStyle: theme
+
+# Performance optimizations
+statusStyle: dot  # Lighter than "full" status style
+disableCollapse: true  # Reduces re-renders
+logLevel: debug
+
+
 layout:
-  Business: 
-    style: row
-    columns: 4
+  Servers:
+    Hypervisor:
+      header: true
+      style: column
+    Storage-Server:
+      header: true
+      style: column
+    DNS:
+      header: true
+      style: column
   Monitoring:
+    header: true
     style: row
     columns: 4
   Automation:
     style: row
     columns: 4
-  Storage Server:
+  Business:
+    header: true
     style: row
-    columns: 2
+    columns: 4
   Media:
     style: row
     columns: 4
   Media2:
     style: row
     columns: 4
+  Other:
+    style: row
+    columns: 2
+
 quicklaunch:
-  searchDescriptions: true
+  searchDescriptions: false  # Faster search
   hideInternetSearch: true
   hideVisitURL: true
+
 hideVersion: true
-logpath: /logfile/path
-showStats: true
+showStats: false  # Disable stats to reduce API calls
 
 providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
+  finnhub: cvjjgu9r01qlscpcir7gcvjjgu9r01qlscpcir80

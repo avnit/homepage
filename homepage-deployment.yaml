@@ -1,0 +1,427 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f compose.yaml
+    kompose.version: 1.35.0 (9532ceef3)
+  labels:
+    io.kompose.service: homepage
+  name: homepage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: homepage
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f compose.yaml
+        kompose.version: 1.35.0 (9532ceef3)
+      labels:
+        io.kompose.service: homepage
+    spec:
+      containers:
+        - env:
+            - name: ALLOWED_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: ALLOWED_HOST
+                  name: env
+            - name: HOMEPAGE_ALLOWED_HOSTS
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_ALLOWED_HOSTS
+                  name: env
+            - name: HOMEPAGE_VAR_CADDY_ADMIN_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_CADDY_ADMIN_URL
+                  name: env
+            - name: HOMEPAGE_VAR_CADDY_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_CADDY_URL
+                  name: env
+            - name: HOMEPAGE_VAR_CALIBRE_ADMIN
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_CALIBRE_ADMIN
+                  name: env
+            - name: HOMEPAGE_VAR_CALIBRE_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_CALIBRE_PASSWORD
+                  name: env
+            - name: HOMEPAGE_VAR_CALIBRE_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_CALIBRE_URL
+                  name: env
+            - name: HOMEPAGE_VAR_CLOUDFLARE_ACCOUNT_ID
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_CLOUDFLARE_ACCOUNT_ID
+                  name: env
+            - name: HOMEPAGE_VAR_CLOUDFLARE_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_CLOUDFLARE_API_KEY
+                  name: env
+            - name: HOMEPAGE_VAR_CLOUDFLARE_TUNNEL_ID
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_CLOUDFLARE_TUNNEL_ID
+                  name: env
+            - name: HOMEPAGE_VAR_DOCKER_WEB_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_DOCKER_WEB_URL
+                  name: env
+            - name: HOMEPAGE_VAR_ESP_HOME_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_ESP_HOME_URL
+                  name: env
+            - name: HOMEPAGE_VAR_GRAFANA_API_TOKEN
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_GRAFANA_API_TOKEN
+                  name: env
+            - name: HOMEPAGE_VAR_GRAFANA_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_GRAFANA_URL
+                  name: env
+            - name: HOMEPAGE_VAR_HDHOMERUN_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_HDHOMERUN_URL
+                  name: env
+            - name: HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY
+                  name: env
+            - name: HOMEPAGE_VAR_HOME_ASSISTANT_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_HOME_ASSISTANT_URL
+                  name: env
+            - name: HOMEPAGE_VAR_INFLUXDB_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_INFLUXDB_URL
+                  name: env
+            - name: HOMEPAGE_VAR_JACKETT_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_JACKETT_API_KEY
+                  name: env
+            - name: HOMEPAGE_VAR_JACKETT_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_JACKETT_URL
+                  name: env
+            - name: HOMEPAGE_VAR_JELLYFIN_API_TOKEN
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_JELLYFIN_API_TOKEN
+                  name: env
+            - name: HOMEPAGE_VAR_JELLYFIN_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_JELLYFIN_URL
+                  name: env
+            - name: HOMEPAGE_VAR_LIDARR_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_LIDARR_API_KEY
+                  name: env
+            - name: HOMEPAGE_VAR_LIDARR_API_KEY_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_LIDARR_API_KEY_2
+                  name: env
+            - name: HOMEPAGE_VAR_LIDARR_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_LIDARR_URL
+                  name: env
+            - name: HOMEPAGE_VAR_LIDARR_URL_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_LIDARR_URL_2
+                  name: env
+            - name: HOMEPAGE_VAR_PIHOLE_API_KEY_1
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PIHOLE_API_KEY_1
+                  name: env
+            - name: HOMEPAGE_VAR_PIHOLE_API_KEY_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PIHOLE_API_KEY_2
+                  name: env
+            - name: HOMEPAGE_VAR_PIHOLE_API_KEY_3
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PIHOLE_API_KEY_3
+                  name: env
+            - name: HOMEPAGE_VAR_PIHOLE_URL_1
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PIHOLE_URL_1
+                  name: env
+            - name: HOMEPAGE_VAR_PIHOLE_URL_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PIHOLE_URL_2
+                  name: env
+            - name: HOMEPAGE_VAR_PIHOLE_URL_3
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PIHOLE_URL_3
+                  name: env
+            - name: HOMEPAGE_VAR_PLEX_API_TOKEN
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PLEX_API_TOKEN
+                  name: env
+            - name: HOMEPAGE_VAR_PLEX_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PLEX_URL
+                  name: env
+            - name: HOMEPAGE_VAR_PORTAINER_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PORTAINER_API_KEY
+                  name: env
+            - name: HOMEPAGE_VAR_PORTAINER_API_KEY_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PORTAINER_API_KEY_2
+                  name: env
+            - name: HOMEPAGE_VAR_PORTAINER_API_KEY_3
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PORTAINER_API_KEY_3
+                  name: env
+            - name: HOMEPAGE_VAR_PORTAINER_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PORTAINER_URL
+                  name: env
+            - name: HOMEPAGE_VAR_PORTAINER_URL_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PORTAINER_URL_2
+                  name: env
+            - name: HOMEPAGE_VAR_PORTAINER_URL_3
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PORTAINER_URL_3
+                  name: env
+            - name: HOMEPAGE_VAR_PROWLARR_API_TOKEN
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROWLARR_API_TOKEN
+                  name: env
+            - name: HOMEPAGE_VAR_PROWLARR_API_TOKEN_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROWLARR_API_TOKEN_2
+                  name: env
+            - name: HOMEPAGE_VAR_PROWLARR_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROWLARR_URL
+                  name: env
+            - name: HOMEPAGE_VAR_PROWLARR_URL_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROWLARR_URL_2
+                  name: env
+            - name: HOMEPAGE_VAR_PROXMOX_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROXMOX_API_KEY
+                  name: env
+            - name: HOMEPAGE_VAR_PROXMOX_API_KEY_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROXMOX_API_KEY_2
+                  name: env
+            - name: HOMEPAGE_VAR_PROXMOX_API_KEY_3
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROXMOX_API_KEY_3
+                  name: env
+            - name: HOMEPAGE_VAR_PROXMOX_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROXMOX_URL
+                  name: env
+            - name: HOMEPAGE_VAR_PROXMOX_URL_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROXMOX_URL_2
+                  name: env
+            - name: HOMEPAGE_VAR_PROXMOX_URL_3
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROXMOX_URL_3
+                  name: env
+            - name: HOMEPAGE_VAR_PROXMOX_USER
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROXMOX_USER
+                  name: env
+            - name: HOMEPAGE_VAR_PROXMOX_USER_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROXMOX_USER_2
+                  name: env
+            - name: HOMEPAGE_VAR_PROXMOX_USER_3
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_PROXMOX_USER_3
+                  name: env
+            - name: HOMEPAGE_VAR_QB_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_QB_API_KEY
+                  name: env
+            - name: HOMEPAGE_VAR_QB_API_KEY_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_QB_API_KEY_2
+                  name: env
+            - name: HOMEPAGE_VAR_QB_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_QB_URL
+                  name: env
+            - name: HOMEPAGE_VAR_QB_URL_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_QB_URL_2
+                  name: env
+            - name: HOMEPAGE_VAR_QB_USER
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_QB_USER
+                  name: env
+            - name: HOMEPAGE_VAR_QB_USER_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_QB_USER_2
+                  name: env
+            - name: HOMEPAGE_VAR_RADARR_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_RADARR_API_KEY
+                  name: env
+            - name: HOMEPAGE_VAR_RADARR_API_KEY_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_RADARR_API_KEY_2
+                  name: env
+            - name: HOMEPAGE_VAR_RADARR_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_RADARR_URL
+                  name: env
+            - name: HOMEPAGE_VAR_RADARR_URL_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_RADARR_URL_2
+                  name: env
+            - name: HOMEPAGE_VAR_READARR_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_READARR_API_KEY
+                  name: env
+            - name: HOMEPAGE_VAR_READARR_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_READARR_URL
+                  name: env
+            - name: HOMEPAGE_VAR_SONARR_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_SONARR_API_KEY
+                  name: env
+            - name: HOMEPAGE_VAR_SONARR_API_KEY_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_SONARR_API_KEY_2
+                  name: env
+            - name: HOMEPAGE_VAR_SONARR_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_SONARR_URL
+                  name: env
+            - name: HOMEPAGE_VAR_SONARR_URL_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_SONARR_URL_2
+                  name: env
+            - name: HOMEPAGE_VAR_SPEEDTEST_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_SPEEDTEST_URL
+                  name: env
+            - name: HOMEPAGE_VAR_TRANSMISSION_API_KEY_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_TRANSMISSION_API_KEY_2
+                  name: env
+            - name: HOMEPAGE_VAR_TRANSMISSION_URL_2
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_TRANSMISSION_URL_2
+                  name: env
+            - name: HOMEPAGE_VAR_TRUENAS_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_TRUENAS_PASSWORD
+                  name: env
+            - name: HOMEPAGE_VAR_TRUENAS_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: HOMEPAGE_VAR_TRUENAS_URL
+                  name: env
+            - name: PGID
+              valueFrom:
+                configMapKeyRef:
+                  key: PGID
+                  name: env
+            - name: PUID
+              valueFrom:
+                configMapKeyRef:
+                  key: PUID
+                  name: env
+            - name: extra_host
+              valueFrom:
+                configMapKeyRef:
+                  key: extra_host
+                  name: env
+          image: abambah/homepage2:latest
+          name: homepage
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          securityContext:
+            privileged: true
+          volumeMounts:
+            - mountPath: /app/config
+              name: homepage-cm0
+      hostname: homepage
+      restartPolicy: Always
+      volumes:
+        - configMap:
+            name: homepage-cm0
+          name: homepage-cm0

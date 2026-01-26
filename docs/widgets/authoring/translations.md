@@ -34,7 +34,7 @@ Homepage uses the [next-i18next](https://github.com/i18next/next-i18next) librar
 
 Homepage uses translated and localized strings for **all text and numerical content** in widgets. English is the default language, and other languages can be added via [Crowdin](https://crowdin.com/project/gethomepage). To add the English translations for your widget, follow these steps:
 
-Open the `public/locales/en/common.js` file.
+Open the `public/locales/en/common.json` file.
 
 Add a new object for your widget to the bottom of the list, like this:
 
@@ -71,7 +71,7 @@ Homepage provides a set of common translations that you can use in your widgets.
 | `common.ms`           | `1,000 ms`      | Format a number in milliseconds. |
 | `common.date`         | `2024-01-01`    | Format a date.                   |
 | `common.relativeDate` | `1 day ago`     | Format a relative date.          |
-| `common.uptime`       | `1 day, 1 hour` | Format an uptime.                |
+| `common.duration`     | `1 day, 1 hour` | Format an duration.              |
 
 ### Text
 
