@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v6.0.0  # Updated from v3.2.0
     hooks:
     -   id: trailing-whitespace
     -   id: end-of-file-fixer
@@ -10,7 +10,7 @@ repos:
         exclude: "(^mkdocs\\.yml$)"
     -   id: check-added-large-files
 -   repo: https://github.com/rbubley/mirrors-prettier
-    rev: 'v3.3.3'
+    rev: 'v3.6.2'  # Updated to match package.json
     hooks:
     -   id: prettier
         types_or:
@@ -18,5 +18,5 @@ repos:
           - markdown
           - jsx
         additional_dependencies:
-          - prettier@3.3.3
-          - 'prettier-plugin-organize-imports@4.1.0'
+          - prettier@3.6.2                        # Updated to match package.json
+          - 'prettier-plugin-organize-imports@4.3.0' # Updated to match package.json

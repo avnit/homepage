@@ -27,7 +27,7 @@ jobs:
 
   test:
     name: Test Build Docs
-    if: github.repository == 'gethomepage/homepage' && github.event_name == 'pull_request'
+    if: github.repository == 'avnit/homepage'
     runs-on: ubuntu-latest
     needs:
       - pre-commit
@@ -49,10 +49,12 @@ jobs:
         run: MKINSIDERS=false mkdocs build
   deploy:
     name: Build & Deploy Docs
-    if: github.repository == 'gethomepage/homepage' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    if: github.repository == 'avnit/homepage' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     needs:
       - pre-commit
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - uses: actions/checkout@v6
       - name: Configure Git Credentials
@@ -70,9 +72,7 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: sudo apt-get install pngquant
-      - run: pip install git+https://${GH_TOKEN}@github.com/benphelps/mkdocs-material-insiders.git
-      - run: pip install mkdocs-redirects "mkdocs-material[imaging]"
+      - run: pip install mkdocs-material mkdocs-redirects "mkdocs-material[imaging]"
       - name: Docs Deploy
-        run: MKINSIDERS=true mkdocs gh-deploy --force
-env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: mkdocs gh-deploy --force
+

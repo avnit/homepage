@@ -1,0 +1,38 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/info-widgets/
+
+- datetime:
+    text_size: xl
+    format:
+      timeStyle: short
+
+- resources:
+    cpu: true
+    memory: true
+    disk: /
+    cacheTime: 360  # Cache for 60 seconds
+
+- search:
+    provider: google
+    target: _blank
+
+# Weather - using openmeteo (free, no API key limits)
+- openmeteo:
+    label: Weather
+    latitude: 37.29
+    longitude: -121.88
+    cache: 15  # Increased cache to 15 minutes
+    units: metric
+
+# Stocks - reduced watchlist for faster loading
+- stocks:
+    label: Stocks
+    provider: finnhub
+    watchlist:
+      - AAPL
+      - MSFT
+      - GOOGL
+      - NVDA
+    showUSMarketStatus: true
+    cache: 15

@@ -69,6 +69,12 @@
       "@tailwindcss/oxide",
       "osx-temperature-sensor",
       "sharp"
+    ],
+    "ignoredBuiltDependencies": [
+      "core-js",
+      "cpu-features",
+      "protobufjs",
+      "ssh2"
     ]
   }
 }
