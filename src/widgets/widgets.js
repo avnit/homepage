@@ -9,6 +9,7 @@ import azuredevops from "./azuredevops/widget";
 import backrest from "./backrest/widget";
 import bazarr from "./bazarr/widget";
 import beszel from "./beszel/widget";
+import booklore from "./booklore/widget";
 import caddy from "./caddy/widget";
 import calendar from "./calendar/widget";
 import calibreweb from "./calibreweb/widget";
@@ -22,6 +23,7 @@ import customapi from "./customapi/widget";
 import deluge from "./deluge/widget";
 import develancacheui from "./develancacheui/widget";
 import diskstation from "./diskstation/widget";
+import dockhand from "./dockhand/widget";
 import downloadstation from "./downloadstation/widget";
 import emby from "./emby/widget";
 import esphome from "./esphome/widget";
@@ -88,6 +90,7 @@ import openmediavault from "./openmediavault/widget";
 import openwrt from "./openwrt/widget";
 import opnsense from "./opnsense/widget";
 import overseerr from "./overseerr/widget";
+import pangolin from "./pangolin/widget";
 import paperlessngx from "./paperlessngx/widget";
 import peanut from "./peanut/widget";
 import pfsense from "./pfsense/widget";
@@ -156,6 +159,7 @@ const widgets = {
   azuredevops,
   backrest,
   bazarr,
+  booklore,
   beszel,
   caddy,
   calibreweb,
@@ -169,6 +173,7 @@ const widgets = {
   deluge,
   develancacheui,
   diskstation,
+  dockhand,
   downloadstation,
   emby,
   esphome,
@@ -239,6 +244,7 @@ const widgets = {
   openmediavault,
   openwrt,
   paperlessngx,
+  pangolin,
   peanut,
   pfsense,
   photoprism,

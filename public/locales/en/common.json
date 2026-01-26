@@ -538,7 +538,8 @@
         "child_bridges_status": "{{ok}}/{{total}}",
         "up": "Up",
         "pending": "Pending",
-        "down": "Down"
+        "down": "Down",
+        "ok": "Ok"
     },
     "healthchecks": {
         "new": "New",
@@ -604,6 +605,15 @@
     "paperlessngx": {
         "inbox": "Inbox",
         "total": "Total"
+    },
+    "pangolin": {
+        "orgs": "Orgs",
+        "sites": "Sites",
+        "resources": "Resources",
+        "targets": "Targets",
+        "traffic": "Traffic",
+        "in": "In",
+        "out": "Out"
     },
     "peanut": {
         "battery_charge": "Battery Charge",
@@ -765,7 +775,8 @@
     "ghostfolio": {
         "gross_percent_today": "Today",
         "gross_percent_1y": "One year",
-        "gross_percent_max": "All time"
+        "gross_percent_max": "All time",
+        "net_worth": "Net Worth"
     },
     "audiobookshelf": {
         "podcasts": "Podcasts",
@@ -787,6 +798,12 @@
         "authors": "Authors",
         "categories": "Categories",
         "series": "Series"
+    },
+    "booklore": {
+        "libraries": "Libraries",
+        "books": "Books",
+        "reading": "Reading",
+        "finished": "Finished"
     },
     "jdownloader": {
         "downloadCount": "Queue",
@@ -1122,8 +1139,22 @@
         "bytes_added_30": "Bytes Added"
     },
     "yourspotify": {
-        "songs": "Songs",
-        "time": "Time",
-        "artists": "Artists"
+      "songs": "Songs",
+      "time":  "Time",
+      "artists": "Artists"
+    },
+    "dockhand": {
+        "running": "Running",
+        "stopped": "Stopped",
+        "cpu": "CPU",
+        "memory": "Memory",
+        "images": "Images",
+        "volumes": "Volumes",
+        "events_today": "Events Today",
+        "pending_updates": "Pending Updates",
+        "stacks": "Stacks",
+        "paused": "Paused",
+        "total": "Total",
+        "environment_not_found": "Environment Not Found"
     }
 }

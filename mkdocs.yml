@@ -41,6 +41,7 @@ nav:
           - widgets/services/azuredevops.md
           - widgets/services/backrest.md
           - widgets/services/bazarr.md
+          - widgets/services/booklore.md
           - widgets/services/beszel.md
           - widgets/services/caddy.md
           - widgets/services/calendar.md
@@ -55,6 +56,7 @@ nav:
           - widgets/services/deluge.md
           - widgets/services/develancacheui.md
           - widgets/services/diskstation.md
+          - widgets/services/dockhand.md
           - widgets/services/downloadstation.md
           - widgets/services/emby.md
           - widgets/services/esphome.md
@@ -122,6 +124,7 @@ nav:
           - widgets/services/opnsense.md
           - widgets/services/openwrt.md
           - widgets/services/overseerr.md
+          - widgets/services/pangolin.md
           - widgets/services/paperlessngx.md
           - widgets/services/peanut.md
           - widgets/services/pfsense.md
