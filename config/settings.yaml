@@ -19,16 +19,6 @@ logLevel: debug
 
 
 layout:
-  Servers:
-    Hypervisor:
-      header: true
-      style: column
-    Storage-Server:
-      header: true
-      style: column
-    DNS:
-      header: true
-      style: column
   Monitoring:
     header: true
     style: row
@@ -49,6 +39,16 @@ layout:
   Other:
     style: row
     columns: 2
+  Servers:
+    Hypervisor:
+      header: true
+      style: column
+    Storage-Server:
+      header: true
+      style: column
+    DNS:
+      header: true
+      style: column
 
 quicklaunch:
   searchDescriptions: false  # Faster search
