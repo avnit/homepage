@@ -9,8 +9,17 @@ fullWidth: true
 language: en
 locale: en
 theme: dark
-color: cyan
+color: violet
 iconStyle: theme
+
+# Background configuration
+background:
+  image: https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop
+  opacity: 30
+  blur: sm
+  saturate: 100
+  brightness: 90
+
 
 # Performance optimizations
 statusStyle: dot  # Lighter than "full" status style

@@ -1,0 +1,409 @@
+/* System Monitor Dashboard Custom Styles */
+
+/* Custom color variables for tropical sunset theme */
+:root {
+  --sunset-orange: #ff6b35;
+  --sunset-pink: #ff4d8f;
+  --sunset-purple: #a855f7;
+  --sunset-deep-purple: #7c3aed;
+  --glass-bg: rgba(30, 30, 46, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-primary: #f5f5f5;
+  --text-secondary: #d1d5db;
+}
+
+/* System monitor main container */
+.system-monitor-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr 320px;
+  grid-template-rows: auto 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+/* Header area spanning full width */
+.system-monitor-header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Left sidebar - System stats */
+.system-stats-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Center content area */
+.system-monitor-center {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Right sidebar - App shortcuts */
+.app-shortcuts-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Glassmorphism card style */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(30, 30, 46, 0.8);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Card headers */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+/* System stat item */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--sunset-orange), var(--sunset-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--sunset-purple), var(--sunset-pink));
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Large clock display */
+.clock-display {
+  text-align: center;
+  padding: 2rem;
+}
+
+.clock-time {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--sunset-orange), var(--sunset-pink), var(--sunset-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.clock-date {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Weather widget */
+.weather-widget {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.weather-icon {
+  font-size: 3rem;
+}
+
+.weather-info {
+  flex: 1;
+}
+
+.weather-temp {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.weather-condition {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Weather forecast */
+.weather-forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.forecast-day {
+  text-align: center;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.forecast-day-name {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.forecast-icon {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.forecast-temp {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Resource usage cards */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.resource-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.resource-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.resource-icon {
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.resource-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.resource-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* App shortcuts */
+.app-shortcut {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.app-shortcut:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateX(4px);
+}
+
+.app-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  background: linear-gradient(135deg, var(--sunset-purple), var(--sunset-pink));
+}
+
+.app-info {
+  flex: 1;
+}
+
+.app-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.125rem;
+}
+
+.app-description {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Status indicators */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Responsive design */
+@media (max-width: 1400px) {
+  .system-monitor-layout {
+    grid-template-columns: 240px 1fr 280px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .system-monitor-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  
+  .system-monitor-header {
+    grid-column: 1;
+  }
+  
+  .clock-time {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .system-monitor-layout {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .clock-time {
+    font-size: 2.5rem;
+  }
+  
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Custom scrollbar for dark theme */
+.system-monitor-layout ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.system-monitor-layout ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.system-monitor-layout ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--sunset-purple), var(--sunset-pink));
+  border-radius: 4px;
+}
+
+.system-monitor-layout ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--sunset-deep-purple), var(--sunset-orange));
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--sunset-orange), var(--sunset-pink), var(--sunset-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}

@@ -3,9 +3,11 @@
 # https://gethomepage.dev/configs/info-widgets/
 
 - datetime:
-    text_size: xl
+    text_size: 4xl
     format:
       timeStyle: short
+      dateStyle: full
+
 
 - resources:
     cpu: true
