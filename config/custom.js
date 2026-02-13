@@ -484,6 +484,115 @@ c     - Toggle chatbot
     }
 
     // ========================================
+    // SYSTEM MONITOR DASHBOARD
+    // ========================================
+
+    /**
+     * Initialize System Monitor Dashboard Layout
+     */
+    function initSystemMonitorDashboard() {
+        // Check if we should enable system monitor mode
+        // You can add a config option or check for a specific class
+        const enableSystemMonitor = true; // Set to true to enable
+
+        if (!enableSystemMonitor) return;
+
+        // Enhance the existing clock widget
+        enhanceClockWidget();
+
+        // Add system stats if resource widgets exist
+        enhanceResourceWidgets();
+
+        debugLog('System Monitor Dashboard initialized');
+    }
+
+    /**
+     * Enhance clock widget with better formatting
+     */
+    function enhanceClockWidget() {
+        // Find datetime widget
+        const datetimeWidgets = document.querySelectorAll('[class*="datetime"]');
+
+        datetimeWidgets.forEach(widget => {
+            // Add custom styling class
+            widget.classList.add('system-monitor-clock');
+
+            // Update time display format
+            const timeElements = widget.querySelectorAll('time, [datetime]');
+            timeElements.forEach(timeEl => {
+                if (timeEl.textContent) {
+                    // Add gradient text class for visual appeal
+                    timeEl.classList.add('gradient-text');
+                }
+            });
+        });
+
+        debugLog('Clock widget enhanced');
+    }
+
+    /**
+     * Enhance resource widgets with progress bars
+     */
+    function enhanceResourceWidgets() {
+        // Find resource widgets (CPU, Memory, Disk)
+        const resourceWidgets = document.querySelectorAll('[class*="resources"]');
+
+        resourceWidgets.forEach(widget => {
+            // Add glassmorphism styling
+            widget.classList.add('glass-card');
+
+            // Find percentage values and add progress bars
+            const percentageElements = widget.querySelectorAll('[class*="percent"], [class*="usage"]');
+            percentageElements.forEach(el => {
+                const text = el.textContent;
+                const match = text.match(/(\d+)%/);
+
+                if (match) {
+                    const percentage = parseInt(match[1]);
+
+                    // Create progress bar if it doesn't exist
+                    if (!el.querySelector('.progress-bar')) {
+                        const progressBar = document.createElement('div');
+                        progressBar.className = 'progress-bar';
+                        progressBar.style.marginTop = '0.5rem';
+
+                        const progressFill = document.createElement('div');
+                        progressFill.className = 'progress-fill';
+                        progressFill.style.width = percentage + '%';
+
+                        progressBar.appendChild(progressFill);
+                        el.appendChild(progressBar);
+                    }
+                }
+            });
+        });
+
+        debugLog('Resource widgets enhanced');
+    }
+
+    /**
+     * Add gradient effects to service cards
+     */
+    function enhanceServiceCards() {
+        const serviceCards = document.querySelectorAll('[class*="service"]');
+
+        serviceCards.forEach(card => {
+            // Add hover effect class
+            card.addEventListener('mouseenter', function () {
+                this.style.transition = 'all 0.3s ease';
+                this.style.transform = 'translateY(-2px)';
+            });
+
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        debugLog('Service cards enhanced');
+    }
+
+
+    // ========================================
     // INITIALIZATION
     // ========================================
 
@@ -495,12 +604,15 @@ c     - Toggle chatbot
         enhanceServiceStatus();
         initClock();
         initScrollToTop();
-        initBookmarkTooltips(); // Add this line
+        initBookmarkTooltips();
+        initSystemMonitorDashboard(); // Add system monitor enhancements
+        enhanceServiceCards(); // Add service card animations
         initChatbot();
         showConsoleBranding();
 
         debugLog('All custom scripts initialized!');
         debugLog('Greeting: ' + getGreeting());
     });
+
 
 })();
