@@ -11,7 +11,7 @@ import bazarr from "./bazarr/widget";
 import beszel from "./beszel/widget";
 import booklore from "./booklore/widget";
 import caddy from "./caddy/widget";
-import calendar from "./calendar/widget";
+import calendar from "./calendar/widget"h;
 import calibreweb from "./calibreweb/widget";
 import changedetectionio from "./changedetectionio/widget";
 import channelsdvrserver from "./channelsdvrserver/widget";
