@@ -74,6 +74,7 @@ import mjpeg from "./mjpeg/widget";
 import moonraker from "./moonraker/widget";
 import mylar from "./mylar/widget";
 import myspeed from "./myspeed/widget";
+import n8n from "./n8n/widget";
 import navidrome from "./navidrome/widget";
 import netalertx from "./netalertx/widget";
 import netdata from "./netdata/widget";
