@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker build:*)",
+      "Bash(where:*)",
+      "Bash(powershell.exe -Command \"Get-Command docker | Select-Object -ExpandProperty Source\")",
+      "Bash(powershell.exe -Command \"[System.Environment]::GetEnvironmentVariable\\(''PATH'',''Machine''\\)\")",
+      "Bash(tr:*)"
+    ]
+  }
+}
