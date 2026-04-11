@@ -415,8 +415,6 @@ spec:
             - containerPort: 3000
               protocol: TCP
           securityContext:
-          readOnlyRootFilesystem: true  # ADDED: harden container
-          allowPrivilegeEscalation: false  # ADDED
             privileged: false  # FIXED: removed privilege escalation
           volumeMounts:
             - mountPath: /app/config
