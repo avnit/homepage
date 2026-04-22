@@ -1,0 +1,647 @@
+# Instincts generated from https://github.com/avnit/homepage
+# Generated: 2026-04-22T14:38:22.760Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: homepage-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Commit Length
+
+## Action
+
+Keep commit messages concise (~49 characters)
+
+## Evidence
+
+- Average commit message length: 49 chars
+- Based on 100 commits
+
+---
+id: homepage-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: homepage-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: homepage-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: __tests__, components, pages, styles, test-utils
+
+---
+id: homepage-test-colocate
+trigger: "when writing tests"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Test Colocate
+
+## Action
+
+Place test file next to the source file (e.g., Button.test.tsx next to Button.tsx)
+
+## Evidence
+
+- Colocated test pattern detected
+- Tests live alongside source files
+
+---
+id: homepage-test-framework
+trigger: "when writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Test Framework
+
+## Action
+
+Use vitest as the test framework
+
+## Evidence
+
+- Test framework detected: vitest
+- File pattern: *.test.js
+
+---
+id: homepage-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.js
+
+## Evidence
+
+- File pattern: *.test.js
+- Consistent across test files
+
+---
+id: homepage-test-mocking
+trigger: "when mocking dependencies in tests"
+confidence: 0.75
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Test Mocking
+
+## Action
+
+Use vi.mock for mocking
+
+## Evidence
+
+- Mocking pattern detected: vi.mock
+- Consistent across test files
+
+---
+id: homepage-test-types
+trigger: "when planning tests for a feature"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Test Types
+
+## Action
+
+Write unit, integration tests to match project standards
+
+## Evidence
+
+- Test types detected: unit, integration
+- Coverage config: yes
+
+---
+id: homepage-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: src/widgets/ghostfolio/*, src/components/services/widget/*, src/widgets/*
+
+---
+id: homepage-workflow-add-or-enhance-widget-service
+trigger: "when doing add or enhance widget service"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Add Or Enhance Widget Service
+
+## Action
+
+Follow the add-or-enhance-widget-service workflow:
+1. Update or create documentation in docs/widgets/services/{service}.md
+2. Update or create implementation files in src/widgets/{service}/component.jsx and/or src/widgets/{service}/widget.js
+3. Optionally update localization in public/locales/en/common.json
+4. Optionally update proxy or helper files in src/widgets/{service}/proxy.js
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: docs/widgets/services/*.md, src/widgets/*/component.jsx, src/widgets/*/widget.js
+
+---
+id: homepage-workflow-dependency-update-via-dependabot
+trigger: "when doing dependency update via dependabot"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Dependency Update Via Dependabot
+
+## Action
+
+Follow the dependency-update-via-dependabot workflow:
+1. Update package.json and pnpm-lock.yaml for npm packages
+2. Update .github/workflows/*.yml for GitHub Actions
+3. Commit with a standard Dependabot message
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: package.json, pnpm-lock.yaml, .github/workflows/*.yml
+
+---
+id: homepage-workflow-documentation-update
+trigger: "when doing documentation update"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Documentation Update
+
+## Action
+
+Follow the documentation-update workflow:
+1. Edit relevant markdown files in docs/ (e.g., configs, installation, troubleshooting, widgets/services)
+2. Commit with a documentation-focused message
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: docs/**/*.md
+
+---
+id: homepage-workflow-crowdin-translation-sync
+trigger: "when doing crowdin translation sync"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Crowdin Translation Sync
+
+## Action
+
+Follow the crowdin-translation-sync workflow:
+1. Update one or more public/locales/{lang}/common.json files
+2. Commit with a Crowdin sync message
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: public/locales/*/common.json
+
+---
+id: homepage-workflow-service-helper-logic-update
+trigger: "when doing service helper logic update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Service Helper Logic Update
+
+## Action
+
+Follow the service-helper-logic-update workflow:
+1. Edit src/utils/config/service-helpers.js
+2. Optionally update related widget/component files
+3. Commit with a feature or fix message
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/utils/config/service-helpers.js
+
+---
+id: homepage-instinct-file-naming-camelCase
+trigger: "When creating a new file or renaming an existing file in the codebase"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct File Naming CamelCase
+
+## Action
+
+Name the file using camelCase convention
+
+## Evidence
+
+- Pattern in files: src/components/services/widget/*
+- src/widgets/ghostfolio/component.jsx
+
+---
+id: homepage-instinct-function-naming-camelCase
+trigger: "When defining a new function"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Function Naming CamelCase
+
+## Action
+
+Name the function using camelCase convention
+
+## Evidence
+
+- Pattern in code: JavaScript functions in src/widgets/*/widget.js
+
+---
+id: homepage-instinct-class-naming-PascalCase
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Class Naming PascalCase
+
+## Action
+
+Name the class using PascalCase convention
+
+## Evidence
+
+- Pattern in code: JavaScript classes in src/components/
+
+---
+id: homepage-instinct-constant-naming-SCREAMING_SNAKE_CASE
+trigger: "When defining a constant value"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Constant Naming SCREAMING_SNAKE_CASE
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE convention
+
+## Evidence
+
+- Pattern in code: constants in src/utils/
+
+---
+id: homepage-instinct-import-absolute
+trigger: "When importing modules in JavaScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Import Absolute
+
+## Action
+
+Use absolute import paths
+
+## Evidence
+
+- Pattern in code: import statements in src/widgets/*/widget.js
+
+---
+id: homepage-instinct-export-named
+trigger: "When exporting functions, classes, or constants"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Export Named
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in code: export statements in src/widgets/*/widget.js
+
+---
+id: homepage-instinct-test-file-pattern
+trigger: "When adding a test file"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Test File Pattern
+
+## Action
+
+Name the test file with the pattern *.test.js and colocate it with the code under test
+
+## Evidence
+
+- Pattern in files: src/widgets/ghostfolio/component.test.js
+- testing.filePattern: *.test.js
+
+---
+id: homepage-instinct-test-framework-vitest
+trigger: "When writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Test Framework Vitest
+
+## Action
+
+Use the Vitest framework for unit and integration tests
+
+## Evidence
+
+- testing.framework: vitest
+- Pattern in package.json dependencies
+
+---
+id: homepage-instinct-mocking-vi-mock
+trigger: "When mocking modules in tests"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Mocking Vi Mock
+
+## Action
+
+Use vi.mock for mocking
+
+## Evidence
+
+- testing.mockingStyle: vi.mock
+- Pattern in test files
+
+---
+id: homepage-instinct-commit-prefix-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Commit Prefix Format
+
+## Action
+
+Start the commit message with a type prefix (e.g., Fix, Enhancement, Chore, Documentation, Feature) followed by a colon and a short description
+
+## Evidence
+
+- Seen in commit: 'Enhancement: add net worth field for ghostfolio (#5958)'
+- Seen in commit: 'Fix: correct language handling and remove zh-CN locale (#6041)'
+
+---
+id: homepage-instinct-commit-length-brief
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Commit Length Brief
+
+## Action
+
+Keep the commit message concise (average length ~49 characters)
+
+## Evidence
+
+- commits.averageLength: 49
+- Examples in commit history
+
+---
+id: homepage-instinct-add-or-enhance-widget-service
+trigger: "When someone wants to add a new widget service or enhance an existing widget's features"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Add Or Enhance Widget Service
+
+## Action
+
+Update or create docs/widgets/services/{service}.md, src/widgets/{service}/component.jsx and/or widget.js, optionally update public/locales/en/common.json and proxy.js
+
+## Evidence
+
+- Workflow: add-or-enhance-widget-service
+- Example commits: 'Enhancement: add net worth field for ghostfolio (#5958)'
+- Pattern in files: docs/widgets/services/*.md, src/widgets/*/component.jsx
+
+---
+id: homepage-instinct-dependency-update-via-dependabot
+trigger: "When a dependency (npm package or GitHub Action) needs to be updated"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Dependency Update Via Dependabot
+
+## Action
+
+Update package.json and pnpm-lock.yaml for npm packages, update .github/workflows/*.yml for GitHub Actions, commit with a standard Dependabot message
+
+## Evidence
+
+- Workflow: dependency-update-via-dependabot
+- Pattern in files: package.json, pnpm-lock.yaml, .github/workflows/*.yml
+
+---
+id: homepage-instinct-documentation-update
+trigger: "When someone wants to clarify, update, or add documentation"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Documentation Update
+
+## Action
+
+Edit relevant markdown files in docs/ and commit with a documentation-focused message
+
+## Evidence
+
+- Workflow: documentation-update
+- Pattern in files: docs/**/*.md
+- Seen in commit: 'Documentation: note support for omada controller version 6 (#5961)'
+
+---
+id: homepage-instinct-crowdin-translation-sync
+trigger: "When new translations are available from Crowdin"
+confidence: 0.97
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Crowdin Translation Sync
+
+## Action
+
+Update one or more public/locales/{lang}/common.json files and commit with a Crowdin sync message
+
+## Evidence
+
+- Workflow: crowdin-translation-sync
+- Seen in commit: 'New Crowdin translations by GitHub Action (#5953)'
+- Pattern in files: public/locales/*/common.json
+
+---
+id: homepage-instinct-service-helper-logic-update
+trigger: "When a new feature or bugfix is needed in service configuration logic"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Service Helper Logic Update
+
+## Action
+
+Edit src/utils/config/service-helpers.js and optionally update related widget/component files, then commit with a feature or fix message
+
+## Evidence
+
+- Workflow: service-helper-logic-update
+- Pattern in files: src/utils/config/service-helpers.js
+
