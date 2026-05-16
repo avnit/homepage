@@ -25,7 +25,7 @@ jobs:
               owner,
               repo,
               issue_number: pullNumber,
-              body: 'Dear contributor, thanks for taking the time to open this pull request! It is being closed because it does not currently meet the pull request guidelines. Please review the checklist in the pull request template and the relevant [contributing guidelines](https://github.com/gethomepage/homepage/blob/main/CONTRIBUTING.md) before opening a new pull request.',
+              body: 'Dear contributor, thanks for taking the time to open this pull request! It is being closed because it does not currently meet the pull request guidelines. Please review the checklist in the pull request template and the relevant [contributing guidelines](https://gethomepage.dev/widgets/authoring/getting-started/#new-feature-guidelines) before opening a new pull request.',
             });
 
             await github.rest.pulls.update({
