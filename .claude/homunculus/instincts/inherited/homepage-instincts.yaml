@@ -1,0 +1,1012 @@
+# Instincts generated from https://github.com/avnit/homepage
+# Generated: 2026-05-24T23:08:47.126Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: homepage-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Commit Length
+
+## Action
+
+Write moderate-length commit messages (~51 characters)
+
+## Evidence
+
+- Average commit message length: 51 chars
+- Based on 100 commits
+
+---
+id: homepage-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: homepage-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: homepage-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: __tests__, components, pages, test-utils, utils
+
+---
+id: homepage-test-colocate
+trigger: "when writing tests"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Test Colocate
+
+## Action
+
+Place test file next to the source file (e.g., Button.test.tsx next to Button.tsx)
+
+## Evidence
+
+- Colocated test pattern detected
+- Tests live alongside source files
+
+---
+id: homepage-test-framework
+trigger: "when writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Test Framework
+
+## Action
+
+Use vitest as the test framework
+
+## Evidence
+
+- Test framework detected: vitest
+- File pattern: *.test.js
+
+---
+id: homepage-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.js
+
+## Evidence
+
+- File pattern: *.test.js
+- Consistent across test files
+
+---
+id: homepage-test-mocking
+trigger: "when mocking dependencies in tests"
+confidence: 0.75
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Test Mocking
+
+## Action
+
+Use vi.mock for mocking
+
+## Evidence
+
+- Mocking pattern detected: vi.mock
+- Consistent across test files
+
+---
+id: homepage-test-types
+trigger: "when planning tests for a feature"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Test Types
+
+## Action
+
+Write unit, integration tests to match project standards
+
+## Evidence
+
+- Test types detected: unit, integration
+- Coverage config: yes
+
+---
+id: homepage-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~7x per month
+- Files: src/widgets/*, src/widgets/dispatcharr/*, src/widgets/arcane/*
+
+---
+id: homepage-workflow-add-new-widget-service
+trigger: "when doing add new widget service"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Add New Widget Service
+
+## Action
+
+Follow the add-new-widget-service workflow:
+1. Create or update documentation for the new widget in docs/widgets/services/{widget}.md
+2. Update docs/widgets/services/index.md to include the new widget
+3. Update mkdocs.yml to register the new documentation page
+4. Update public/locales/en/common.json for localization
+5. Update src/utils/config/service-helpers.js to add service config helpers
+6. Add new widget implementation files: src/widgets/{widget}/component.jsx, src/widgets/{widget}/widget.js (and optionally proxy.js)
+7. Update src/widgets/components.js and src/widgets/widgets.js to register the new widget
+8. Add tests: src/widgets/{widget}/component.test.jsx, src/widgets/{widget}/widget.test.js
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: docs/widgets/services/{widget}.md, docs/widgets/services/index.md, mkdocs.yml
+
+---
+id: homepage-workflow-update-existing-widget-for-breaking-changes
+trigger: "when doing update existing widget for breaking changes"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Update Existing Widget For Breaking Changes
+
+## Action
+
+Follow the update-existing-widget-for-breaking-changes workflow:
+1. Update docs/widgets/services/{widget}.md to document the breaking change
+2. Update src/widgets/{widget}/widget.js and/or component.jsx to handle new API/behavior
+3. Update src/utils/config/service-helpers.js if config helpers need changes
+4. Update or add tests as needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: docs/widgets/services/{widget}.md, src/widgets/{widget}/widget.js, src/widgets/{widget}/component.jsx
+
+---
+id: homepage-workflow-add-or-update-widget-tests
+trigger: "when doing add or update widget tests"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Add Or Update Widget Tests
+
+## Action
+
+Follow the add-or-update-widget-tests workflow:
+1. Add or update src/widgets/{widget}/component.test.jsx
+2. Add or update src/widgets/{widget}/widget.test.js
+3. Optionally update src/test-utils/widget-assertions.js for shared test logic
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/widgets/{widget}/component.test.jsx, src/widgets/{widget}/widget.test.js, src/test-utils/widget-assertions.js
+
+---
+id: homepage-workflow-add-or-update-documentation
+trigger: "when doing add or update documentation"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Add Or Update Documentation
+
+## Action
+
+Follow the add-or-update-documentation workflow:
+1. Edit or add relevant markdown files in docs/widgets/services/, docs/widgets/info/, or docs/configs/
+2. Update mkdocs.yml if a new documentation page is added
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: docs/widgets/services/{widget}.md, docs/widgets/services/index.md, docs/widgets/info/{widget}.md
+
+---
+id: homepage-workflow-dependency-upgrade
+trigger: "when doing dependency upgrade"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Dependency Upgrade
+
+## Action
+
+Follow the dependency-upgrade workflow:
+1. Update package.json with new version(s)
+2. Update pnpm-lock.yaml
+3. Optionally update related config files (e.g., eslint.config.mjs)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: package.json, pnpm-lock.yaml, eslint.config.mjs
+
+---
+id: homepage-workflow-localization-update
+trigger: "when doing localization update"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/avnit/homepage
+---
+
+# Homepage Workflow Localization Update
+
+## Action
+
+Follow the localization-update workflow:
+1. Update public/locales/{lang}/common.json for all supported languages
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: public/locales/*/common.json
+
+---
+id: homepage-instinct-camelcase-filenames
+trigger: "When creating or renaming source files"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Camelcase Filenames
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in src/widgets/dispatcharr/component.jsx
+- Pattern in src/utils/config/service-helpers.js
+
+---
+id: homepage-instinct-camelcase-functions
+trigger: "When defining functions"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Camelcase Functions
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in src/utils/config/service-helpers.js
+- Pattern in src/widgets/widgets.js
+
+---
+id: homepage-instinct-pascalcase-classes
+trigger: "When defining classes"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Pascalcase Classes
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in src/widgets/widgets.js
+- Pattern in src/widgets/components.js
+
+---
+id: homepage-instinct-screaming-snake-constants
+trigger: "When defining constants"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Screaming Snake Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in src/utils/config/service-helpers.js
+
+---
+id: homepage-instinct-absolute-imports
+trigger: "When importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Absolute Imports
+
+## Action
+
+Use absolute import paths
+
+## Evidence
+
+- Pattern in src/widgets/widgets.js
+- Pattern in src/widgets/components.js
+
+---
+id: homepage-instinct-named-exports
+trigger: "When exporting modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Named Exports
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in src/widgets/widgets.js
+- Pattern in src/widgets/components.js
+
+---
+id: homepage-instinct-vitest-pattern
+trigger: "When writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Vitest Pattern
+
+## Action
+
+Place test files as *.test.js or *.test.jsx next to the implementation
+
+## Evidence
+
+- Pattern in src/widgets/dispatcharr/component.test.jsx
+- Pattern in src/widgets/dispatcharr/widget.test.js
+
+---
+id: homepage-instinct-vi-mock
+trigger: "When mocking dependencies in tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Vi Mock
+
+## Action
+
+Use vi.mock for mocking
+
+## Evidence
+
+- Pattern in src/widgets/dispatcharr/widget.test.js
+
+---
+id: homepage-instinct-test-coverage-config
+trigger: "When configuring tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Test Coverage Config
+
+## Action
+
+Enable coverage reporting in test config
+
+## Evidence
+
+- Presence of coverageConfig: true in testing config
+
+---
+id: homepage-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Commit Prefix
+
+## Action
+
+Start the commit message with a type prefix (e.g., Feature, Fix, Enhancement, Chore, Documentation)
+
+## Evidence
+
+- Seen in commit 'Enhancement: Add support for PWA icons and shortcuts (#6235)'
+- Seen in commit 'Fix: fix authentik widget login counts for v2 api (#6257)'
+
+---
+id: homepage-instinct-commit-capitalization
+trigger: "When writing a commit message after the prefix"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Commit Capitalization
+
+## Action
+
+Capitalize the first word after the prefix
+
+## Evidence
+
+- Seen in commit 'Enhancement: Add support for PWA icons and shortcuts (#6235)'
+
+---
+id: homepage-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Commit Length
+
+## Action
+
+Keep the commit message concise (around 50 characters)
+
+## Evidence
+
+- Average commit length is 51 characters
+
+---
+id: homepage-instinct-add-widget-docs
+trigger: "When adding a new widget/service"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Add Widget Docs
+
+## Action
+
+Create or update docs/widgets/services/{widget}.md
+
+## Evidence
+
+- Workflow 'add-new-widget-service'
+- Seen in commit 'Create or update documentation for the new widget in docs/widgets/services/{widget}.md'
+
+---
+id: homepage-instinct-register-widget-docs-index
+trigger: "When adding a new widget/service"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Register Widget Docs Index
+
+## Action
+
+Update docs/widgets/services/index.md to include the new widget
+
+## Evidence
+
+- Workflow 'add-new-widget-service'
+- Seen in commit 'Update docs/widgets/services/index.md to include the new widget'
+
+---
+id: homepage-instinct-register-widget-mkdocs
+trigger: "When adding a new widget/service"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Register Widget Mkdocs
+
+## Action
+
+Update mkdocs.yml to register the new documentation page
+
+## Evidence
+
+- Workflow 'add-new-widget-service'
+- Seen in commit 'Update mkdocs.yml to register the new documentation page'
+
+---
+id: homepage-instinct-localize-widget
+trigger: "When adding a new widget/service"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Localize Widget
+
+## Action
+
+Update public/locales/en/common.json for localization
+
+## Evidence
+
+- Workflow 'add-new-widget-service'
+- Seen in commit 'Update public/locales/en/common.json for localization'
+
+---
+id: homepage-instinct-widget-service-helper
+trigger: "When adding a new widget/service"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Widget Service Helper
+
+## Action
+
+Update src/utils/config/service-helpers.js to add service config helpers
+
+## Evidence
+
+- Workflow 'add-new-widget-service'
+- Seen in commit 'Update src/utils/config/service-helpers.js to add service config helpers'
+
+---
+id: homepage-instinct-widget-implementation-files
+trigger: "When adding a new widget/service"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Widget Implementation Files
+
+## Action
+
+Add src/widgets/{widget}/component.jsx and src/widgets/{widget}/widget.js (and optionally proxy.js)
+
+## Evidence
+
+- Workflow 'add-new-widget-service'
+- Seen in commit 'Add new widget implementation files: src/widgets/{widget}/component.jsx, src/widgets/{widget}/widget.js (and optionally proxy.js)'
+
+---
+id: homepage-instinct-register-widget-components
+trigger: "When adding a new widget/service"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Register Widget Components
+
+## Action
+
+Update src/widgets/components.js and src/widgets/widgets.js to register the new widget
+
+## Evidence
+
+- Workflow 'add-new-widget-service'
+- Seen in commit 'Update src/widgets/components.js and src/widgets/widgets.js to register the new widget'
+
+---
+id: homepage-instinct-widget-tests
+trigger: "When adding a new widget/service"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Widget Tests
+
+## Action
+
+Add tests: src/widgets/{widget}/component.test.jsx, src/widgets/{widget}/widget.test.js
+
+## Evidence
+
+- Workflow 'add-new-widget-service'
+- Seen in commit 'Add tests: src/widgets/{widget}/component.test.jsx, src/widgets/{widget}/widget.test.js'
+
+---
+id: homepage-instinct-update-widget-breaking-docs
+trigger: "When updating a widget for upstream breaking changes"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Update Widget Breaking Docs
+
+## Action
+
+Update docs/widgets/services/{widget}.md to document the breaking change
+
+## Evidence
+
+- Workflow 'update-existing-widget-for-breaking-changes'
+- Seen in commit 'Update docs/widgets/services/{widget}.md to document the breaking change'
+
+---
+id: homepage-instinct-update-widget-breaking-code
+trigger: "When updating a widget for upstream breaking changes"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Update Widget Breaking Code
+
+## Action
+
+Update src/widgets/{widget}/widget.js and/or component.jsx to handle new API/behavior
+
+## Evidence
+
+- Workflow 'update-existing-widget-for-breaking-changes'
+- Seen in commit 'Update src/widgets/{widget}/widget.js and/or component.jsx to handle new API/behavior'
+
+---
+id: homepage-instinct-update-widget-breaking-helper
+trigger: "When updating a widget for upstream breaking changes"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Update Widget Breaking Helper
+
+## Action
+
+Update src/utils/config/service-helpers.js if config helpers need changes
+
+## Evidence
+
+- Workflow 'update-existing-widget-for-breaking-changes'
+- Seen in commit 'Update src/utils/config/service-helpers.js if config helpers need changes'
+
+---
+id: homepage-instinct-update-widget-breaking-tests
+trigger: "When updating a widget for upstream breaking changes"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Update Widget Breaking Tests
+
+## Action
+
+Update or add tests as needed
+
+## Evidence
+
+- Workflow 'update-existing-widget-for-breaking-changes'
+- Seen in commit 'Update or add tests as needed'
+
+---
+id: homepage-instinct-add-or-update-widget-tests-component
+trigger: "When adding or updating widget tests"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Add Or Update Widget Tests Component
+
+## Action
+
+Add or update src/widgets/{widget}/component.test.jsx
+
+## Evidence
+
+- Workflow 'add-or-update-widget-tests'
+- Seen in commit 'Add or update src/widgets/{widget}/component.test.jsx'
+
+---
+id: homepage-instinct-add-or-update-widget-tests-widget
+trigger: "When adding or updating widget tests"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Add Or Update Widget Tests Widget
+
+## Action
+
+Add or update src/widgets/{widget}/widget.test.js
+
+## Evidence
+
+- Workflow 'add-or-update-widget-tests'
+- Seen in commit 'Add or update src/widgets/{widget}/widget.test.js'
+
+---
+id: homepage-instinct-update-shared-test-utils
+trigger: "When adding or updating widget tests"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Update Shared Test Utils
+
+## Action
+
+Optionally update src/test-utils/widget-assertions.js for shared test logic
+
+## Evidence
+
+- Workflow 'add-or-update-widget-tests'
+- Seen in commit 'Optionally update src/test-utils/widget-assertions.js for shared test logic'
+
+---
+id: homepage-instinct-add-or-update-docs-md
+trigger: "When adding or updating documentation"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Add Or Update Docs Md
+
+## Action
+
+Edit or add relevant markdown files in docs/widgets/services/, docs/widgets/info/, or docs/configs/
+
+## Evidence
+
+- Workflow 'add-or-update-documentation'
+- Seen in commit 'Edit or add relevant markdown files in docs/widgets/services/, docs/widgets/info/, or docs/configs/'
+
+---
+id: homepage-instinct-add-or-update-docs-mkdocs
+trigger: "When adding a new documentation page"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Add Or Update Docs Mkdocs
+
+## Action
+
+Update mkdocs.yml to register the new documentation page
+
+## Evidence
+
+- Workflow 'add-or-update-documentation'
+- Seen in commit 'Update mkdocs.yml if a new documentation page is added'
+
+---
+id: homepage-instinct-dependency-upgrade-packagejson
+trigger: "When upgrading dependencies"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Dependency Upgrade Packagejson
+
+## Action
+
+Update package.json with new version(s)
+
+## Evidence
+
+- Workflow 'dependency-upgrade'
+- Seen in commit 'Update package.json with new version(s)'
+
+---
+id: homepage-instinct-dependency-upgrade-lockfile
+trigger: "When upgrading dependencies"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Dependency Upgrade Lockfile
+
+## Action
+
+Update pnpm-lock.yaml
+
+## Evidence
+
+- Workflow 'dependency-upgrade'
+- Seen in commit 'Update pnpm-lock.yaml'
+
+---
+id: homepage-instinct-dependency-upgrade-eslint
+trigger: "When upgrading dependencies"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Dependency Upgrade Eslint
+
+## Action
+
+Optionally update related config files (e.g., eslint.config.mjs)
+
+## Evidence
+
+- Workflow 'dependency-upgrade'
+- Seen in commit 'Optionally update related config files (e.g., eslint.config.mjs)'
+
+---
+id: homepage-instinct-localization-update
+trigger: "When new or updated translations are imported"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: avnit/homepage
+---
+
+# Homepage Instinct Localization Update
+
+## Action
+
+Update public/locales/{lang}/common.json for all supported languages
+
+## Evidence
+
+- Workflow 'localization-update'
+- Seen in commit 'Update public/locales/{lang}/common.json for all supported languages'
+
