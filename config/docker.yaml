@@ -11,13 +11,13 @@ my-docker:
 # Option 1: Using Docker socket over TCP (requires Docker to expose TCP port)
 # Uncomment and use this if Docker on Unraid is configured to listen on TCP port 2375
 # unraid-docker:
-#   host: 192.168.0.4
+#   host: 192.168.0.95
 #   port: 2375
 
 # Option 2: Using Docker socket over TLS (more secure, requires certificates)
 # Uncomment and use this if Docker on Unraid is configured with TLS on port 2376
 # unraid-docker:
-#   host: 192.168.0.4
+#   host: 192.168.0.95
 #   port: 2376
 #   tls:
 #     ca: /path/to/ca.pem
@@ -38,7 +38,7 @@ my-docker:
 
 # Active configuration for Unraid (TCP without TLS - for testing)
 unraid-docker:
-  host: 192.168.0.4
+  host: 192.168.0.95
   port: 2375
 
 portainer-docker:
