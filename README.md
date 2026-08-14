@@ -219,3 +219,31 @@ Then run the development server:
 mkdocs serve # or build, to build the static site
 ```
 
+<!-- ARCH-DIAGRAM:START -->
+
+## Architecture
+
+> Auto-generated architecture diagram. See [`docs/context-map.md`](docs/context-map.md) for the full context map (core application, containers/cloud, and database connections).
+
+```mermaid
+flowchart TD
+  User([User / Client])
+  UI["Frontend:80/443/3000<br/>Next.js / React"]
+  App["homepage<br/><small>index.js</small><br/>Express / Node"]
+  DB0[("InfluxDB")]
+  SVC0["AWS"]
+  SVC1["Azure"]
+  SVC2["Cloudflare Workers"]
+  Img["Container image<br/>(Docker/Compose)"]
+  Deploy["GKE / Kubernetes"]
+  User --> UI
+  UI --> App
+  App --> DB0
+  App --> SVC0
+  App --> SVC1
+  App --> SVC2
+  App -.deploy.-> Img
+  Img -.deploy.-> Deploy
+```
+
+<!-- ARCH-DIAGRAM:END -->
