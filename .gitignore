@@ -44,3 +44,4 @@ site*/
 *.bak*
 .env.bak*
 config/logs/
+k3d/.envrc
