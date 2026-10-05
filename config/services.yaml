@@ -1,58 +1,63 @@
 ---
 - Hypervisor:
-    - Proxmox:
+    - pve:
         icon: proxmox.svg
-        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
-        description: pve1
-        siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        href: https://192.168.0.45:8006/#v1:0:=node%2Fpve
+        siteMonitor: https://192.168.0.45:8006
         widget:
           type: proxmox
           url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
           username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
           password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
-          cache: 300000
-          refreshInterval: 60000
           node: pve
-    - Proxmox2:
+    - pve4:
         icon: proxmox.svg
-        href: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
-        description: pve-dell
-        siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
-        widget:
-          type: proxmox
-          url: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
-          username: "{{HOMEPAGE_VAR_PROXMOX_USER_2}}"
-          password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_2}}"
-          cache: 300000
-          refreshInterval: 60000
-          node: pve2
-    - Proxmox3:
-        icon: proxmox.svg
-        href: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
-        description: pve-backup
-        siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
-        widget:
-          type: proxmox
-          url: "{{HOMEPAGE_VAR_PROXMOX_URL_3}}"
-          username: "{{HOMEPAGE_VAR_PROXMOX_USER_3}}"
-          password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY_3}}"
-          cache: 300000
-          refreshInterval: 60000
-          node: pve-backup
-    - Proxmox4:
-        icon: proxmox.svg
-        href: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
-        description: pve6
-        siteMonitor: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        href: https://192.168.0.45:8006/#v1:0:=node%2Fpve4
+        siteMonitor: https://192.168.0.88:8006
         widget:
           type: proxmox
           url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
           username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
           password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
-          cache: 300000
-          refreshInterval: 60000
+          node: pve4
+    - pve6:
+        icon: proxmox.svg
+        href: https://192.168.0.45:8006/#v1:0:=node%2Fpve6
+        siteMonitor: https://192.168.0.192:8006
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+          username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+          password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
           node: pve6
-
+    - pve7:
+        icon: proxmox.svg
+        href: https://192.168.0.45:8006/#v1:0:=node%2Fpve7
+        siteMonitor: https://192.168.0.160:8006
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+          username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+          password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+          node: pve7
+    - pve-backup:
+        icon: proxmox.svg
+        href: https://192.168.0.45:8006/#v1:0:=node%2Fpve-backup
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+          username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+          password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+          node: pve-backup
+    - pve2:
+        icon: proxmox.svg
+        href: https://192.168.0.45:8006/#v1:0:=node%2Fpve2
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+          username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+          password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+          node: pve2
 - DNS:
     - cloudflare:
         icon: cloudflare.svg
@@ -168,3 +173,111 @@
               url: http://www.coursera.org/api/learnerCalendars.v1/46974119/uRHz9JWGSM2swl2Uux8vHg.ics
               params:
                 showName: true
+- Monitoring:
+    - UniFi:
+        icon: unifi.svg
+        href: "{{HOMEPAGE_VAR_UNIFI_URL}}"
+        siteMonitor: "{{HOMEPAGE_VAR_UNIFI_URL}}"
+        widget:
+          type: unifi
+          url: "{{HOMEPAGE_VAR_UNIFI_URL}}"
+          username: "{{HOMEPAGE_VAR_UNIFI_USER}}"
+          password: "{{HOMEPAGE_VAR_UNIFI_PASSWORD}}"
+    - Portainer:
+        icon: portainer.svg
+        href: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
+        siteMonitor: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
+    - Grafana:
+        icon: grafana.svg
+        href: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
+        siteMonitor: "{{HOMEPAGE_VAR_GRAFANA_URL}}"
+    - Speedtest:
+        icon: speedtest-tracker.svg
+        href: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
+        widget:
+          type: speedtest
+          url: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
+- Automation:
+    - Home-Assistant:
+        icon: home-assistant.svg
+        href: http://192.168.0.154:8123
+        siteMonitor: http://192.168.0.154:8123
+    - Home-Assistant-PVE2:
+        icon: home-assistant.svg
+        href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
+        siteMonitor: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
+        widget:
+          type: homeassistant
+          url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL_2}}"
+          key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}"
+    - CasaOS:
+        icon: casaos.svg
+        href: http://192.168.0.206
+    - n8n:
+        icon: n8n.svg
+        href: "{{HOMEPAGE_VAR_N8N_URL}}"
+        siteMonitor: "{{HOMEPAGE_VAR_N8N_URL}}"
+    - Caddy:
+        icon: caddy.svg
+        widget:
+          type: caddy
+          url: "{{HOMEPAGE_VAR_CADDY_ADMIN_URL}}"
+- Media2:
+    - Jellyfin:
+        icon: jellyfin.svg
+        href: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+        siteMonitor: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+    - Jellyseerr:
+        icon: jellyseerr.svg
+        href: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
+        widget:
+          type: jellyseerr
+          url: "{{HOMEPAGE_VAR_JELLYSEER_URL}}"
+          key: "{{HOMEPAGE_VAR_JELLYSEER_KEY}}"
+    - Immich:
+        icon: immich.svg
+        href: "{{HOMEPAGE_VAR_IMMICH_URL}}"
+        siteMonitor: "{{HOMEPAGE_VAR_IMMICH_URL}}"
+    - Plex:
+        icon: plex.svg
+        href: "{{HOMEPAGE_VAR_PLEX_URL}}"
+    - HDHomeRun:
+        icon: hdhomerun.svg
+        href: "{{HOMEPAGE_VAR_HDHOMERUN_URL}}"
+    - Sonarr2:
+        icon: sonarr.svg
+        href: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
+        siteMonitor: "{{HOMEPAGE_VAR_SONARR_URL_2}}"
+    - Radarr2:
+        icon: radarr.svg
+        href: "{{HOMEPAGE_VAR_RADARR_URL_2}}"
+        siteMonitor: "{{HOMEPAGE_VAR_RADARR_URL_2}}"
+    - Prowlarr2:
+        icon: prowlarr.svg
+        href: "{{HOMEPAGE_VAR_PROWLARR_URL_2}}"
+        siteMonitor: "{{HOMEPAGE_VAR_PROWLARR_URL_2}}"
+    - Lidarr2:
+        icon: lidarr.svg
+        href: "{{HOMEPAGE_VAR_LIDARR_URL_2}}"
+        siteMonitor: "{{HOMEPAGE_VAR_LIDARR_URL_2}}"
+    - qBittorrent2:
+        icon: qbittorrent.svg
+        href: "{{HOMEPAGE_VAR_QB_URL_2}}"
+        siteMonitor: "{{HOMEPAGE_VAR_QB_URL_2}}"
+    - Jackett:
+        icon: jackett.svg
+        href: "{{HOMEPAGE_VAR_JACKETT_URL}}"
+        siteMonitor: "{{HOMEPAGE_VAR_JACKETT_URL}}"
+    - Transmission:
+        icon: transmission.svg
+        href: "{{HOMEPAGE_VAR_TRANSMISSION_URL_2}}"
+    - Docker-web:
+        icon: docker.svg
+        href: "{{HOMEPAGE_VAR_DOCKER_WEB_URL}}"
+    - ESPHome:
+        icon: esphome.svg
+        href: "{{HOMEPAGE_VAR_ESP_HOME_URL}}"
+        siteMonitor: "{{HOMEPAGE_VAR_ESP_HOME_URL}}"
+    - Calibre-web:
+        icon: calibre-web.svg
+        href: "{{HOMEPAGE_VAR_CALIBRE_URL}}"

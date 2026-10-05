@@ -53,3 +53,7 @@ site*/
 # venv
 .venv/
 *.bak*
+.env
+.env.bak*
+*.bak*
+config/logs/
