@@ -6,6 +6,34 @@
 
 @theme {
   --breakpoint-3xl: 112rem;
+
+  /* Voltgrave concept page (/voltgrave) */
+  --font-vg-display: "VT323", "Courier New", monospace;
+  --font-vg-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-vg-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-vg-ground: #0c0e0b;
+  --color-vg-panel: #10140f;
+  --color-vg-panel-deep: #070907;
+  --color-vg-panel-warm: #15110c;
+  --color-vg-chip: #1c221a;
+  --color-vg-chip-warm: #241b12;
+  --color-vg-grid: #1a2118;
+  --color-vg-line: #2b2f27;
+  --color-vg-ink: #e8e6df;
+  --color-vg-ink-soft: #d6d4cb;
+  --color-vg-ink-warm: #e8d9c6;
+  --color-vg-muted: #a9a79d;
+  --color-vg-dim: #8e8c82;
+  --color-vg-ember: #ff8a1f;
+  --color-vg-ember-soft: #ffb066;
+  --color-vg-glow: #6be4ff;
+  --color-vg-glow-bright: #03c6f1;
+  --color-vg-arc: #c9f7ff;
+  --color-vg-lime: #7cff6b;
+  --color-vg-lime-soft: #b8ffaf;
+  --color-vg-copper: #b87333;
+  --color-vg-oxide: #6e8f6a;
 }
 
 /*
