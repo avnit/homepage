@@ -1,9 +1,10 @@
 my-docker:
   host: dockerproxy
   port: 2375
-orange-docker:
-  host: 192.168.0.185
-  port: 2375
+# 192.168.0.185 is offline; each page load waited for the connect timeout.
+# orange-docker:
+#  host: 192.168.0.185
+#  port: 2375
 # portainer-docker:
 #  host: 192.168.0.117
 #  port: 2375
