@@ -20,6 +20,18 @@
         "minutes": "m",
         "seconds": "s"
     },
+    "auth": {
+        "signout": "Sign out",
+        "loginRequired": "Login Required",
+        "loginDescription": "Login to view your dashboard.",
+        "signIn": "Sign in",
+        "password": "Password",
+        "loginVia": "Login via {{provider}}",
+        "redirecting": "Redirecting to {{provider}}",
+        "invalidPassword": "Invalid password. Please try again.",
+        "authenticationError": "Authentication error",
+        "authenticationErrorDescription": "Auth is disabled or misconfigured."
+    },
     "widget": {
         "missing_type": "Missing Widget Type: {{type}}",
         "api_error": "API Error",
@@ -36,7 +48,9 @@
         "wait": "Please wait"
     },
     "search": {
-        "placeholder": "Search…"
+        "placeholder": "Search…",
+        "provider": "Search engine: {{name}}",
+        "select_provider": "Select search engine"
     },
     "resources": {
         "cpu": "CPU",
@@ -71,6 +85,15 @@
         "degraded": "Degraded",
         "no_data": "No storage data available"
     },
+    "duplicati": {
+        "jobs": "Jobs",
+        "stored": "Stored",
+        "lastBackup": "Last Run",
+        "nextRun": "Next Run",
+        "running": "Running",
+        "warnings": "Warnings",
+        "errors": "Errors"
+    },
     "docker": {
         "rx": "RX",
         "tx": "TX",
@@ -85,7 +108,12 @@
         "unhealthy": "Unhealthy",
         "not_found": "Not Found",
         "exited": "Exited",
-        "partial": "Partial"
+        "partial": "Partial",
+        "created": "Created",
+        "paused": "Paused",
+        "restarting": "Restarting",
+        "removing": "Removing",
+        "dead": "Dead"
     },
     "ping": {
         "error": "Error",
@@ -120,7 +148,8 @@
         "movies": "Movies",
         "series": "Series",
         "episodes": "Episodes",
-        "songs": "Songs"
+        "songs": "Songs",
+        "albums": "Albums"
     },
     "esphome": {
         "offline": "Offline",
@@ -236,6 +265,16 @@
         "leech": "Leech",
         "seed": "Seed"
     },
+    "qui": {
+        "leech": "Leech",
+        "download": "Download",
+        "seed": "Seed",
+        "upload": "Upload",
+        "total": "Total",
+        "errored": "Errored",
+        "ratio": "Ratio",
+        "freeSpace": "Free"
+    },
     "qnap": {
         "cpuUsage": "CPU Usage",
         "memUsage": "MEM Usage",
@@ -328,17 +367,20 @@
     "portainer": {
         "running": "Running",
         "stopped": "Stopped",
-        "total": "Total"
+        "total": "Total",
+        "applications": "Applications",
+        "services": "Services",
+        "namespaces": "Namespaces"
     },
     "suwayomi": {
-        "download": "Downloaded",
-        "nondownload": "Non-Downloaded",
-        "read": "Read",
-        "unread": "Unread",
-        "downloadedread": "Downloaded & Read",
-        "downloadedunread": "Downloaded & Unread",
-        "nondownloadedread": "Non-Downloaded & Read",
-        "nondownloadedunread": "Non-Downloaded & Unread"
+      "download": "Downloaded",
+      "nondownload": "Non-Downloaded",
+      "read": "Read",
+      "unread": "Unread",
+      "downloadedread": "Downloaded & Read",
+      "downloadedunread": "Downloaded & Unread",
+      "nondownloadedread": "Non-Downloaded & Read",
+      "nondownloadedunread": "Non-Downloaded & Unread"
     },
     "tailscale": {
         "address": "Address",
@@ -405,12 +447,6 @@
         "disabled": "Disabled",
         "total": "Total"
     },
-    "n8n": {
-        "workflows": "Workflows",
-        "active": "Active",
-        "executions": "Executions",
-        "failed": "Failed"
-    },
     "coinmarketcap": {
         "configure": "Configure one or more crypto currencies to track",
         "1hour": "1 Hour",
@@ -464,13 +500,19 @@
     "authentik": {
         "users": "Users",
         "loginsLast24H": "Logins (24h)",
-        "failedLoginsLast24H": "Failed Logins (24h)"
+        "failedLoginsLast24H": "Failed Logins (24h)",
+        "authorizationsLast24H": "Auths (24h)"
     },
     "proxmox": {
         "mem": "MEM",
         "cpu": "CPU",
         "lxc": "LXC",
         "vms": "VMs"
+    },
+    "pulse": {
+        "nodes": "Nodes",
+        "vms": "VMs",
+        "lxcs": "LXCs"
     },
     "glances": {
         "cpu": "CPU",
@@ -760,7 +802,8 @@
         "queue": "Queue",
         "processing": "Processing",
         "processed": "Processed",
-        "time": "Time"
+        "time": "Time",
+        "failed": "Failed"
     },
     "firefly": {
         "networth": "Net Worth",
@@ -839,6 +882,14 @@
         "reading": "Reading",
         "finished": "Finished"
     },
+    "bookorbit": {
+        "books": "Books",
+        "authors": "Authors",
+        "series": "Series",
+        "storage": "Storage",
+        "reading": "Reading",
+        "finished": "Finished"
+    },
     "jdownloader": {
         "downloadCount": "Queue",
         "downloadBytesRemaining": "Remaining",
@@ -875,7 +926,7 @@
         "ping": "Ping"
     },
     "urbackup": {
-        "ok": "Ok",
+        "ok" : "Ok",
         "errored": "Errors",
         "noRecent": "Out of Date",
         "totalUsed": "Used Storage"
@@ -933,14 +984,36 @@
         "totalfilesize": "Total Size"
     },
     "mailcow": {
-        "domains": "Domains",
-        "mailboxes": "Mailboxes",
-        "mails": "Mails",
-        "storage": "Storage"
+      "domains": "Domains",
+      "mailboxes": "Mailboxes",
+      "mails": "Mails",
+      "storage": "Storage"
+    },
+    "maintainerr": {
+      "itemsHandled": "Items Handled",
+      "episodesHandled": "Episodes Handled",
+      "moviesHandled": "Movies Handled",
+      "showsHandled": "Shows Handled",
+      "seasonsHandled": "Seasons Handled",
+      "reclaimable": "Reclaimable",
+      "movieReclaimable": "Movie Reclaimable",
+      "showReclaimable": "Show Reclaimable",
+      "totalCapacity": "Total Capacity"
+    },
+    "netbird": {
+      "online": "Online Peers",
+      "users": "Users",
+      "login_expired": "Login Expired"
+    },
+    "n8n": {
+        "workflows": "Workflows",
+        "active": "Active",
+        "executions": "Executions",
+        "failed": "Failed"
     },
     "netdata": {
-        "warnings": "Warnings",
-        "criticals": "Criticals"
+      "warnings": "Warnings",
+      "criticals": "Criticals"
     },
     "ntfy": {
       "title": "Title",
@@ -962,10 +1035,10 @@
         "species": "Species"
     },
     "gitea": {
-        "notifications": "Notifications",
-        "issues": "Issues",
-        "pulls": "Pull Requests",
-        "repositories": "Repositories"
+      "notifications": "Notifications",
+      "issues": "Issues",
+      "pulls": "Pull Requests",
+      "repositories": "Repositories"
     },
     "stash": {
         "scenes": "Scenes",
@@ -1035,48 +1108,56 @@
         "tags": "Tags"
     },
     "zabbix": {
-        "unclassified": "Not classified",
-        "information": "Information",
-        "warning": "Warning",
-        "average": "Average",
-        "high": "High",
-        "disaster": "Disaster"
+      "unclassified": "Not classified",
+      "information": "Information",
+      "warning": "Warning",
+      "average": "Average",
+      "high": "High",
+      "disaster": "Disaster"
     },
     "lubelogger": {
-        "vehicle": "Vehicle",
-        "vehicles": "Vehicles",
-        "serviceRecords": "Service Records",
-        "reminders": "Reminders",
-        "nextReminder": "Next Reminder",
-        "none": "None"
+      "vehicle": "Vehicle",
+      "vehicles": "Vehicles",
+      "serviceRecords": "Service Records",
+      "reminders": "Reminders",
+      "nextReminder": "Next Reminder",
+      "none": "None"
     },
     "vikunja": {
-        "projects": "Active Projects",
-        "tasks7d": "Tasks Due This Week",
-        "tasksOverdue": "Overdue Tasks",
-        "tasksInProgress": "Tasks In Progress"
+      "projects": "Active Projects",
+      "tasks7d": "Tasks Due This Week",
+      "tasksOverdue": "Overdue Tasks",
+      "tasksInProgress": "Tasks In Progress"
     },
     "headscale": {
-        "name": "Name",
-        "address": "Address",
-        "last_seen": "Last Seen",
-        "status": "Status",
-        "online": "Online",
-        "offline": "Offline"
+      "name": "Name",
+      "address": "Address",
+      "last_seen": "Last Seen",
+      "status": "Status",
+      "online": "Online",
+      "offline": "Offline"
     },
     "beszel": {
-        "name": "Name",
-        "systems": "Systems",
-        "up": "Up",
-        "down": "Down",
-        "paused": "Paused",
-        "pending": "Pending",
-        "status": "Status",
-        "updated": "Updated",
-        "cpu": "CPU",
-        "memory": "MEM",
-        "disk": "Disk",
-        "network": "NET"
+      "name": "Name",
+      "systems": "Systems",
+      "up": "Up",
+      "down": "Down",
+      "paused": "Paused",
+      "pending": "Pending",
+      "status": "Status",
+      "updated": "Updated",
+      "cpu": "CPU",
+      "memory": "MEM",
+      "disk": "Disk",
+      "network": "NET",
+      "temp": "Temp",
+      "load": "Load",
+      "gpu": "GPU",
+      "uptime": "Uptime",
+      "services": "Services",
+      "updates": "Updates",
+      "battery": "Battery",
+      "agent": "Agent"
     },
     "argocd": {
         "apps": "Apps",
@@ -1100,8 +1181,8 @@
     "apcups": {
         "status": "Status",
         "load": "Load",
-        "bcharge": "Battery Charge",
-        "timeleft": "Time Left"
+        "bcharge":"Battery Charge",
+        "timeleft":"Time Left"
     },
     "karakeep": {
         "bookmarks": "Bookmarks",
@@ -1216,5 +1297,19 @@
         "burned": "Burned",
         "remaining": "Remaining",
         "steps": "Steps"
+    },
+    "syncthing": {
+        "connected": "Connected",
+        "synced": "Synced",
+        "errors": "Errors",
+        "storage": "Storage"
+    },
+    "sportarr": {
+        "wanted": "Wanted",
+        "queued": "Queued",
+        "leagues": "Leagues"
+    },
+    "feed": {
+        "noItems": "No items"
     }
 }
