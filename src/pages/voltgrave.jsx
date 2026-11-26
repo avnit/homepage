@@ -1,10 +1,11 @@
 import Board, { BoardHeader, Eyebrow, SectionLabel, Stat } from "components/voltgrave/board";
 import CathedralElevation from "components/voltgrave/cathedral-elevation";
 import CircuitCard from "components/voltgrave/circuit-card";
-import { cathedral, districts, mechanics, world, zones } from "components/voltgrave/content";
 import DistrictCard from "components/voltgrave/district-card";
 import WorldMap from "components/voltgrave/world-map";
 import Head from "next/head";
+
+import { cathedral, districts, mechanics, world, zones } from "components/voltgrave/content";
 
 const FONTS_HREF =
   "https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap";

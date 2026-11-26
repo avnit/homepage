@@ -1,7 +1,6 @@
-/* eslint-disable camelcase */
 import Block from "components/services/widget/block";
 import Container from "components/services/widget/container";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { BsCpu, BsFillCpuFill, BsFillPlayFill, BsPauseFill } from "react-icons/bs";
 import { MdOutlineSmartDisplay, MdSmartDisplay } from "react-icons/md";
 
@@ -233,7 +232,7 @@ export default function Component({ service }) {
     );
   }
 
-  const playing = activityData.data.sort((a, b) => a.progressMs - b.progressMs);
+  const playing = [...activityData.data].sort((a, b) => a.progressMs - b.progressMs);
   const { summary } = activityData;
 
   if (view === "summary") {

@@ -2,13 +2,13 @@ import Block from "components/services/widget/block";
 import Container from "components/services/widget/container";
 
 import useWidgetAPI from "utils/proxy/use-widget-api";
+import withWidgetFields from "utils/widget-fields";
 
-export default function Component({ service }) {
+const defaultFields = ["workflows", "active", "executions", "failed"];
+
+export default function Component({ service: configuredService }) {
+    const service = withWidgetFields(configuredService, defaultFields);
     const { widget } = service;
-
-    if (!widget.fields) {
-        widget.fields = ["workflows", "active", "executions", "failed"];
-    }
 
     const { data: workflowsData, error: workflowsError } = useWidgetAPI(widget, "workflows");
 
