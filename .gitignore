@@ -45,3 +45,7 @@ site*/
 .env.bak*
 config/logs/
 k3d/.envrc
+
+# Kubernetes configmaps with real secrets; keep local only
+env-configmap.yaml
+homepage-cm0-configmap.yaml
